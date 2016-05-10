@@ -1,168 +1,243 @@
 ---
-title: API Reference
-
-language_tabs:
-  - shell
-  - ruby
-  - python
-
-toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
-
-includes:
-  - errors
-
-search: true
+TODO: TOC and Intro
 ---
+# AccountService 1.0.2
 
-# Introduction
+## Account Service contains properties common to all user accounts, such as password requirements, and control features such as account lockout.  It also contains links to the collections of Manager Accounts and Roles.
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+# AttributeRegistry 1.0.0
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+## An Attribute Registry is a set of key-value pairs which are specific to a particular implementation or product, such that creating standardized property names would be impractical.  This schema describes the structure of a Registry, and also includes mechanisms for building user interfaces (menus) allowing consistent navigation of the contents.
 
-This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
+# Bios 1.0.0
 
-# Authentication
+## Bios contains properties surrounding a BIOS Attribute Registry (where the system-specific BIOS attributes are described) and the Actions needed to perform changes to BIOS settings, which typically require a system reset to apply.
 
-> To authorize, use this code:
+# Chassis 1.2.0
 
-```ruby
-require 'kittn'
+## A Chassis represents the physical components for any system.  This resource represents the sheet-metal confined spaces and logical zones like racks, enclosures, chassis and all other containers. Subsystems (like sensors), which operate outside of a system's data plane (meaning the resources are not accessible to software running on the system) are linked either directly or indirectly through this resource.
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
+# ChassisCollection 
 
-```python
-import kittn
+## A Collection of Chassis resource instances.
 
-api = kittn.authorize('meowmeowmeow')
-```
+# ComputerSystem 1.1.0
 
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
+## This schema defines a computer system and its respective properties.  A computer system represents a machine (physical or virtual) and the local resources such as memory, cpu and other devices that can be accessed from that machine.
 
-> Make sure to replace `meowmeowmeow` with your API key.
+# ComputerSystemCollection 
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+## A Collection of ComputerSystem resource instances.
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+# Drive 1.0.0
 
-`Authorization: meowmeowmeow`
+## Drive contains properties describing a single physical disk drive for any system, along with links to associated Volumes.
 
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
+# EthernetInterface 1.0.2
 
-# Kittens
+## This schema defines a simple ethernet NIC resource.
 
-## Get All Kittens
+# EthernetInterfaceCollection 
 
-```ruby
-require 'kittn'
+## A Collection of EthernetInterface resource instances.
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
+# Event 1.1.0
 
-```python
-import kittn
+## The Event schema describes the JSON payload received by an Event Destination (which has subscribed to event notification) when events occurs.  This resource contains data about event(s), including descriptions, severity and MessageId reference to a Message Registry that can be accessed for further information. 
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
+# EventDestination 1.0.2
 
-```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
+## An Event Destination desribes the target of an event subscription, including the types of events subscribed and context to provide to the target in the Event payload.
 
-> The above command returns JSON structured like this:
+# EventDestinationCollection 
 
-```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
-```
+## A Collection of EventDestination resource instances.
 
-This endpoint retrieves all kittens.
+# EventService 1.0.2
 
-### HTTP Request
+## The Event Service resource contains properties for managing event subcriptions and generates the events sent to subscribers.  The resource has links to the actual collection of subscriptions (called Event Destinations).
 
-`GET http://example.com/api/kittens`
+# JsonSchemaFile 1.0.2
 
-### Query Parameters
+## This is the schema definition for the Schema File locator resource.
 
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+# JsonSchemaFileCollection 
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
+## A Collection of JsonSchemaFile resource instances.
 
-## Get a Specific Kitten
+# LogEntry 1.0.2
 
-```ruby
-require 'kittn'
+## This resource defines the record format for a log.  It is designed to be used for SEL logs (from IPMI) as well as Event Logs and OEM-specific log formats.  The EntryType field indicates the type of log and the resource includes several additional properties dependent on the EntryType.
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
+# LogEntryCollection 
 
-```python
-import kittn
+## A Collection of LogEntry resource instances.
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
+# LogService 1.0.2
 
-```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
-```
+## This resource represents the log service for the resource or service to which it is associated.
 
-> The above command returns JSON structured like this:
+# LogServiceCollection 
 
-```json
-{
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
-}
-```
+## A Collection of LogService resource instances.
 
-This endpoint retrieves a specific kitten.
+# Manager 1.1.0
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+## This is the schema definition for a Manager.  Examples of managers are BMCs, Enclosure Managers, Management Controllers and other subsystems assigned managability functions.
 
-### HTTP Request
+# ManagerAccount 1.0.2
 
-`GET http://example.com/kittens/<ID>`
+## The user accounts, owned by a Manager, are defined in this resource.  Changes to a Manager Account may affect the current Redfish service connection if this manager is responsible for the Redfish service.
 
-### URL Parameters
+# ManagerAccountCollection 
 
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
+## A Collection of ManagerAccount resource instances.
+
+# ManagerCollection 
+
+## A Collection of Manager resource instances.
+
+# ManagerNetworkProtocol 1.0.2
+
+## This resource is used to obtain or modify the network services managed by a given manager.
+
+# Memory 1.0.0
+
+## This is the schema definition for definition of a Memory and its configuration
+
+# MemoryCollection 
+
+## A Collection of Memory resource instances.
+
+# MemoryMetrics 1.0.0
+
+## MemoryMetrics contains usage and health statistics for a single Memory module or device instance.
+
+# Message 
+
+# MessageRegistry 1.0.2
+
+## This is the schema definition for all Message Registries.  It represents the properties for the registries themselves.  The MessageId is formed per the Redfish specification.  It consists of the RegistryPrefix concatenated with the version concatenated with the unique identifier for the message registry entry.
+
+# MessageRegistryCollection 
+
+## A Collection of MessageRegistry resource instances.
+
+# MessageRegistryFile 1.0.2
+
+## This is the schema definition for the Schema File locator resource.
+
+# MessageRegistryFileCollection 
+
+## A Collection of MessageRegistryFile resource instances.
+
+# Power 1.1.0
+
+## This is the schema definition for the Power Metrics.  It represents the properties for Power Consumption and Power Limiting.
+
+# Processor 1.0.2
+
+## This is the schema definition for the Processor resource.  It represents the properties of a processor attached to a System.
+
+# ProcessorCollection 
+
+## A Collection of Processor resource instances.
+
+# Redundancy 
+
+## This is the common redundancy definition and structure used in other Redfish schemas.
+
+# Resource 1.0.0
+
+# Role 1.0.2
+
+## This resource defines a user role to be used in conjunction with a Manager Account.
+
+# RoleCollection 
+
+## A Collection of Role resource instances.
+
+# SecureBoot 1.0.0
+
+## This resource contains UEFI Secure Boot information. It represents properties for managing the UEFI Secure Boot functionality of a system.
+
+# SerialInterface 1.0.2
+
+## This schema defines an asynchronous serial interface resource.
+
+# SerialInterfaceCollection 
+
+## A Collection of SerialInterface resource instances.
+
+# ServiceRoot 1.0.2
+
+## This object represents the root Redfish service.
+
+# Session 1.0.2
+
+## The Session resource describes a single connection (session) between a client and a Redfish service instance.
+
+# SessionCollection 
+
+## A Collection of Session resource instances.
+
+# SessionService 1.0.2
+
+## This is the schema definition for the Session Service.  It represents the properties for the service itself and has links to the actual list of sessions.
+
+# Settings 1.0.0
+
+# SimpleStorage 1.1.0
+
+## This is the schema definition for the Simple Storage resource.  It represents the properties of a storage controller and its directly-attached devices.
+
+# SimpleStorageCollection 
+
+## A Collection of SimpleStorage resource instances.
+
+# Storage 1.0.0
+
+## This schema defines a storage subsystem and its respective properties.  A storage subsystem represents a set of storage controllers (physical or virtual) and the resources such as volumes that can be accessed from that subsystem.
+
+# StorageCollection 
+
+## A Collection of Storage resource instances.
+
+# Task 1.0.2
+
+## This resource contains information about a specific Task scheduled by or being executed by a Redfish service's Task Service.
+
+# TaskCollection 
+
+## A Collection of Task resource instances.
+
+# TaskService 1.0.2
+
+## This is the schema definition for the Task Service.  It represents the properties for the service itself and has links to the actual list of tasks.
+
+# Thermal 1.1.0
+
+## This is the schema definition for the Thermal properties.  It represents the properties for Temperature and Cooling.
+
+# VLanNetworkInterface 1.0.2
+
+## This resource contains information for a Virtual LAN (VLAN) network instance available on a manager, system or other device.
+
+# VLanNetworkInterfaceCollection 
+
+## A Collection of VLanNetworkInterface resource instances.
+
+# VirtualMedia 1.0.2
+
+## This resource allows monitoring and control of an instance of virtual media (e.g. a remote CD, DVD, or USB device) functionality provided by a Manager for a system or device.
+
+# VirtualMediaCollection 
+
+## A Collection of VirtualMedia resource instances.
+
+# Volume 1.0.0
+
+## Volume contains properties used to describe a volume, virtual disk, LUN, or other logical storage entity for any system.
+---
+TODO: postscript from MD file
 
