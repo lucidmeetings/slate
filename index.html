@@ -4,10 +4,8 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>API Documentation</title>
 
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
     <style>
       .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
@@ -88,10 +86,12 @@
   color: #90a959;
 }
     </style>
-      <script src="javascripts/all.js"></script>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all_nosearch.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;]">
+  <body class="index" data-languages="[]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -101,246 +101,258 @@
     <div class="tocify-wrapper">
       <img src="images/logo.png" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
         </div>
-        <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
-        </div>
-        <ul class="search-results"></ul>
       <div id="toc">
       </div>
-        <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
-        </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id="introduction">Introduction</h1>
+        <h1 id="accountservice-1-0-2">AccountService 1.0.2</h1>
 
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<h2 id="account-service-contains-properties-common-to-all-user-accounts-such-as-password-requirements-and-control-features-such-as-account-lockout-it-also-contains-links-to-the-collections-of-manager-accounts-and-roles">Account Service contains properties common to all user accounts, such as password requirements, and control features such as account lockout.  It also contains links to the collections of Manager Accounts and Roles.</h2>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<h1 id="attributeregistry-1-0-0">AttributeRegistry 1.0.0</h1>
 
-<p>This example API documentation page was created with <a href="https://github.com/tripit/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&rsquo;s documentation.</p>
+<h2 id="an-attribute-registry-is-a-set-of-key-value-pairs-which-are-specific-to-a-particular-implementation-or-product-such-that-creating-standardized-property-names-would-be-impractical-this-schema-describes-the-structure-of-a-registry-and-also-includes-mechanisms-for-building-user-interfaces-menus-allowing-consistent-navigation-of-the-contents">An Attribute Registry is a set of key-value pairs which are specific to a particular implementation or product, such that creating standardized property names would be impractical.  This schema describes the structure of a Registry, and also includes mechanisms for building user interfaces (menus) allowing consistent navigation of the contents.</h2>
 
-<h1 id="authentication">Authentication</h1>
+<h1 id="bios-1-0-0">Bios 1.0.0</h1>
 
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h2 id="bios-contains-properties-surrounding-a-bios-attribute-registry-where-the-system-specific-bios-attributes-are-described-and-the-actions-needed-to-perform-changes-to-bios-settings-which-typically-require-a-system-reset-to-apply">Bios contains properties surrounding a BIOS Attribute Registry (where the system-specific BIOS attributes are described) and the Actions needed to perform changes to BIOS settings, which typically require a system reset to apply.</h2>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<h1 id="chassis-1-2-0">Chassis 1.2.0</h1>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
+<h2 id="a-chassis-represents-the-physical-components-for-any-system-this-resource-represents-the-sheet-metal-confined-spaces-and-logical-zones-like-racks-enclosures-chassis-and-all-other-containers-subsystems-like-sensors-which-operate-outside-of-a-system-39-s-data-plane-meaning-the-resources-are-not-accessible-to-software-running-on-the-system-are-linked-either-directly-or-indirectly-through-this-resource">A Chassis represents the physical components for any system.  This resource represents the sheet-metal confined spaces and logical zones like racks, enclosures, chassis and all other containers. Subsystems (like sensors), which operate outside of a system&rsquo;s data plane (meaning the resources are not accessible to software running on the system) are linked either directly or indirectly through this resource.</h2>
 
-<blockquote>
-<p>Make sure to replace <code class="prettyprint">meowmeowmeow</code> with your API key.</p>
-</blockquote>
+<h1 id="chassiscollection">ChassisCollection</h1>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<h2 id="a-collection-of-chassis-resource-instances">A Collection of Chassis resource instances.</h2>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<h1 id="computersystem-1-1-0">ComputerSystem 1.1.0</h1>
 
-<p><code class="prettyprint">Authorization: meowmeowmeow</code></p>
+<h2 id="this-schema-defines-a-computer-system-and-its-respective-properties-a-computer-system-represents-a-machine-physical-or-virtual-and-the-local-resources-such-as-memory-cpu-and-other-devices-that-can-be-accessed-from-that-machine">This schema defines a computer system and its respective properties.  A computer system represents a machine (physical or virtual) and the local resources such as memory, cpu and other devices that can be accessed from that machine.</h2>
 
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
+<h1 id="computersystemcollection">ComputerSystemCollection</h1>
 
-<h1 id="kittens">Kittens</h1>
+<h2 id="a-collection-of-computersystem-resource-instances">A Collection of ComputerSystem resource instances.</h2>
 
-<h2 id="get-all-kittens">Get All Kittens</h2>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h1 id="drive-1-0-0">Drive 1.0.0</h1>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<h2 id="drive-contains-properties-describing-a-single-physical-disk-drive-for-any-system-along-with-links-to-associated-volumes">Drive contains properties describing a single physical disk drive for any system, along with links to associated Volumes.</h2>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
+<h1 id="ethernetinterface-1-0-2">EthernetInterface 1.0.2</h1>
 
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
+<h2 id="this-schema-defines-a-simple-ethernet-nic-resource">This schema defines a simple ethernet NIC resource.</h2>
 
-<p>This endpoint retrieves all kittens.</p>
+<h1 id="ethernetinterfacecollection">EthernetInterfaceCollection</h1>
 
-<h3 id="http-request">HTTP Request</h3>
+<h2 id="a-collection-of-ethernetinterface-resource-instances">A Collection of EthernetInterface resource instances.</h2>
 
-<p><code class="prettyprint">GET http://example.com/api/kittens</code></p>
+<h1 id="event-1-1-0">Event 1.1.0</h1>
 
-<h3 id="query-parameters">Query Parameters</h3>
+<h2 id="the-event-schema-describes-the-json-payload-received-by-an-event-destination-which-has-subscribed-to-event-notification-when-events-occurs-this-resource-contains-data-about-event-s-including-descriptions-severity-and-messageid-reference-to-a-message-registry-that-can-be-accessed-for-further-information">The Event schema describes the JSON payload received by an Event Destination (which has subscribed to event notification) when events occurs.  This resource contains data about event(s), including descriptions, severity and MessageId reference to a Message Registry that can be accessed for further information.</h2>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
+<h1 id="eventdestination-1-0-2">EventDestination 1.0.2</h1>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
+<h2 id="an-event-destination-desribes-the-target-of-an-event-subscription-including-the-types-of-events-subscribed-and-context-to-provide-to-the-target-in-the-event-payload">An Event Destination desribes the target of an event subscription, including the types of events subscribed and context to provide to the target in the Event payload.</h2>
 
-<h2 id="get-a-specific-kitten">Get a Specific Kitten</h2>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h1 id="eventdestinationcollection">EventDestinationCollection</h1>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<h2 id="a-collection-of-eventdestination-resource-instances">A Collection of EventDestination resource instances.</h2>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
+<h1 id="eventservice-1-0-2">EventService 1.0.2</h1>
 
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
+<h2 id="the-event-service-resource-contains-properties-for-managing-event-subcriptions-and-generates-the-events-sent-to-subscribers-the-resource-has-links-to-the-actual-collection-of-subscriptions-called-event-destinations">The Event Service resource contains properties for managing event subcriptions and generates the events sent to subscribers.  The resource has links to the actual collection of subscriptions (called Event Destinations).</h2>
 
-<p>This endpoint retrieves a specific kitten.</p>
+<h1 id="jsonschemafile-1-0-2">JsonSchemaFile 1.0.2</h1>
 
-<aside class="warning">Inside HTML code blocks like this one, you can&rsquo;t use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<h2 id="this-is-the-schema-definition-for-the-schema-file-locator-resource">This is the schema definition for the Schema File locator resource.</h2>
 
-<h3 id="http-request">HTTP Request</h3>
+<h1 id="jsonschemafilecollection">JsonSchemaFileCollection</h1>
 
-<p><code class="prettyprint">GET http://example.com/kittens/&lt;ID&gt;</code></p>
+<h2 id="a-collection-of-jsonschemafile-resource-instances">A Collection of JsonSchemaFile resource instances.</h2>
 
-<h3 id="url-parameters">URL Parameters</h3>
+<h1 id="logentry-1-0-2">LogEntry 1.0.2</h1>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
+<h2 id="this-resource-defines-the-record-format-for-a-log-it-is-designed-to-be-used-for-sel-logs-from-ipmi-as-well-as-event-logs-and-oem-specific-log-formats-the-entrytype-field-indicates-the-type-of-log-and-the-resource-includes-several-additional-properties-dependent-on-the-entrytype">This resource defines the record format for a log.  It is designed to be used for SEL logs (from IPMI) as well as Event Logs and OEM-specific log formats.  The EntryType field indicates the type of log and the resource includes several additional properties dependent on the EntryType.</h2>
 
-          <h1 id="errors">Errors</h1>
+<h1 id="logentrycollection">LogEntryCollection</h1>
 
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
+<h2 id="a-collection-of-logentry-resource-instances">A Collection of LogEntry resource instances.</h2>
 
-<p>The Kittn API uses the following error codes:</p>
+<h1 id="logservice-1-0-2">LogService 1.0.2</h1>
 
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>400</td>
-<td>Bad Request &ndash; Your request sucks</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized &ndash; Your API key is wrong</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden &ndash; The kitten requested is hidden for administrators only</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found &ndash; The specified kitten could not be found</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed &ndash; You tried to access a kitten with an invalid method</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable &ndash; You requested a format that isn&rsquo;t json</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone &ndash; The kitten requested has been removed from our servers</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&rsquo;m a teapot</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests &ndash; You&rsquo;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error &ndash; We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable &ndash; We&rsquo;re temporarially offline for maintanance. Please try again later.</td>
-</tr>
-</tbody></table>
+<h2 id="this-resource-represents-the-log-service-for-the-resource-or-service-to-which-it-is-associated">This resource represents the log service for the resource or service to which it is associated.</h2>
+
+<h1 id="logservicecollection">LogServiceCollection</h1>
+
+<h2 id="a-collection-of-logservice-resource-instances">A Collection of LogService resource instances.</h2>
+
+<h1 id="manager-1-1-0">Manager 1.1.0</h1>
+
+<h2 id="this-is-the-schema-definition-for-a-manager-examples-of-managers-are-bmcs-enclosure-managers-management-controllers-and-other-subsystems-assigned-managability-functions">This is the schema definition for a Manager.  Examples of managers are BMCs, Enclosure Managers, Management Controllers and other subsystems assigned managability functions.</h2>
+
+<h1 id="manageraccount-1-0-2">ManagerAccount 1.0.2</h1>
+
+<h2 id="the-user-accounts-owned-by-a-manager-are-defined-in-this-resource-changes-to-a-manager-account-may-affect-the-current-redfish-service-connection-if-this-manager-is-responsible-for-the-redfish-service">The user accounts, owned by a Manager, are defined in this resource.  Changes to a Manager Account may affect the current Redfish service connection if this manager is responsible for the Redfish service.</h2>
+
+<h1 id="manageraccountcollection">ManagerAccountCollection</h1>
+
+<h2 id="a-collection-of-manageraccount-resource-instances">A Collection of ManagerAccount resource instances.</h2>
+
+<h1 id="managercollection">ManagerCollection</h1>
+
+<h2 id="a-collection-of-manager-resource-instances">A Collection of Manager resource instances.</h2>
+
+<h1 id="managernetworkprotocol-1-0-2">ManagerNetworkProtocol 1.0.2</h1>
+
+<h2 id="this-resource-is-used-to-obtain-or-modify-the-network-services-managed-by-a-given-manager">This resource is used to obtain or modify the network services managed by a given manager.</h2>
+
+<h1 id="memory-1-0-0">Memory 1.0.0</h1>
+
+<h2 id="this-is-the-schema-definition-for-definition-of-a-memory-and-its-configuration">This is the schema definition for definition of a Memory and its configuration</h2>
+
+<h1 id="memorycollection">MemoryCollection</h1>
+
+<h2 id="a-collection-of-memory-resource-instances">A Collection of Memory resource instances.</h2>
+
+<h1 id="memorymetrics-1-0-0">MemoryMetrics 1.0.0</h1>
+
+<h2 id="memorymetrics-contains-usage-and-health-statistics-for-a-single-memory-module-or-device-instance">MemoryMetrics contains usage and health statistics for a single Memory module or device instance.</h2>
+
+<h1 id="message">Message</h1>
+
+<h1 id="messageregistry-1-0-2">MessageRegistry 1.0.2</h1>
+
+<h2 id="this-is-the-schema-definition-for-all-message-registries-it-represents-the-properties-for-the-registries-themselves-the-messageid-is-formed-per-the-redfish-specification-it-consists-of-the-registryprefix-concatenated-with-the-version-concatenated-with-the-unique-identifier-for-the-message-registry-entry">This is the schema definition for all Message Registries.  It represents the properties for the registries themselves.  The MessageId is formed per the Redfish specification.  It consists of the RegistryPrefix concatenated with the version concatenated with the unique identifier for the message registry entry.</h2>
+
+<h1 id="messageregistrycollection">MessageRegistryCollection</h1>
+
+<h2 id="a-collection-of-messageregistry-resource-instances">A Collection of MessageRegistry resource instances.</h2>
+
+<h1 id="messageregistryfile-1-0-2">MessageRegistryFile 1.0.2</h1>
+
+<h2 id="this-is-the-schema-definition-for-the-schema-file-locator-resource">This is the schema definition for the Schema File locator resource.</h2>
+
+<h1 id="messageregistryfilecollection">MessageRegistryFileCollection</h1>
+
+<h2 id="a-collection-of-messageregistryfile-resource-instances">A Collection of MessageRegistryFile resource instances.</h2>
+
+<h1 id="power-1-1-0">Power 1.1.0</h1>
+
+<h2 id="this-is-the-schema-definition-for-the-power-metrics-it-represents-the-properties-for-power-consumption-and-power-limiting">This is the schema definition for the Power Metrics.  It represents the properties for Power Consumption and Power Limiting.</h2>
+
+<h1 id="processor-1-0-2">Processor 1.0.2</h1>
+
+<h2 id="this-is-the-schema-definition-for-the-processor-resource-it-represents-the-properties-of-a-processor-attached-to-a-system">This is the schema definition for the Processor resource.  It represents the properties of a processor attached to a System.</h2>
+
+<h1 id="processorcollection">ProcessorCollection</h1>
+
+<h2 id="a-collection-of-processor-resource-instances">A Collection of Processor resource instances.</h2>
+
+<h1 id="redundancy">Redundancy</h1>
+
+<h2 id="this-is-the-common-redundancy-definition-and-structure-used-in-other-redfish-schemas">This is the common redundancy definition and structure used in other Redfish schemas.</h2>
+
+<h1 id="resource-1-0-0">Resource 1.0.0</h1>
+
+<h1 id="role-1-0-2">Role 1.0.2</h1>
+
+<h2 id="this-resource-defines-a-user-role-to-be-used-in-conjunction-with-a-manager-account">This resource defines a user role to be used in conjunction with a Manager Account.</h2>
+
+<h1 id="rolecollection">RoleCollection</h1>
+
+<h2 id="a-collection-of-role-resource-instances">A Collection of Role resource instances.</h2>
+
+<h1 id="secureboot-1-0-0">SecureBoot 1.0.0</h1>
+
+<h2 id="this-resource-contains-uefi-secure-boot-information-it-represents-properties-for-managing-the-uefi-secure-boot-functionality-of-a-system">This resource contains UEFI Secure Boot information. It represents properties for managing the UEFI Secure Boot functionality of a system.</h2>
+
+<h1 id="serialinterface-1-0-2">SerialInterface 1.0.2</h1>
+
+<h2 id="this-schema-defines-an-asynchronous-serial-interface-resource">This schema defines an asynchronous serial interface resource.</h2>
+
+<h1 id="serialinterfacecollection">SerialInterfaceCollection</h1>
+
+<h2 id="a-collection-of-serialinterface-resource-instances">A Collection of SerialInterface resource instances.</h2>
+
+<h1 id="serviceroot-1-0-2">ServiceRoot 1.0.2</h1>
+
+<h2 id="this-object-represents-the-root-redfish-service">This object represents the root Redfish service.</h2>
+
+<h1 id="session-1-0-2">Session 1.0.2</h1>
+
+<h2 id="the-session-resource-describes-a-single-connection-session-between-a-client-and-a-redfish-service-instance">The Session resource describes a single connection (session) between a client and a Redfish service instance.</h2>
+
+<h1 id="sessioncollection">SessionCollection</h1>
+
+<h2 id="a-collection-of-session-resource-instances">A Collection of Session resource instances.</h2>
+
+<h1 id="sessionservice-1-0-2">SessionService 1.0.2</h1>
+
+<h2 id="this-is-the-schema-definition-for-the-session-service-it-represents-the-properties-for-the-service-itself-and-has-links-to-the-actual-list-of-sessions">This is the schema definition for the Session Service.  It represents the properties for the service itself and has links to the actual list of sessions.</h2>
+
+<h1 id="settings-1-0-0">Settings 1.0.0</h1>
+
+<h1 id="simplestorage-1-1-0">SimpleStorage 1.1.0</h1>
+
+<h2 id="this-is-the-schema-definition-for-the-simple-storage-resource-it-represents-the-properties-of-a-storage-controller-and-its-directly-attached-devices">This is the schema definition for the Simple Storage resource.  It represents the properties of a storage controller and its directly-attached devices.</h2>
+
+<h1 id="simplestoragecollection">SimpleStorageCollection</h1>
+
+<h2 id="a-collection-of-simplestorage-resource-instances">A Collection of SimpleStorage resource instances.</h2>
+
+<h1 id="storage-1-0-0">Storage 1.0.0</h1>
+
+<h2 id="this-schema-defines-a-storage-subsystem-and-its-respective-properties-a-storage-subsystem-represents-a-set-of-storage-controllers-physical-or-virtual-and-the-resources-such-as-volumes-that-can-be-accessed-from-that-subsystem">This schema defines a storage subsystem and its respective properties.  A storage subsystem represents a set of storage controllers (physical or virtual) and the resources such as volumes that can be accessed from that subsystem.</h2>
+
+<h1 id="storagecollection">StorageCollection</h1>
+
+<h2 id="a-collection-of-storage-resource-instances">A Collection of Storage resource instances.</h2>
+
+<h1 id="task-1-0-2">Task 1.0.2</h1>
+
+<h2 id="this-resource-contains-information-about-a-specific-task-scheduled-by-or-being-executed-by-a-redfish-service-39-s-task-service">This resource contains information about a specific Task scheduled by or being executed by a Redfish service&rsquo;s Task Service.</h2>
+
+<h1 id="taskcollection">TaskCollection</h1>
+
+<h2 id="a-collection-of-task-resource-instances">A Collection of Task resource instances.</h2>
+
+<h1 id="taskservice-1-0-2">TaskService 1.0.2</h1>
+
+<h2 id="this-is-the-schema-definition-for-the-task-service-it-represents-the-properties-for-the-service-itself-and-has-links-to-the-actual-list-of-tasks">This is the schema definition for the Task Service.  It represents the properties for the service itself and has links to the actual list of tasks.</h2>
+
+<h1 id="thermal-1-1-0">Thermal 1.1.0</h1>
+
+<h2 id="this-is-the-schema-definition-for-the-thermal-properties-it-represents-the-properties-for-temperature-and-cooling">This is the schema definition for the Thermal properties.  It represents the properties for Temperature and Cooling.</h2>
+
+<h1 id="vlannetworkinterface-1-0-2">VLanNetworkInterface 1.0.2</h1>
+
+<h2 id="this-resource-contains-information-for-a-virtual-lan-vlan-network-instance-available-on-a-manager-system-or-other-device">This resource contains information for a Virtual LAN (VLAN) network instance available on a manager, system or other device.</h2>
+
+<h1 id="vlannetworkinterfacecollection">VLanNetworkInterfaceCollection</h1>
+
+<h2 id="a-collection-of-vlannetworkinterface-resource-instances">A Collection of VLanNetworkInterface resource instances.</h2>
+
+<h1 id="virtualmedia-1-0-2">VirtualMedia 1.0.2</h1>
+
+<h2 id="this-resource-allows-monitoring-and-control-of-an-instance-of-virtual-media-e-g-a-remote-cd-dvd-or-usb-device-functionality-provided-by-a-manager-for-a-system-or-device">This resource allows monitoring and control of an instance of virtual media (e.g. a remote CD, DVD, or USB device) functionality provided by a Manager for a system or device.</h2>
+
+<h1 id="virtualmediacollection">VirtualMediaCollection</h1>
+
+<h2 id="a-collection-of-virtualmedia-resource-instances">A Collection of VirtualMedia resource instances.</h2>
+
+<h1 id="volume-1-0-0">Volume 1.0.0</h1>
+
+<h2 id="volume-contains-properties-used-to-describe-a-volume-virtual-disk-lun-or-other-logical-storage-entity-for-any-system">Volume contains properties used to describe a volume, virtual disk, LUN, or other logical storage entity for any system.</h2>
+
+<hr>
+
+<p>TODO: postscript from MD file</p>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
           </div>
       </div>
     </div>
