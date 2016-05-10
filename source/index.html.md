@@ -3,6 +3,7 @@ Title: Redfish Schema
 
 search: true
 ---
+
 # AccountService 1.0.2
 
 Account Service contains properties common to all user accounts, such as password requirements, and control features such as account lockout.  It also contains links to the collections of Manager Accounts and Roles.
@@ -240,6 +241,7 @@ A Collection of VirtualMedia resource instances.
 # Volume 1.0.0
 
 Volume contains properties used to describe a volume, virtual disk, LUN, or other logical storage entity for any system.
+
 ---
 TODO: postscript from MD file
 
