@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Documentation</title>
+    <title>Redfish Schema</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -116,113 +116,1469 @@
 
 <p>Account Service contains properties common to all user accounts, such as password requirements, and control features such as account lockout.  It also contains links to the collections of Manager Accounts and Roles.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>AccountLockoutCounterResetAfter</strong></p>
+
+<p><strong>AccountLockoutDuration</strong></p>
+
+<p><strong>AccountLockoutThreshold</strong></p>
+
+<p><strong>Accounts</strong></p>
+
+<p><a href="#manageraccountcollection">http://redfish.dmtf.org/schemas/v1/ManagerAccountCollection.json#/definitions/ManagerAccountCollection</a></p>
+
+<p><strong>AuthFailureLoggingThreshold</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>MaxPasswordLength</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>MinPasswordLength</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>Roles</strong></p>
+
+<p><a href="#rolecollection">http://redfish.dmtf.org/schemas/v1/RoleCollection.json#/definitions/RoleCollection</a></p>
+
+<p><strong>ServiceEnabled</strong></p>
+
+<p><strong>Status</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Status</a></p>
+
 <h1 id="attributeregistry-1-0-0">AttributeRegistry 1.0.0</h1>
 
 <p>An Attribute Registry is a set of key-value pairs which are specific to a particular implementation or product, such that creating standardized property names would be impractical.  This schema describes the structure of a Registry, and also includes mechanisms for building user interfaces (menus) allowing consistent navigation of the contents.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Language</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>OwningEntity</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>RegistryEntries</strong></p>
+
+<p><strong>RegistryVersion</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>SupportedSystems</strong></p>
 
 <h1 id="bios-1-0-0">Bios 1.0.0</h1>
 
 <p>Bios contains properties surrounding a BIOS Attribute Registry (where the system-specific BIOS attributes are described) and the Actions needed to perform changes to BIOS settings, which typically require a system reset to apply.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Actions</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>AttributeRegistry</strong></p>
+
+<p><strong>Attributes</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
 <h1 id="chassis-1-2-0">Chassis 1.2.0</h1>
 
 <p>A Chassis represents the physical components for any system.  This resource represents the sheet-metal confined spaces and logical zones like racks, enclosures, chassis and all other containers. Subsystems (like sensors), which operate outside of a system&rsquo;s data plane (meaning the resources are not accessible to software running on the system) are linked either directly or indirectly through this resource.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Actions</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>AssetTag</strong></p>
+
+<p><strong>ChassisType</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>IndicatorLED</strong></p>
+
+<p><strong>Links</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Location</strong></p>
+
+<p><strong>LogServices</strong></p>
+
+<p><a href="#logservicecollection">http://redfish.dmtf.org/schemas/v1/LogServiceCollection.json#/definitions/LogServiceCollection</a></p>
+
+<p><strong>Manufacturer</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Model</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>PartNumber</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>PhysicalSecurity</strong></p>
+
+<p><strong>Power</strong></p>
+
+<p><a href="#power-1-1-0">http://redfish.dmtf.org/schemas/v1/Power.json#/definitions/Power</a></p>
+
+<p><strong>PowerState</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>SKU</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>SerialNumber</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Status</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Status</a></p>
+
+<p><strong>Thermal</strong></p>
+
+<p><a href="#thermal-1-1-0">http://redfish.dmtf.org/schemas/v1/Thermal.json#/definitions/Thermal</a></p>
 
 <h1 id="chassiscollection">ChassisCollection</h1>
 
 <p>A Collection of Chassis resource instances.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
 <h1 id="computersystem-1-1-0">ComputerSystem 1.1.0</h1>
 
 <p>This schema defines a computer system and its respective properties.  A computer system represents a machine (physical or virtual) and the local resources such as memory, cpu and other devices that can be accessed from that machine.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Actions</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>AssetTag</strong></p>
+
+<p><strong>Bios</strong></p>
+
+<p><a href="#bios-1-0-0">http://redfish.dmtf.org/schemas/v1/Bios.json#/definitions/Bios</a></p>
+
+<p><strong>BiosVersion</strong></p>
+
+<p><strong>Boot</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>EthernetInterfaces</strong></p>
+
+<p><a href="#ethernetinterfacecollection">http://redfish.dmtf.org/schemas/v1/EthernetInterfaceCollection.json#/definitions/EthernetInterfaceCollection</a></p>
+
+<p><strong>HostName</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>IndicatorLED</strong></p>
+
+<p><strong>Links</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>LogServices</strong></p>
+
+<p><a href="#logservicecollection">http://redfish.dmtf.org/schemas/v1/LogServiceCollection.json#/definitions/LogServiceCollection</a></p>
+
+<p><strong>Manufacturer</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Memory</strong></p>
+
+<p><a href="#memorycollection">http://redfish.dmtf.org/schemas/v1/MemoryCollection.json#/definitions/MemoryCollection</a></p>
+
+<p><strong>MemorySummary</strong></p>
+
+<p><strong>Model</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>PartNumber</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>PowerState</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>ProcessorSummary</strong></p>
+
+<p><strong>Processors</strong></p>
+
+<p><a href="#processorcollection">http://redfish.dmtf.org/schemas/v1/ProcessorCollection.json#/definitions/ProcessorCollection</a></p>
+
+<p><strong>SKU</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>SecureBoot</strong></p>
+
+<p><a href="#secureboot-1-0-0">http://redfish.dmtf.org/schemas/v1/SecureBoot.json#/definitions/SecureBoot</a></p>
+
+<p><strong>SerialNumber</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>SimpleStorage</strong></p>
+
+<p><a href="#simplestoragecollection">http://redfish.dmtf.org/schemas/v1/SimpleStorageCollection.json#/definitions/SimpleStorageCollection</a></p>
+
+<p><strong>Status</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Status</a></p>
+
+<p><strong>Storage</strong></p>
+
+<p><a href="#storagecollection">http://redfish.dmtf.org/schemas/v1/StorageCollection.json#/definitions/StorageCollection</a></p>
+
+<p><strong>SystemType</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>TrustedModules</strong></p>
+
+<p><strong>UUID</strong></p>
+
+<p>Read Only</p>
 
 <h1 id="computersystemcollection">ComputerSystemCollection</h1>
 
 <p>A Collection of ComputerSystem resource instances.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
 <h1 id="drive-1-0-0">Drive 1.0.0</h1>
 
 <p>Drive contains properties describing a single physical disk drive for any system, along with links to associated Volumes.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Actions</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>AssetTag</strong></p>
+
+<p><strong>BlockSizeBytes</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>CapableSpeedGbs</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>CapacityBytes</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>EncryptionAbility</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>EncryptionStatus</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>FailurePredicted</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>HotspareType</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Identifiers</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>IndicatorLED</strong></p>
+
+<p><strong>Links</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Location</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Manufacturer</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>MediaType</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Model</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>NegotiatedSpeedGbs</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>PartNumber</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>PredictedMediaLifeLeftPercent</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Protocol</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Revision</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>RotationSpeedRPM</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>SKU</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>SerialNumber</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Status</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Status</a></p>
+
+<p><strong>StatusIndicator</strong></p>
 
 <h1 id="ethernetinterface-1-0-2">EthernetInterface 1.0.2</h1>
 
 <p>This schema defines a simple ethernet NIC resource.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>AutoNeg</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>FQDN</strong></p>
+
+<p><strong>FullDuplex</strong></p>
+
+<p><strong>HostName</strong></p>
+
+<p><strong>IPv4Addresses</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>IPv6AddressPolicyTable</strong></p>
+
+<p><strong>IPv6Addresses</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>IPv6DefaultGateway</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>IPv6StaticAddresses</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>InterfaceEnabled</strong></p>
+
+<p><strong>MACAddress</strong></p>
+
+<p><strong>MTUSize</strong></p>
+
+<p><strong>MaxIPv6StaticAddresses</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>NameServers</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>PermanentMACAddress</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>SpeedMbps</strong></p>
+
+<p><strong>Status</strong></p>
+
+<p><strong>UefiDevicePath</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>VLAN</strong></p>
+
+<p><strong>VLANs</strong></p>
+
+<p><a href="#vlannetworkinterfacecollection">http://redfish.dmtf.org/schemas/v1/VLanNetworkInterfaceCollection.json#/definitions/VLanNetworkInterfaceCollection</a></p>
+
 <h1 id="ethernetinterfacecollection">EthernetInterfaceCollection</h1>
 
 <p>A Collection of EthernetInterface resource instances.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
 
 <h1 id="event-1-1-0">Event 1.1.0</h1>
 
 <p>The Event schema describes the JSON payload received by an Event Destination (which has subscribed to event notification) when events occurs.  This resource contains data about event(s), including descriptions, severity and MessageId reference to a Message Registry that can be accessed for further information. </p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Context</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Events</strong></p>
+
+<p><strong>Events@odata.count</strong></p>
+
+<p><strong>Events@odata.navigationLink</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
 <h1 id="eventdestination-1-0-2">EventDestination 1.0.2</h1>
 
 <p>An Event Destination desribes the target of an event subscription, including the types of events subscribed and context to provide to the target in the Event payload.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Context</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Destination</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>EventTypes</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>HttpHeaders</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>Protocol</strong></p>
+
+<p>Read Only</p>
 
 <h1 id="eventdestinationcollection">EventDestinationCollection</h1>
 
 <p>A Collection of EventDestination resource instances.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
 <h1 id="eventservice-1-0-2">EventService 1.0.2</h1>
 
 <p>The Event Service resource contains properties for managing event subcriptions and generates the events sent to subscribers.  The resource has links to the actual collection of subscriptions (called Event Destinations).</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Actions</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>DeliveryRetryAttempts</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>DeliveryRetryIntervalSeconds</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>EventTypesForSubscription</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>ServiceEnabled</strong></p>
+
+<p><strong>Status</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Status</a></p>
+
+<p><strong>Subscriptions</strong></p>
+
+<p><a href="#eventdestinationcollection">http://redfish.dmtf.org/schemas/v1/EventDestinationCollection.json#/definitions/EventDestinationCollection</a></p>
 
 <h1 id="jsonschemafile-1-0-2">JsonSchemaFile 1.0.2</h1>
 
 <p>This is the schema definition for the Schema File locator resource.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Languages</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Location</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>Schema</strong></p>
+
+<p>Read Only</p>
+
 <h1 id="jsonschemafilecollection">JsonSchemaFileCollection</h1>
 
 <p>A Collection of JsonSchemaFile resource instances.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
 
 <h1 id="logentry-1-0-2">LogEntry 1.0.2</h1>
 
 <p>This resource defines the record format for a log.  It is designed to be used for SEL logs (from IPMI) as well as Event Logs and OEM-specific log formats.  The EntryType field indicates the type of log and the resource includes several additional properties dependent on the EntryType.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Created</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>EntryCode</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>EntryType</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Links</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Message</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>MessageArgs</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>MessageId</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>OemRecordFormat</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>SensorNumber</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>SensorType</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Severity</strong></p>
+
+<p>Read Only</p>
+
 <h1 id="logentrycollection">LogEntryCollection</h1>
 
 <p>A Collection of LogEntry resource instances.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
 
 <h1 id="logservice-1-0-2">LogService 1.0.2</h1>
 
 <p>This resource represents the log service for the resource or service to which it is associated.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Actions</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>DateTime</strong></p>
+
+<p><strong>DateTimeLocalOffset</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Entries</strong></p>
+
+<p><a href="#logentrycollection">http://redfish.dmtf.org/schemas/v1/LogEntryCollection.json#/definitions/LogEntryCollection</a></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>MaxNumberOfRecords</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>OverWritePolicy</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>ServiceEnabled</strong></p>
+
+<p><strong>Status</strong></p>
+
 <h1 id="logservicecollection">LogServiceCollection</h1>
 
 <p>A Collection of LogService resource instances.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
 
 <h1 id="manager-1-1-0">Manager 1.1.0</h1>
 
 <p>This is the schema definition for a Manager.  Examples of managers are BMCs, Enclosure Managers, Management Controllers and other subsystems assigned managability functions.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Actions</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>CommandShell</strong></p>
+
+<p><strong>DateTime</strong></p>
+
+<p><strong>DateTimeLocalOffset</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>EthernetInterfaces</strong></p>
+
+<p><a href="#ethernetinterfacecollection">http://redfish.dmtf.org/schemas/v1/EthernetInterfaceCollection.json#/definitions/EthernetInterfaceCollection</a></p>
+
+<p><strong>FirmwareVersion</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>GraphicalConsole</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Links</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>LogServices</strong></p>
+
+<p><a href="#logservicecollection">http://redfish.dmtf.org/schemas/v1/LogServiceCollection.json#/definitions/LogServiceCollection</a></p>
+
+<p><strong>ManagerType</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Model</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>NetworkProtocol</strong></p>
+
+<p><a href="#managernetworkprotocol-1-0-2">http://redfish.dmtf.org/schemas/v1/ManagerNetworkProtocol.json#/definitions/ManagerNetworkProtocol</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>Redundancy</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Redundancy@odata.count</strong></p>
+
+<p><strong>Redundancy@odata.navigationLink</strong></p>
+
+<p><strong>SerialConsole</strong></p>
+
+<p><strong>SerialInterfaces</strong></p>
+
+<p><a href="#serialinterfacecollection">http://redfish.dmtf.org/schemas/v1/SerialInterfaceCollection.json#/definitions/SerialInterfaceCollection</a></p>
+
+<p><strong>ServiceEntryPointUUID</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/UUID</a></p>
+
+<p><strong>Status</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Status</a></p>
+
+<p><strong>UUID</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>VirtualMedia</strong></p>
+
+<p><a href="#virtualmediacollection">http://redfish.dmtf.org/schemas/v1/VirtualMediaCollection.json#/definitions/VirtualMediaCollection</a></p>
+
 <h1 id="manageraccount-1-0-2">ManagerAccount 1.0.2</h1>
 
 <p>The user accounts, owned by a Manager, are defined in this resource.  Changes to a Manager Account may affect the current Redfish service connection if this manager is responsible for the Redfish service.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Enabled</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Links</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Locked</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>Password</strong></p>
+
+<p><strong>RoleId</strong></p>
+
+<p><strong>UserName</strong></p>
 
 <h1 id="manageraccountcollection">ManagerAccountCollection</h1>
 
 <p>A Collection of ManagerAccount resource instances.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
 <h1 id="managercollection">ManagerCollection</h1>
 
 <p>A Collection of Manager resource instances.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
 
 <h1 id="managernetworkprotocol-1-0-2">ManagerNetworkProtocol 1.0.2</h1>
 
 <p>This resource is used to obtain or modify the network services managed by a given manager.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>FQDN</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>HTTP</strong></p>
+
+<p><strong>HTTPS</strong></p>
+
+<p><strong>HostName</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>IPMI</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>KVMIP</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>SNMP</strong></p>
+
+<p><strong>SSDP</strong></p>
+
+<p><strong>SSH</strong></p>
+
+<p><strong>Status</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Status</a></p>
+
+<p><strong>Telnet</strong></p>
+
+<p><strong>VirtualMedia</strong></p>
+
 <h1 id="memory-1-0-0">Memory 1.0.0</h1>
 
 <p>This is the schema definition for definition of a Memory and its configuration</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Actions</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>AllowedSpeedsMHz</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>BaseModuleType</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>BusWidthBits</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>CapacityMiB</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>DataWidthBits</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>DeviceID</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>DeviceLocator</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>ErrorCorrection</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>FirmwareApiVersion</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>FirmwareRevision</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>FunctionClasses</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>IsRankSpareEnabled</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>IsSpareDeviceEnabled</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Manufacturer</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>MaxTDPMilliWatts</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>MemoryDeviceType</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>MemoryLocation</strong></p>
+
+<p><strong>MemoryMedia</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>MemoryType</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Metrics</strong></p>
+
+<p><a href="#memorymetrics-1-0-0">http://redfish.dmtf.org/schemas/v1/MemoryMetrics.json#/definitions/MemoryMetrics</a></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>OperatingMemoryModes</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>OperatingSpeedMhz</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>PartNumber</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>PersistentRegionSizeLimitMiB</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>PowerManagementPolicy</strong></p>
+
+<p><strong>RankCount</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Regions</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>SecurityCapabilities</strong></p>
+
+<p><strong>SerialNumber</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>SpareDeviceCount</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>SubsystemDeviceID</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>SubsystemVendorID</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>VendorID</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>VolatileRegionSizeLimitMiB</strong></p>
+
+<p>Read Only</p>
 
 <h1 id="memorycollection">MemoryCollection</h1>
 
 <p>A Collection of Memory resource instances.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
 <h1 id="memorymetrics-1-0-0">MemoryMetrics 1.0.0</h1>
 
 <p>MemoryMetrics contains usage and health statistics for a single Memory module or device instance.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Actions</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>BlockSizeBytes</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>CurrentPeriod</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>HealthData</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>LifeTime</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
 
 <h1 id="message">Message</h1>
 
@@ -230,33 +1586,291 @@
 
 <p>This is the schema definition for all Message Registries.  It represents the properties for the registries themselves.  The MessageId is formed per the Redfish specification.  It consists of the RegistryPrefix concatenated with the version concatenated with the unique identifier for the message registry entry.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Language</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Messages</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>OwningEntity</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>RegistryPrefix</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>RegistryVersion</strong></p>
+
+<p>Read Only</p>
+
 <h1 id="messageregistrycollection">MessageRegistryCollection</h1>
 
 <p>A Collection of MessageRegistry resource instances.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
 
 <h1 id="messageregistryfile-1-0-2">MessageRegistryFile 1.0.2</h1>
 
 <p>This is the schema definition for the Schema File locator resource.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Languages</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Location</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>Registry</strong></p>
+
+<p>Read Only</p>
+
 <h1 id="messageregistryfilecollection">MessageRegistryFileCollection</h1>
 
 <p>A Collection of MessageRegistryFile resource instances.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
 
 <h1 id="power-1-1-0">Power 1.1.0</h1>
 
 <p>This is the schema definition for the Power Metrics.  It represents the properties for Power Consumption and Power Limiting.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>PowerControl</strong></p>
+
+<p><strong>PowerControl@odata.count</strong></p>
+
+<p><strong>PowerControl@odata.navigationLink</strong></p>
+
+<p><strong>PowerSupplies</strong></p>
+
+<p><strong>PowerSupplies@odata.count</strong></p>
+
+<p><strong>PowerSupplies@odata.navigationLink</strong></p>
+
+<p><strong>Redundancy</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Redundancy@odata.count</strong></p>
+
+<p><strong>Redundancy@odata.navigationLink</strong></p>
+
+<p><strong>Voltages</strong></p>
+
+<p><strong>Voltages@odata.count</strong></p>
+
+<p><strong>Voltages@odata.navigationLink</strong></p>
+
 <h1 id="processor-1-0-2">Processor 1.0.2</h1>
 
 <p>This is the schema definition for the Processor resource.  It represents the properties of a processor attached to a System.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>InstructionSet</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Manufacturer</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>MaxSpeedMHz</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Model</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>ProcessorArchitecture</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>ProcessorId</strong></p>
+
+<p><strong>ProcessorType</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Socket</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Status</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Status</a></p>
+
+<p><strong>TotalCores</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>TotalThreads</strong></p>
+
+<p>Read Only</p>
 
 <h1 id="processorcollection">ProcessorCollection</h1>
 
 <p>A Collection of Processor resource instances.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
 <h1 id="redundancy">Redundancy</h1>
 
 <p>This is the common redundancy definition and structure used in other Redfish schemas.</p>
+
+<p><strong>MemberId</strong></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
 
 <h1 id="resource-1-0-0">Resource 1.0.0</h1>
 
@@ -264,91 +1878,879 @@
 
 <p>This resource defines a user role to be used in conjunction with a Manager Account.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>AssignedPrivileges</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>IsPredefined</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>OemPrivileges</strong></p>
+
 <h1 id="rolecollection">RoleCollection</h1>
 
 <p>A Collection of Role resource instances.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
 
 <h1 id="secureboot-1-0-0">SecureBoot 1.0.0</h1>
 
 <p>This resource contains UEFI Secure Boot information. It represents properties for managing the UEFI Secure Boot functionality of a system.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Actions</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>SecureBootCurrentBoot</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>SecureBootEnable</strong></p>
+
+<p><strong>SecureBootMode</strong></p>
+
+<p>Read Only</p>
+
 <h1 id="serialinterface-1-0-2">SerialInterface 1.0.2</h1>
 
 <p>This schema defines an asynchronous serial interface resource.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>BitRate</strong></p>
+
+<p><strong>ConnectorType</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>DataBits</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>FlowControl</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>InterfaceEnabled</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>Parity</strong></p>
+
+<p><strong>PinOut</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>SignalType</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>StopBits</strong></p>
 
 <h1 id="serialinterfacecollection">SerialInterfaceCollection</h1>
 
 <p>A Collection of SerialInterface resource instances.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
 <h1 id="serviceroot-1-0-2">ServiceRoot 1.0.2</h1>
 
 <p>This object represents the root Redfish service.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>AccountService</strong></p>
+
+<p><a href="#accountservice-1-0-2">http://redfish.dmtf.org/schemas/v1/AccountService.json#/definitions/AccountService</a></p>
+
+<p><strong>Chassis</strong></p>
+
+<p><a href="#chassiscollection">http://redfish.dmtf.org/schemas/v1/ChassisCollection.json#/definitions/ChassisCollection</a></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>EventService</strong></p>
+
+<p><a href="#eventservice-1-0-2">http://redfish.dmtf.org/schemas/v1/EventService.json#/definitions/EventService</a></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>JsonSchemas</strong></p>
+
+<p><a href="#jsonschemafilecollection">http://redfish.dmtf.org/schemas/v1/JsonSchemaFileCollection.json#/definitions/JsonSchemaFileCollection</a></p>
+
+<p><strong>Links</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Managers</strong></p>
+
+<p><a href="#managercollection">http://redfish.dmtf.org/schemas/v1/ManagerCollection.json#/definitions/ManagerCollection</a></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>RedfishVersion</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Registries</strong></p>
+
+<p><a href="#messageregistryfilecollection">http://redfish.dmtf.org/schemas/v1/MessageRegistryFileCollection.json#/definitions/MessageRegistryFileCollection</a></p>
+
+<p><strong>SessionService</strong></p>
+
+<p><a href="#sessionservice-1-0-2">http://redfish.dmtf.org/schemas/v1/SessionService.json#/definitions/SessionService</a></p>
+
+<p><strong>Systems</strong></p>
+
+<p><a href="#computersystemcollection">http://redfish.dmtf.org/schemas/v1/ComputerSystemCollection.json#/definitions/ComputerSystemCollection</a></p>
+
+<p><strong>Tasks</strong></p>
+
+<p><a href="#taskservice-1-0-2">http://redfish.dmtf.org/schemas/v1/TaskService.json#/definitions/TaskService</a></p>
+
+<p><strong>UUID</strong></p>
+
+<p>Read Only</p>
 
 <h1 id="session-1-0-2">Session 1.0.2</h1>
 
 <p>The Session resource describes a single connection (session) between a client and a Redfish service instance.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>Password</strong></p>
+
+<p><strong>UserName</strong></p>
+
+<p>Read Only</p>
+
 <h1 id="sessioncollection">SessionCollection</h1>
 
 <p>A Collection of Session resource instances.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
 
 <h1 id="sessionservice-1-0-2">SessionService 1.0.2</h1>
 
 <p>This is the schema definition for the Session Service.  It represents the properties for the service itself and has links to the actual list of sessions.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>ServiceEnabled</strong></p>
+
+<p><strong>SessionTimeout</strong></p>
+
+<p><strong>Sessions</strong></p>
+
+<p><a href="#sessioncollection">http://redfish.dmtf.org/schemas/v1/SessionCollection.json#/definitions/SessionCollection</a></p>
+
+<p><strong>Status</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Status</a></p>
+
 <h1 id="settings-1-0-0">Settings 1.0.0</h1>
+
+<p><strong>ETag</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Messages</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>SettingsObject</strong></p>
+
+<p><strong>Time</strong></p>
+
+<p>Read Only</p>
 
 <h1 id="simplestorage-1-1-0">SimpleStorage 1.1.0</h1>
 
 <p>This is the schema definition for the Simple Storage resource.  It represents the properties of a storage controller and its directly-attached devices.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Devices</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>Status</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Status</a></p>
+
+<p><strong>UefiDevicePath</strong></p>
+
+<p>Read Only</p>
+
 <h1 id="simplestoragecollection">SimpleStorageCollection</h1>
 
 <p>A Collection of SimpleStorage resource instances.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
 
 <h1 id="storage-1-0-0">Storage 1.0.0</h1>
 
 <p>This schema defines a storage subsystem and its respective properties.  A storage subsystem represents a set of storage controllers (physical or virtual) and the resources such as volumes that can be accessed from that subsystem.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Actions</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Drives</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Drives@odata.count</strong></p>
+
+<p><strong>Drives@odata.navigationLink</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Links</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>Redundancy</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Redundancy@odata.count</strong></p>
+
+<p><strong>Redundancy@odata.navigationLink</strong></p>
+
+<p><strong>Status</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Status</a></p>
+
+<p><strong>StorageControllers</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>StorageControllers@odata.count</strong></p>
+
+<p><strong>StorageControllers@odata.navigationLink</strong></p>
+
+<p><strong>Volumes</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Volumes@odata.count</strong></p>
+
+<p><strong>Volumes@odata.navigationLink</strong></p>
+
 <h1 id="storagecollection">StorageCollection</h1>
 
 <p>A Collection of Storage resource instances.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
 
 <h1 id="task-1-0-2">Task 1.0.2</h1>
 
 <p>This resource contains information about a specific Task scheduled by or being executed by a Redfish service&rsquo;s Task Service.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>EndTime</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Messages</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>StartTime</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>TaskState</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>TaskStatus</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Health</a></p>
+
 <h1 id="taskcollection">TaskCollection</h1>
 
 <p>A Collection of Task resource instances.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
 
 <h1 id="taskservice-1-0-2">TaskService 1.0.2</h1>
 
 <p>This is the schema definition for the Task Service.  It represents the properties for the service itself and has links to the actual list of tasks.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>CompletedTaskOverWritePolicy</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>DateTime</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>LifeCycleEventOnTaskStateChange</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>ServiceEnabled</strong></p>
+
+<p><strong>Status</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Status</a></p>
+
+<p><strong>Tasks</strong></p>
+
+<p><a href="#taskcollection">http://redfish.dmtf.org/schemas/v1/TaskCollection.json#/definitions/TaskCollection</a></p>
+
 <h1 id="thermal-1-1-0">Thermal 1.1.0</h1>
 
 <p>This is the schema definition for the Thermal properties.  It represents the properties for Temperature and Cooling.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Fans</strong></p>
+
+<p><strong>Fans@odata.count</strong></p>
+
+<p><strong>Fans@odata.navigationLink</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>Redundancy</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Redundancy@odata.count</strong></p>
+
+<p><strong>Redundancy@odata.navigationLink</strong></p>
+
+<p><strong>Status</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Status</a></p>
+
+<p><strong>Temperatures</strong></p>
+
+<p><strong>Temperatures@odata.count</strong></p>
+
+<p><strong>Temperatures@odata.navigationLink</strong></p>
 
 <h1 id="vlannetworkinterface-1-0-2">VLanNetworkInterface 1.0.2</h1>
 
 <p>This resource contains information for a Virtual LAN (VLAN) network instance available on a manager, system or other device.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>VLANEnable</strong></p>
+
+<p><strong>VLANId</strong></p>
+
 <h1 id="vlannetworkinterfacecollection">VLanNetworkInterfaceCollection</h1>
 
 <p>A Collection of VLanNetworkInterface resource instances.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
 
 <h1 id="virtualmedia-1-0-2">VirtualMedia 1.0.2</h1>
 
 <p>This resource allows monitoring and control of an instance of virtual media (e.g. a remote CD, DVD, or USB device) functionality provided by a Manager for a system or device.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>ConnectedVia</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Image</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>ImageName</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Inserted</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>MediaTypes</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>WriteProtected</strong></p>
+
+<p>Read Only</p>
+
 <h1 id="virtualmediacollection">VirtualMediaCollection</h1>
 
 <p>A Collection of VirtualMedia resource instances.</p>
 
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Members</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Members@odata.count</strong></p>
+
+<p><strong>Members@odata.navigationLink</strong></p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
 <h1 id="volume-1-0-0">Volume 1.0.0</h1>
 
 <p>Volume contains properties used to describe a volume, virtual disk, LUN, or other logical storage entity for any system.</p>
+
+<p><strong>@odata.context</strong></p>
+
+<p><strong>@odata.id</strong></p>
+
+<p><strong>@odata.type</strong></p>
+
+<p><strong>Actions</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>BlockSizeBytes</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>CapacityBytes</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Description</strong></p>
+
+<p><strong>Encrypted</strong></p>
+
+<p><strong>EncryptionTypes</strong></p>
+
+<p><strong>Id</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id</a></p>
+
+<p><strong>Identifiers</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Links</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Name</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Name</a></p>
+
+<p><strong>Oem</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem</a></p>
+
+<p><strong>Operations</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>OptimumIOSizeBytes</strong></p>
+
+<p>Read Only</p>
+
+<p><strong>Status</strong></p>
+
+<p><a href="#resource-1-0-0">http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Status</a></p>
+
+<p><strong>VolumeType</strong></p>
+
+<p>Read Only</p>
 
 <hr>
 
