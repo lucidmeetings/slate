@@ -112,7 +112,13 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id="accountservice-1-0-2">AccountService 1.0.2</h1>
+        <h1 id="introduction">Introduction</h1>
+
+<p>Lucid brings clarity to your meetings by making it easy for everyone in an organization to run consistently successful meetings using your chosen process.</p>
+
+<p>Template-driven processes give every meeting a quick start, with sensible defaults pre-filled, pre-formatted, and prepared for you. Step-by-step prompts and one-click access guide meeting leaders through prep to follow-up. Automated tracking, timing, and reminders keep everyone in synch.</p>
+
+<h1 id="accountservice-1-0-2">AccountService 1.0.2</h1>
 
 <p>Account Service contains properties common to all user accounts, such as password requirements, and control features such as account lockout.  It also contains links to the collections of Manager Accounts and Roles.</p>
 
@@ -123,21 +129,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>AccountLockoutCounterResetAfter</strong></td>
 <td>number<br><br><em>read-write</em></td>
@@ -159,21 +150,6 @@
 <td>Link to a collection of Manager Accounts</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -182,11 +158,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -249,21 +220,6 @@
 <td>Link to a collection of Roles</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -272,11 +228,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -303,124 +254,6 @@
 <td>boolean, null<br><br><em>read-write</em></td>
 <td>This indicates whether this service is enabled.</td>
 </tr>
-<tr>
-<td><strong>Status</strong> {</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Health</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the health state of this resource in the absence of its dependent resources. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>HealthRollup</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the overall health state from the view of this resource. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Oem</strong> {}</td>
-<td>object<br><br><em>read-write</em></td>
-<td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>State</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This indicates the known state of the resource, such as if it is enabled. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>}</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-
-<h2 id="property-details">Property Details</h2>
-
-<h3 id="health">Health:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="healthrollup">HealthRollup:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="state">State:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Absent</td>
-<td>This function or resource is not present or not detected</td>
-</tr>
-<tr>
-<td>Disabled</td>
-<td>This function or resource has been disabled</td>
-</tr>
-<tr>
-<td>Enabled</td>
-<td>This function or resource has been enabled</td>
-</tr>
-<tr>
-<td>InTest</td>
-<td>This function or resource is undergoing testing</td>
-</tr>
-<tr>
-<td>StandbyOffline</td>
-<td>This function or resource is enabled, but awaiting an external action to activate it</td>
-</tr>
-<tr>
-<td>StandbySpare</td>
-<td>This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it.</td>
-</tr>
-<tr>
-<td>Starting</td>
-<td>This function or resource is starting</td>
-</tr>
-<tr>
-<td>UnavailableOffline</td>
-<td>This function or resource is present but cannot be used</td>
-</tr>
 </tbody></table>
 
 <h1 id="attributeregistry-1-0-0">AttributeRegistry 1.0.0</h1>
@@ -434,21 +267,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
@@ -543,21 +361,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Actions</strong> {</td>
 <td>object<br><br><em>read-only</em></td>
 <td>The available actions for this resource.</td>
@@ -626,21 +429,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Actions</strong> {</td>
 <td>object<br><br><em>read-only</em></td>
 <td>The available actions for this resource.</td>
@@ -696,11 +484,6 @@
 <td>An array of references to the computer systems contained in this chassis.  This will only reference ComputerSystems that are directly and wholly contained in this chassis.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ComputerSystems@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ComputerSystems@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -716,11 +499,6 @@
 <td>An array of references to any other chassis that this chassis has in it.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Contains@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Contains@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -729,11 +507,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>CooledBy</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>An array of ID[s] of resources that cool this chassis. Normally the ID will be a chassis or a specific set of fans.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>CooledBy@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>CooledBy@odata.navigationLink</strong></td>
@@ -746,11 +519,6 @@
 <td>An array of references to the disk drives located in this Chassis.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Drives@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Drives@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -761,11 +529,6 @@
 <td>An array of references to the Managers responsible for managing this chassis.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ManagedBy@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ManagedBy@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -774,11 +537,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ManagersInChassis</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>An array of references to the managers located in this Chassis.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ManagersInChassis@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ManagersInChassis@odata.navigationLink</strong></td>
@@ -796,11 +554,6 @@
 <td>An array of ID[s] of resources that power this chassis. Normally the ID will be a chassis or a specific set of powerSupplies</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>PoweredBy@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>PoweredBy@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -809,11 +562,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Storage</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>An array of references to the storage subsystems connected to or inside this Chassis.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Storage@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Storage@odata.navigationLink</strong></td>
@@ -856,21 +604,6 @@
 <td>A reference to the logs for this chassis.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -879,11 +612,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -961,21 +689,6 @@
 <td>A reference to the power properties (power supplies, power policies, sensors) for this chassis.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -1001,11 +714,6 @@
 <td>This is the definition for power control function (power reading/limiting).</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>PowerControl@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>PowerControl@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -1014,11 +722,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>PowerSupplies</strong> [ {} ]</td>
 <td>array<br><br><em>read-write</em></td>
 <td>Details of the power supplies associated with this system or device</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>PowerSupplies@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>PowerSupplies@odata.navigationLink</strong></td>
@@ -1031,11 +734,6 @@
 <td>Redundancy information for the power subsystem of this system or device</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Redundancy@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Redundancy@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -1044,11 +742,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Voltages</strong> [ {} ]</td>
 <td>array<br><br><em>read-write</em></td>
 <td>This is the definition for voltage sensors.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Voltages@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Voltages@odata.navigationLink</strong></td>
@@ -1076,54 +769,9 @@
 <td>The serial number for this chassis.</td>
 </tr>
 <tr>
-<td><strong>Status</strong> {</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Health</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the health state of this resource in the absence of its dependent resources. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>HealthRollup</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the overall health state from the view of this resource. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Oem</strong> {}</td>
-<td>object<br><br><em>read-write</em></td>
-<td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>State</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This indicates the known state of the resource, such as if it is enabled. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Thermal</strong> {</td>
 <td>object<br><br><em>read-write</em></td>
 <td>A reference to the thermal properties (fans, cooling, sensors) for this chassis.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
@@ -1134,11 +782,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Fans</strong> [ {} ]</td>
 <td>array<br><br><em>read-write</em></td>
 <td>This is the definition for fans.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Fans@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Fans@odata.navigationLink</strong></td>
@@ -1166,29 +809,14 @@
 <td>This structure is used to show redundancy for fans.  The Component ids will reference the members of the redundancy groups.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Redundancy@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Redundancy@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
 <td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Temperatures</strong> [ {} ]</td>
 <td>array<br><br><em>read-write</em></td>
 <td>This is the definition for temperature sensors.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Temperatures@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Temperatures@odata.navigationLink</strong></td>
@@ -1286,50 +914,6 @@
 </tr>
 </tbody></table>
 
-<h3 id="health">Health:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="healthrollup">HealthRollup:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
 <h3 id="indicatorled">IndicatorLED:</h3>
 
 <table><thead>
@@ -1422,48 +1006,6 @@
 </tr>
 </tbody></table>
 
-<h3 id="state">State:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Absent</td>
-<td>This function or resource is not present or not detected</td>
-</tr>
-<tr>
-<td>Disabled</td>
-<td>This function or resource has been disabled</td>
-</tr>
-<tr>
-<td>Enabled</td>
-<td>This function or resource has been enabled</td>
-</tr>
-<tr>
-<td>InTest</td>
-<td>This function or resource is undergoing testing</td>
-</tr>
-<tr>
-<td>StandbyOffline</td>
-<td>This function or resource is enabled, but awaiting an external action to activate it</td>
-</tr>
-<tr>
-<td>StandbySpare</td>
-<td>This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it.</td>
-</tr>
-<tr>
-<td>Starting</td>
-<td>This function or resource is starting</td>
-</tr>
-<tr>
-<td>UnavailableOffline</td>
-<td>This function or resource is present but cannot be used</td>
-</tr>
-</tbody></table>
-
 <h1 id="chassiscollection">ChassisCollection</h1>
 
 <p>A Collection of Chassis resource instances.</p>
@@ -1476,21 +1018,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -1499,21 +1026,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Actions</strong> {}</td>
@@ -1611,11 +1123,6 @@
 <td>The serial number for this chassis.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Thermal</strong> {}</td>
 <td>object<br><br><em>read-write</em></td>
 <td>A reference to the thermal properties (fans, cooling, sensors) for this chassis.</td>
@@ -1623,11 +1130,6 @@
 <tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -1795,21 +1297,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Actions</strong> {</td>
 <td>object<br><br><em>read-only</em></td>
 <td>The available actions for this resource.</td>
@@ -1838,21 +1325,6 @@
 <td><strong>Bios</strong> <em>(v1.1.0)</em> {</td>
 <td>object<br><br><em>read-write</em></td>
 <td>A reference to the BIOS settings associated with this system.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Actions</strong> {}</td>
@@ -1940,21 +1412,6 @@
 <td>A reference to the collection of Ethernet interfaces associated with this system</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -1963,11 +1420,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -2015,11 +1467,6 @@
 <td>An array of references to the chassis in which this system is contained</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Chassis@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Chassis@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -2030,11 +1477,6 @@
 <td>An array of ID[s] of resources that cool this computer system. Normally the ID will be a chassis or a specific set of fans.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>CooledBy@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>CooledBy@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -2043,11 +1485,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ManagedBy</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>An array of references to the Managers responsible for this system</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ManagedBy@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ManagedBy@odata.navigationLink</strong></td>
@@ -2065,11 +1502,6 @@
 <td>An array of ID[s] of resources that power this computer system. Normally the ID will be a chassis or a specific set of powerSupplies</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>PoweredBy@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>PoweredBy@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -2085,21 +1517,6 @@
 <td>A reference to the collection of Log Services associated with this system</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -2108,11 +1525,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -2145,21 +1557,6 @@
 <td>A reference to the collection of Memory associated with this system</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -2168,11 +1565,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -2203,11 +1595,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>MemoryMirroring</strong></td>
 <td>string, null<br><br><em>read-write</em></td>
 <td>The ability and type of memory mirroring supported by this system. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TotalSystemMemoryGiB</strong></td>
@@ -2260,11 +1647,6 @@
 <td>The processor model for the primary or majority of processors in this system.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
 <td>}</td>
 <td></td>
 <td></td>
@@ -2275,21 +1657,6 @@
 <td>A reference to the collection of Processors associated with this system</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -2298,11 +1665,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -2333,21 +1695,6 @@
 <td><strong>SecureBoot</strong> <em>(v1.1.0)</em> {</td>
 <td>object<br><br><em>read-write</em></td>
 <td>A reference to the UEFI SecureBoot resource associated with this system.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Actions</strong> {}</td>
@@ -2405,21 +1752,6 @@
 <td>A reference to the collection of storage devices associated with this system</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -2428,11 +1760,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -2455,54 +1782,9 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>Status</strong> {</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Health</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the health state of this resource in the absence of its dependent resources. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>HealthRollup</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the overall health state from the view of this resource. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Oem</strong> {}</td>
-<td>object<br><br><em>read-write</em></td>
-<td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>State</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This indicates the known state of the resource, such as if it is enabled. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Storage</strong> <em>(v1.1.0)</em> {</td>
 <td>object<br><br><em>read-write</em></td>
 <td>A reference to the collection of storage devices associated with this system</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
@@ -2513,11 +1795,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -2563,11 +1840,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Oem</strong> {}</td>
 <td>object<br><br><em>read-write</em></td>
 <td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
 </tr>
 <tr>
 <td>} ]</td>
@@ -2682,50 +1954,6 @@
 <tr>
 <td>Utilities</td>
 <td>Boot the manufacturer&rsquo;s Utilities program(s)</td>
-</tr>
-</tbody></table>
-
-<h3 id="health">Health:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="healthrollup">HealthRollup:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
 </tr>
 </tbody></table>
 
@@ -2873,48 +2101,6 @@
 </tr>
 </tbody></table>
 
-<h3 id="state">State:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Absent</td>
-<td>This function or resource is not present or not detected</td>
-</tr>
-<tr>
-<td>Disabled</td>
-<td>This function or resource has been disabled</td>
-</tr>
-<tr>
-<td>Enabled</td>
-<td>This function or resource has been enabled</td>
-</tr>
-<tr>
-<td>InTest</td>
-<td>This function or resource is undergoing testing</td>
-</tr>
-<tr>
-<td>StandbyOffline</td>
-<td>This function or resource is enabled, but awaiting an external action to activate it</td>
-</tr>
-<tr>
-<td>StandbySpare</td>
-<td>This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it.</td>
-</tr>
-<tr>
-<td>Starting</td>
-<td>This function or resource is starting</td>
-</tr>
-<tr>
-<td>UnavailableOffline</td>
-<td>This function or resource is present but cannot be used</td>
-</tr>
-</tbody></table>
-
 <h3 id="systemtype">SystemType:</h3>
 
 <table><thead>
@@ -2957,21 +2143,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -2980,21 +2151,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Actions</strong> {}</td>
@@ -3127,11 +2283,6 @@
 <td>A reference to the collection of storage devices associated with this system</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Storage</strong> {}</td>
 <td>object<br><br><em>read-write</em></td>
 <td>A reference to the collection of storage devices associated with this system</td>
@@ -3154,11 +2305,6 @@
 <tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -3274,21 +2420,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Actions</strong> {</td>
 <td>object<br><br><em>read-only</em></td>
 <td>The available actions for this resource.</td>
@@ -3399,11 +2530,6 @@
 <td>An array of references to the volumes contained in this drive. This will reference Volumes that are either wholly or only partly contained by this drive.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Volumes@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Volumes@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -3504,36 +2630,6 @@
 <td>The serial number for this drive.</td>
 </tr>
 <tr>
-<td><strong>Status</strong> {</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Health</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the health state of this resource in the absence of its dependent resources. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>HealthRollup</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the overall health state from the view of this resource. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Oem</strong> {}</td>
-<td>object<br><br><em>read-write</em></td>
-<td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>State</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This indicates the known state of the resource, such as if it is enabled. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>StatusIndicator</strong></td>
 <td>string, null<br><br><em>read-write</em></td>
 <td>The state of the status indicator, used to communicate status information about this drive. <em>See Property Details, below, for more information about this property.</em></td>
@@ -3620,50 +2716,6 @@
 </tr>
 </tbody></table>
 
-<h3 id="health">Health:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="healthrollup">HealthRollup:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
 <h3 id="hotsparetype">HotspareType:</h3>
 
 <table><thead>
@@ -3734,48 +2786,6 @@
 </tr>
 </tbody></table>
 
-<h3 id="state">State:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Absent</td>
-<td>This function or resource is not present or not detected</td>
-</tr>
-<tr>
-<td>Disabled</td>
-<td>This function or resource has been disabled</td>
-</tr>
-<tr>
-<td>Enabled</td>
-<td>This function or resource has been enabled</td>
-</tr>
-<tr>
-<td>InTest</td>
-<td>This function or resource is undergoing testing</td>
-</tr>
-<tr>
-<td>StandbyOffline</td>
-<td>This function or resource is enabled, but awaiting an external action to activate it</td>
-</tr>
-<tr>
-<td>StandbySpare</td>
-<td>This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it.</td>
-</tr>
-<tr>
-<td>Starting</td>
-<td>This function or resource is starting</td>
-</tr>
-<tr>
-<td>UnavailableOffline</td>
-<td>This function or resource is present but cannot be used</td>
-</tr>
-</tbody></table>
-
 <h3 id="statusindicator">StatusIndicator:</h3>
 
 <table><thead>
@@ -3825,21 +2835,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>AutoNeg</strong></td>
 <td>boolean, null<br><br><em>read-write</em></td>
@@ -4041,36 +3036,6 @@
 <td>This is the current speed in Mbps of this interface.</td>
 </tr>
 <tr>
-<td><strong>Status</strong> {</td>
-<td>object, null<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Health</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the health state of this resource in the absence of its dependent resources. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>HealthRollup</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the overall health state from the view of this resource. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Oem</strong> {}</td>
-<td>object<br><br><em>read-write</em></td>
-<td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>State</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This indicates the known state of the resource, such as if it is enabled. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>UefiDevicePath</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>The UEFI device path for this interface</td>
@@ -4086,21 +3051,6 @@
 <td>This is a reference to a collection of VLANs and is only used if the interface supports more than one VLANs.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -4109,11 +3059,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -4191,92 +3136,6 @@
 </tr>
 </tbody></table>
 
-<h3 id="health">Health:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="healthrollup">HealthRollup:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="state">State:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Absent</td>
-<td>This function or resource is not present or not detected</td>
-</tr>
-<tr>
-<td>Disabled</td>
-<td>This function or resource has been disabled</td>
-</tr>
-<tr>
-<td>Enabled</td>
-<td>This function or resource has been enabled</td>
-</tr>
-<tr>
-<td>InTest</td>
-<td>This function or resource is undergoing testing</td>
-</tr>
-<tr>
-<td>StandbyOffline</td>
-<td>This function or resource is enabled, but awaiting an external action to activate it</td>
-</tr>
-<tr>
-<td>StandbySpare</td>
-<td>This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it.</td>
-</tr>
-<tr>
-<td>Starting</td>
-<td>This function or resource is starting</td>
-</tr>
-<tr>
-<td>UnavailableOffline</td>
-<td>This function or resource is present but cannot be used</td>
-</tr>
-</tbody></table>
-
 <h1 id="ethernetinterfacecollection">EthernetInterfaceCollection</h1>
 
 <p>A Collection of EthernetInterface resource instances.</p>
@@ -4289,21 +3148,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -4312,21 +3156,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>AutoNeg</strong></td>
@@ -4429,11 +3258,6 @@
 <td>This is the current speed in Mbps of this interface.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object, null<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>UefiDevicePath</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>The UEFI device path for this interface</td>
@@ -4451,11 +3275,6 @@
 <tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -4486,21 +3305,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Context</strong> <em>(v1.1.0)</em></td>
 <td>string<br><br><em>read-only</em></td>
@@ -4577,11 +3381,6 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>Events@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Events@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -4646,21 +3445,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Context</strong></td>
 <td>string<br><br><em>read-write</em></td>
@@ -4734,21 +3518,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -4757,21 +3526,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Context</strong></td>
@@ -4824,11 +3578,6 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Members@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -4870,21 +3619,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Actions</strong> {</td>
 <td>object<br><br><em>read-only</em></td>
@@ -4946,54 +3680,9 @@
 <td>This indicates whether this service is enabled.</td>
 </tr>
 <tr>
-<td><strong>Status</strong> {</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Health</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the health state of this resource in the absence of its dependent resources. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>HealthRollup</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the overall health state from the view of this resource. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Oem</strong> {}</td>
-<td>object<br><br><em>read-write</em></td>
-<td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>State</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This indicates the known state of the resource, such as if it is enabled. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Subscriptions</strong> {</td>
 <td>object<br><br><em>read-write</em></td>
 <td>This is a reference to a collection of Event Destination resources.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
@@ -5004,11 +3693,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -5032,94 +3716,6 @@
 </tr>
 </tbody></table>
 
-<h2 id="property-details">Property Details</h2>
-
-<h3 id="health">Health:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="healthrollup">HealthRollup:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="state">State:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Absent</td>
-<td>This function or resource is not present or not detected</td>
-</tr>
-<tr>
-<td>Disabled</td>
-<td>This function or resource has been disabled</td>
-</tr>
-<tr>
-<td>Enabled</td>
-<td>This function or resource has been enabled</td>
-</tr>
-<tr>
-<td>InTest</td>
-<td>This function or resource is undergoing testing</td>
-</tr>
-<tr>
-<td>StandbyOffline</td>
-<td>This function or resource is enabled, but awaiting an external action to activate it</td>
-</tr>
-<tr>
-<td>StandbySpare</td>
-<td>This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it.</td>
-</tr>
-<tr>
-<td>Starting</td>
-<td>This function or resource is starting</td>
-</tr>
-<tr>
-<td>UnavailableOffline</td>
-<td>This function or resource is present but cannot be used</td>
-</tr>
-</tbody></table>
-
 <h1 id="jsonschemafile-1-0-2">JsonSchemaFile 1.0.2</h1>
 
 <p>This is the schema definition for the Schema File locator resource.</p>
@@ -5131,21 +3727,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
@@ -5225,21 +3806,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -5248,21 +3814,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
@@ -5305,11 +3856,6 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Members@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -5337,21 +3883,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Created</strong></td>
 <td>string<br><br><em>read-only</em></td>
@@ -5818,21 +4349,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -5841,21 +4357,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Created</strong></td>
@@ -5935,11 +4436,6 @@
 <tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -6323,7 +4819,9 @@
 
 <h1 id="logservice-1-0-2">LogService 1.0.2</h1>
 
-<p>This resource represents the log service for the resource or service to which it is associated.</p>
+<p><strong>You don&rsquo;t have to attend every meeting to know what happened.</strong></p>
+
+<p>Meeting records capture who showed up, what they reviewed, what was decided, and what tasks were assigned. Publish records to the team and your existing business systems.</p>
 
 <table><thead>
 <tr>
@@ -6332,21 +4830,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Actions</strong> {</td>
 <td>object<br><br><em>read-only</em></td>
@@ -6388,21 +4871,6 @@
 <td>References to the log entry collection.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -6411,11 +4879,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -6467,83 +4930,9 @@
 <td>boolean, null<br><br><em>read-write</em></td>
 <td>This indicates whether this service is enabled.</td>
 </tr>
-<tr>
-<td><strong>Status</strong> {</td>
-<td>object, null<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Health</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the health state of this resource in the absence of its dependent resources. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>HealthRollup</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the overall health state from the view of this resource. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Oem</strong> {}</td>
-<td>object<br><br><em>read-write</em></td>
-<td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>State</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This indicates the known state of the resource, such as if it is enabled. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>}</td>
-<td></td>
-<td></td>
-</tr>
 </tbody></table>
 
 <h2 id="property-details">Property Details</h2>
-
-<h3 id="health">Health:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="healthrollup">HealthRollup:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
 
 <h3 id="overwritepolicy">OverWritePolicy:</h3>
 
@@ -6567,48 +4956,6 @@
 </tr>
 </tbody></table>
 
-<h3 id="state">State:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Absent</td>
-<td>This function or resource is not present or not detected</td>
-</tr>
-<tr>
-<td>Disabled</td>
-<td>This function or resource has been disabled</td>
-</tr>
-<tr>
-<td>Enabled</td>
-<td>This function or resource has been enabled</td>
-</tr>
-<tr>
-<td>InTest</td>
-<td>This function or resource is undergoing testing</td>
-</tr>
-<tr>
-<td>StandbyOffline</td>
-<td>This function or resource is enabled, but awaiting an external action to activate it</td>
-</tr>
-<tr>
-<td>StandbySpare</td>
-<td>This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it.</td>
-</tr>
-<tr>
-<td>Starting</td>
-<td>This function or resource is starting</td>
-</tr>
-<tr>
-<td>UnavailableOffline</td>
-<td>This function or resource is present but cannot be used</td>
-</tr>
-</tbody></table>
-
 <h1 id="logservicecollection">LogServiceCollection</h1>
 
 <p>A Collection of LogService resource instances.</p>
@@ -6621,21 +4968,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -6644,21 +4976,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Actions</strong> {}</td>
@@ -6716,18 +5033,8 @@
 <td>This indicates whether this service is enabled.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object, null<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -6782,21 +5089,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Actions</strong> {</td>
 <td>object<br><br><em>read-only</em></td>
@@ -6873,21 +5165,6 @@
 <td>This is a reference to a collection of NICs that this manager uses for network communication.  It is here that clients will find NIC configuration options and settings.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -6896,11 +5173,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -6968,11 +5240,6 @@
 <td>This property is an array of references to the chassis that this manager has control over.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ManagerForChassis@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ManagerForChassis@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -6981,11 +5248,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ManagerForServers</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>This property is an array of references to the systems that this manager has control over.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ManagerForServers@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ManagerForServers@odata.navigationLink</strong></td>
@@ -7013,21 +5275,6 @@
 <td>This is a reference to a collection of Logs used by the manager.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -7036,11 +5283,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -7081,21 +5323,6 @@
 <td><strong>NetworkProtocol</strong> {</td>
 <td>object<br><br><em>read-write</em></td>
 <td>This is a reference to the network services and their settings that the manager controls.  It is here that clients will find network configuration options as well as network services.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
@@ -7163,11 +5390,6 @@
 <td>Settings for this Manager&rsquo;s SSH (Secure Shell) protocol support</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Telnet</strong> {}</td>
 <td>object<br><br><em>read-write</em></td>
 <td>Settings for this Manager&rsquo;s Telnet protocol support</td>
@@ -7208,11 +5430,6 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>Redundancy@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Redundancy@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -7248,21 +5465,6 @@
 <td>This is a reference to a collection of serial interfaces that this manager uses for serial and console communication.  It is here that clients will find serial configuration options and settings.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -7271,11 +5473,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -7303,36 +5500,6 @@
 <td>The UUID of the Redfish Service provided by this manager</td>
 </tr>
 <tr>
-<td><strong>Status</strong> {</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Health</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the health state of this resource in the absence of its dependent resources. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>HealthRollup</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the overall health state from the view of this resource. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Oem</strong> {}</td>
-<td>object<br><br><em>read-write</em></td>
-<td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>State</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This indicates the known state of the resource, such as if it is enabled. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>UUID</strong></td>
 <td>string, null<br><br><em>read-write</em></td>
 <td>The Universal Unique Identifier (UUID) for this Manager</td>
@@ -7343,21 +5510,6 @@
 <td>This is a reference to the Virtual Media services for this particular manager.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -7366,11 +5518,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -7395,50 +5542,6 @@
 </tbody></table>
 
 <h2 id="property-details">Property Details</h2>
-
-<h3 id="health">Health:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="healthrollup">HealthRollup:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
 
 <h3 id="managertype">ManagerType:</h3>
 
@@ -7470,51 +5573,40 @@
 </tr>
 </tbody></table>
 
-<h3 id="state">State:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Absent</td>
-<td>This function or resource is not present or not detected</td>
-</tr>
-<tr>
-<td>Disabled</td>
-<td>This function or resource has been disabled</td>
-</tr>
-<tr>
-<td>Enabled</td>
-<td>This function or resource has been enabled</td>
-</tr>
-<tr>
-<td>InTest</td>
-<td>This function or resource is undergoing testing</td>
-</tr>
-<tr>
-<td>StandbyOffline</td>
-<td>This function or resource is enabled, but awaiting an external action to activate it</td>
-</tr>
-<tr>
-<td>StandbySpare</td>
-<td>This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it.</td>
-</tr>
-<tr>
-<td>Starting</td>
-<td>This function or resource is starting</td>
-</tr>
-<tr>
-<td>UnavailableOffline</td>
-<td>This function or resource is present but cannot be used</td>
-</tr>
-</tbody></table>
-
 <h1 id="manageraccount-1-0-2">ManagerAccount 1.0.2</h1>
 
-<p>The user accounts, owned by a Manager, are defined in this resource.  Changes to a Manager Account may affect the current Redfish service connection if this manager is responsible for the Redfish service.</p>
+<p>Stop juggling multiple applications while trying to run a productive meeting. Before, during, after: Lucid&rsquo;s all-in-one platform combines all the tools you need to run a successful meeting start to finish.</p>
+
+<blockquote>
+<p>Here is how to get a list of meetings. A meeting contains all the information necessary for scheduling and running an online meeting. Meetings are scheduled within a room, and each meeting includes its specific agenda, meeting state, list of attendees, notes, action items, and meeting record.</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"meeting_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1194</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Review meeting"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"start_time"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">1431648000</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"iso_8601"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-05-15T00:00:00Z"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"meeting_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1192</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Status followup"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"start_time"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">1430956800</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"iso_8601"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-05-07T00:00:00Z"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"meeting_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1199</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Status update"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"start_time"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">1430872200</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"iso_8601"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-05-06T00:30:00Z"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
 
 <table><thead>
 <tr>
@@ -7523,21 +5615,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
@@ -7617,21 +5694,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -7640,21 +5702,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
@@ -7712,11 +5759,6 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Members@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -7745,21 +5787,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -7768,21 +5795,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Actions</strong> {}</td>
@@ -7870,11 +5882,6 @@
 <td>Redundancy information for the managers of this system</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Redundancy@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Redundancy@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -7895,11 +5902,6 @@
 <td>The UUID of the Redfish Service provided by this manager</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>UUID</strong></td>
 <td>string, null<br><br><em>read-write</em></td>
 <td>The Universal Unique Identifier (UUID) for this Manager</td>
@@ -7912,11 +5914,6 @@
 <tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -7979,21 +5976,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
@@ -8180,36 +6162,6 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>Status</strong> {</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Health</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the health state of this resource in the absence of its dependent resources. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>HealthRollup</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the overall health state from the view of this resource. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Oem</strong> {}</td>
-<td>object<br><br><em>read-write</em></td>
-<td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>State</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This indicates the known state of the resource, such as if it is enabled. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Telnet</strong> {</td>
 <td>object<br><br><em>read-write</em></td>
 <td>Settings for this Manager&rsquo;s Telnet protocol support</td>
@@ -8253,50 +6205,6 @@
 
 <h2 id="property-details">Property Details</h2>
 
-<h3 id="health">Health:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="healthrollup">HealthRollup:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
 <h3 id="notifyipv6scope">NotifyIPv6Scope:</h3>
 
 <table><thead>
@@ -8319,48 +6227,6 @@
 </tr>
 </tbody></table>
 
-<h3 id="state">State:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Absent</td>
-<td>This function or resource is not present or not detected</td>
-</tr>
-<tr>
-<td>Disabled</td>
-<td>This function or resource has been disabled</td>
-</tr>
-<tr>
-<td>Enabled</td>
-<td>This function or resource has been enabled</td>
-</tr>
-<tr>
-<td>InTest</td>
-<td>This function or resource is undergoing testing</td>
-</tr>
-<tr>
-<td>StandbyOffline</td>
-<td>This function or resource is enabled, but awaiting an external action to activate it</td>
-</tr>
-<tr>
-<td>StandbySpare</td>
-<td>This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it.</td>
-</tr>
-<tr>
-<td>Starting</td>
-<td>This function or resource is starting</td>
-</tr>
-<tr>
-<td>UnavailableOffline</td>
-<td>This function or resource is present but cannot be used</td>
-</tr>
-</tbody></table>
-
 <h1 id="memory-1-0-0">Memory 1.0.0</h1>
 
 <p>This is the schema definition for definition of a Memory and its configuration</p>
@@ -8372,21 +6238,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Actions</strong> {</td>
 <td>object<br><br><em>read-only</em></td>
@@ -8556,21 +6407,6 @@
 <td><strong>Metrics</strong> {</td>
 <td>object<br><br><em>read-write</em></td>
 <td>A reference to the Metrics associated with this Memory</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Actions</strong> {}</td>
@@ -9003,21 +6839,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -9026,21 +6847,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Actions</strong> {}</td>
@@ -9240,11 +7046,6 @@
 <tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -9466,21 +7267,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Actions</strong> {</td>
 <td>object<br><br><em>read-only</em></td>
 <td>The available actions for this resource.</td>
@@ -9614,21 +7400,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -9687,21 +7458,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -9710,21 +7466,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
@@ -9777,11 +7518,6 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Members@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -9809,21 +7545,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
@@ -9903,21 +7624,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -9926,21 +7632,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
@@ -9983,11 +7674,6 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Members@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -10015,21 +7701,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
@@ -10111,28 +7782,13 @@
 <td>The ID(s) of the resources associated with this Power Limit</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>RelatedItem@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>RelatedItem@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>PowerControl@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -10216,11 +7872,6 @@
 <td>This structure is used to show redundancy for power supplies.  The Component ids will reference the members of the redundancy groups.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Redundancy@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Redundancy@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -10229,11 +7880,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>RelatedItem</strong> [ {} ]</td>
 <td>array<br><br><em>read-write</em></td>
 <td>The ID(s) of the resources associated with this Power Limit</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>RelatedItem@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>RelatedItem@odata.navigationLink</strong></td>
@@ -10251,18 +7897,8 @@
 <td>The spare part number for this Power Supply</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>PowerSupplies@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -10288,11 +7924,6 @@
 <tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Redundancy@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -10361,11 +7992,6 @@
 <td>Describes the areas or devices to which this voltage measurement applies.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>RelatedItem@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>RelatedItem@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -10374,11 +8000,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>SensorNumber</strong></td>
 <td>number, null<br><br><em>read-only</em></td>
 <td>A numerical identifier to represent the voltage sensor</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>UpperThresholdCritical</strong></td>
@@ -10398,11 +8019,6 @@
 <tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Voltages@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -10590,7 +8206,54 @@
 
 <h1 id="processor-1-0-2">Processor 1.0.2</h1>
 
-<p>This is the schema definition for the Processor resource.  It represents the properties of a processor attached to a System.</p>
+<h3 id="processorid">ProcessorID</h3>
+
+<p>This object&rsquo;s properties shall contain values dependent on the value of the ProcessorArchitecture property, as listed in the sections below:</p>
+
+<h4 id="processorarchitecture-x86">ProcessorArchitecture: x86</h4>
+
+<h5 id="vendorid">VendorId</h5>
+
+<p>This property shall contain a 12 byte, little-endian ASCII string derived from register values resulting from the execution of the CPUID instruction.  The value shall be constructed using the following algorithm:</p>
+<pre class="highlight plaintext"><code>k=0;
+foreach reg (cpuid.0.ebx, cpuid.0.edx, cpuid.0.ecx){ ##NB: order must be ebx, edx, ecx
+  for (i=0; i&lt;=3; i++) { vendorID[ byte(k*4 + i) ] = reg[byte(i)]; }
+  k++;
+  }
+</code></pre>
+
+<h5 id="identificationregisters">IdentificationRegisters</h5>
+
+<p>This property shall contain the register contents resulting from the exeuction of the CPUID instruction.</p>
+
+<h5 id="effectivefamily">EffectiveFamily</h5>
+
+<p>This property shall contain a value derived from register values resulting from the execution of the CPUID instruction.  The value shall use the following forumula:
+~~~
+((cpuid.1.eax &amp; 0x0ff00000) &gt;&gt; 20) + ((cpuid.1.eax &amp; 0x00000f00) &gt;&gt; 8)
+~~~</p>
+
+<h5 id="effectivemodel">EffectiveModel</h5>
+
+<p>This property shall contain a value derived from register values resulting from the execution of the CPUID instruction.  The value shall use the following forumula:
+~~~
+((cpuid.1.eax &amp; 0x000f0000) &gt;&gt; 12) + ((cpuid.1.eax &amp; 0x000000f0) &gt;&gt; 4)
+~~~</p>
+
+<h5 id="step">Step</h5>
+
+<p>This property shall contain a value derived from register values resulting from the execution of the CPUID instruction.  The value shall use the following forumula:
+~~~
+(cpuid-&gt;eax &amp; 0xf)
+~~~</p>
+
+<h5 id="microcodeinfo">MicrocodeInfo</h5>
+
+<p>This property shall contain the 64-bit value contained in MSR 0x8B.</p>
+
+<h4 id="processorarchitecture-all-others">ProcessorArchitecture: All Others</h4>
+
+<p>The contents of this object are not specified.</p>
 
 <table><thead>
 <tr>
@@ -10599,21 +8262,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
@@ -10710,36 +8358,6 @@
 <td>The socket or location of the processor</td>
 </tr>
 <tr>
-<td><strong>Status</strong> {</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Health</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the health state of this resource in the absence of its dependent resources. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>HealthRollup</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the overall health state from the view of this resource. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Oem</strong> {}</td>
-<td>object<br><br><em>read-write</em></td>
-<td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>State</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This indicates the known state of the resource, such as if it is enabled. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>TotalCores</strong></td>
 <td>number, null<br><br><em>read-only</em></td>
 <td>The total number of cores contained in this processor</td>
@@ -10752,50 +8370,6 @@
 </tbody></table>
 
 <h2 id="property-details">Property Details</h2>
-
-<h3 id="health">Health:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="healthrollup">HealthRollup:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
 
 <h3 id="instructionset">InstructionSet:</h3>
 
@@ -10903,48 +8477,6 @@
 </tr>
 </tbody></table>
 
-<h3 id="state">State:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Absent</td>
-<td>This function or resource is not present or not detected</td>
-</tr>
-<tr>
-<td>Disabled</td>
-<td>This function or resource has been disabled</td>
-</tr>
-<tr>
-<td>Enabled</td>
-<td>This function or resource has been enabled</td>
-</tr>
-<tr>
-<td>InTest</td>
-<td>This function or resource is undergoing testing</td>
-</tr>
-<tr>
-<td>StandbyOffline</td>
-<td>This function or resource is enabled, but awaiting an external action to activate it</td>
-</tr>
-<tr>
-<td>StandbySpare</td>
-<td>This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it.</td>
-</tr>
-<tr>
-<td>Starting</td>
-<td>This function or resource is starting</td>
-</tr>
-<tr>
-<td>UnavailableOffline</td>
-<td>This function or resource is present but cannot be used</td>
-</tr>
-</tbody></table>
-
 <h1 id="processorcollection">ProcessorCollection</h1>
 
 <p>A Collection of Processor resource instances.</p>
@@ -10957,21 +8489,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -10980,21 +8497,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
@@ -11057,11 +8559,6 @@
 <td>The socket or location of the processor</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TotalCores</strong></td>
 <td>number, null<br><br><em>read-only</em></td>
 <td>The total number of cores contained in this processor</td>
@@ -11074,11 +8571,6 @@
 <tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -11218,21 +8710,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>AssignedPrivileges</strong> [ {} ]</td>
 <td>array<br><br><em>read-write</em></td>
 <td>The redfish privileges that this role includes.</td>
@@ -11281,21 +8758,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -11304,21 +8766,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>AssignedPrivileges</strong> [ {} ]</td>
@@ -11361,11 +8808,6 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Members@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -11393,21 +8835,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Actions</strong> {</td>
 <td>object<br><br><em>read-only</em></td>
@@ -11522,21 +8949,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>BitRate</strong></td>
 <td>string<br><br><em>read-write</em></td>
@@ -11805,21 +9217,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -11828,21 +9225,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BitRate</strong></td>
@@ -11912,11 +9294,6 @@
 <tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -12137,39 +9514,9 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>AccountService</strong> {</td>
 <td>object<br><br><em>read-write</em></td>
 <td>This is a link to the Account Service.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>AccountLockoutCounterResetAfter</strong></td>
@@ -12237,11 +9584,6 @@
 <td>This indicates whether this service is enabled.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
 <td>}</td>
 <td></td>
 <td></td>
@@ -12252,21 +9594,6 @@
 <td>This is a link to a collection of Chassis.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -12275,11 +9602,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -12310,21 +9632,6 @@
 <td><strong>EventService</strong> {</td>
 <td>object<br><br><em>read-write</em></td>
 <td>This is a link to the EventService.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Actions</strong> {}</td>
@@ -12372,11 +9679,6 @@
 <td>This indicates whether this service is enabled.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Subscriptions</strong> {}</td>
 <td>object<br><br><em>read-write</em></td>
 <td>This is a reference to a collection of Event Destination resources.</td>
@@ -12397,21 +9699,6 @@
 <td>This is a link to a collection of Json-Schema files.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -12420,11 +9707,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -12472,21 +9754,6 @@
 <td>This is a link to a collection of Managers.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -12495,11 +9762,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -12542,21 +9804,6 @@
 <td>This is a link to a collection of Registries.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -12565,11 +9812,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -12595,21 +9837,6 @@
 <td><strong>SessionService</strong> {</td>
 <td>object<br><br><em>read-write</em></td>
 <td>This is a link to the Sessions Service.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
@@ -12647,11 +9874,6 @@
 <td>Link to a collection of Sessions</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
 <td>}</td>
 <td></td>
 <td></td>
@@ -12662,21 +9884,6 @@
 <td>This is a link to a collection of Systems.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -12685,11 +9892,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -12715,21 +9917,6 @@
 <td><strong>Tasks</strong> {</td>
 <td>object<br><br><em>read-write</em></td>
 <td>This is a link to the Task Service.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>CompletedTaskOverWritePolicy</strong></td>
@@ -12770,11 +9957,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ServiceEnabled</strong></td>
 <td>boolean, null<br><br><em>read-write</em></td>
 <td>This indicates whether this service is enabled.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Tasks</strong> {}</td>
@@ -12825,21 +10007,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -12883,21 +10050,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -12906,21 +10058,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
@@ -12958,11 +10095,6 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Members@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -12990,21 +10122,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
@@ -13041,21 +10158,6 @@
 <td>Link to a collection of Sessions</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -13064,11 +10166,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -13090,124 +10187,6 @@
 <td></td>
 <td></td>
 </tr>
-<tr>
-<td><strong>Status</strong> {</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Health</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the health state of this resource in the absence of its dependent resources. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>HealthRollup</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the overall health state from the view of this resource. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Oem</strong> {}</td>
-<td>object<br><br><em>read-write</em></td>
-<td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>State</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This indicates the known state of the resource, such as if it is enabled. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>}</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-
-<h2 id="property-details">Property Details</h2>
-
-<h3 id="health">Health:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="healthrollup">HealthRollup:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="state">State:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Absent</td>
-<td>This function or resource is not present or not detected</td>
-</tr>
-<tr>
-<td>Disabled</td>
-<td>This function or resource has been disabled</td>
-</tr>
-<tr>
-<td>Enabled</td>
-<td>This function or resource has been enabled</td>
-</tr>
-<tr>
-<td>InTest</td>
-<td>This function or resource is undergoing testing</td>
-</tr>
-<tr>
-<td>StandbyOffline</td>
-<td>This function or resource is enabled, but awaiting an external action to activate it</td>
-</tr>
-<tr>
-<td>StandbySpare</td>
-<td>This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it.</td>
-</tr>
-<tr>
-<td>Starting</td>
-<td>This function or resource is starting</td>
-</tr>
-<tr>
-<td>UnavailableOffline</td>
-<td>This function or resource is present but cannot be used</td>
-</tr>
 </tbody></table>
 
 <h1 id="simplestorage-1-1-0">SimpleStorage 1.1.0</h1>
@@ -13221,21 +10200,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
@@ -13272,11 +10236,6 @@
 <td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
 <td>} ]</td>
 <td></td>
 <td></td>
@@ -13297,127 +10256,9 @@
 <td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
 </tr>
 <tr>
-<td><strong>Status</strong> {</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Health</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the health state of this resource in the absence of its dependent resources. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>HealthRollup</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the overall health state from the view of this resource. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Oem</strong> {}</td>
-<td>object<br><br><em>read-write</em></td>
-<td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>State</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This indicates the known state of the resource, such as if it is enabled. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>UefiDevicePath</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>The UEFI device path used to access this storage controller.</td>
-</tr>
-</tbody></table>
-
-<h2 id="property-details">Property Details</h2>
-
-<h3 id="health">Health:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="healthrollup">HealthRollup:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="state">State:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Absent</td>
-<td>This function or resource is not present or not detected</td>
-</tr>
-<tr>
-<td>Disabled</td>
-<td>This function or resource has been disabled</td>
-</tr>
-<tr>
-<td>Enabled</td>
-<td>This function or resource has been enabled</td>
-</tr>
-<tr>
-<td>InTest</td>
-<td>This function or resource is undergoing testing</td>
-</tr>
-<tr>
-<td>StandbyOffline</td>
-<td>This function or resource is enabled, but awaiting an external action to activate it</td>
-</tr>
-<tr>
-<td>StandbySpare</td>
-<td>This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it.</td>
-</tr>
-<tr>
-<td>Starting</td>
-<td>This function or resource is starting</td>
-</tr>
-<tr>
-<td>UnavailableOffline</td>
-<td>This function or resource is present but cannot be used</td>
 </tr>
 </tbody></table>
 
@@ -13433,21 +10274,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -13456,21 +10282,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
@@ -13498,11 +10309,6 @@
 <td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>UefiDevicePath</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>The UEFI device path used to access this storage controller.</td>
@@ -13510,11 +10316,6 @@
 <tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -13546,21 +10347,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Actions</strong> {</td>
 <td>object<br><br><em>read-only</em></td>
 <td>The available actions for this resource.</td>
@@ -13589,21 +10375,6 @@
 <td><strong>Drives</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>The set of drives attached to the storage controllers represented by this resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Actions</strong> {}</td>
@@ -13746,11 +10517,6 @@
 <td>The serial number for this drive.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>StatusIndicator</strong></td>
 <td>string, null<br><br><em>read-write</em></td>
 <td>The state of the status indicator, used to communicate status information about this drive. <em>See Property Details, below, for more information about this property.</em></td>
@@ -13758,11 +10524,6 @@
 <tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Drives@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -13784,11 +10545,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Enclosures</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>An array of references to the chassis to which this storage subsystem is attached</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Enclosures@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Enclosures@odata.navigationLink</strong></td>
@@ -13836,64 +10592,14 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>Redundancy@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Redundancy@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
-<td><strong>Status</strong> {</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Health</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the health state of this resource in the absence of its dependent resources. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>HealthRollup</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the overall health state from the view of this resource. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Oem</strong> {}</td>
-<td>object<br><br><em>read-write</em></td>
-<td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>State</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This indicates the known state of the resource, such as if it is enabled. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>StorageControllers</strong> [ {</td>
+<td><strong>StorageControllers</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>The set of storage controllers represented by this resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>} ]</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>StorageControllers@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td><strong>StorageControllers@odata.navigationLink</strong></td>
@@ -13904,21 +10610,6 @@
 <td><strong>Volumes</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>The set of volumes produced by the storage controllers represented by this resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Actions</strong> {}</td>
@@ -13986,11 +10677,6 @@
 <td>The size in bytes of this Volume&rsquo;s optimum IO size.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>VolumeType</strong></td>
 <td>string, null<br><br><em>read-write</em></td>
 <td>Is this drive currently predicting a failure in the near future <em>See Property Details, below, for more information about this property.</em></td>
@@ -13998,11 +10684,6 @@
 <tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Volumes@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -14059,50 +10740,6 @@
 <tr>
 <td>Unlocked</td>
 <td>The drive is currently encrypted but the data is accessible to the user unencrypted</td>
-</tr>
-</tbody></table>
-
-<h3 id="health">Health:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="healthrollup">HealthRollup:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
 </tr>
 </tbody></table>
 
@@ -14173,48 +10810,6 @@
 <tr>
 <td>SSD</td>
 <td>The drive media type is solid state or flash memory</td>
-</tr>
-</tbody></table>
-
-<h3 id="state">State:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Absent</td>
-<td>This function or resource is not present or not detected</td>
-</tr>
-<tr>
-<td>Disabled</td>
-<td>This function or resource has been disabled</td>
-</tr>
-<tr>
-<td>Enabled</td>
-<td>This function or resource has been enabled</td>
-</tr>
-<tr>
-<td>InTest</td>
-<td>This function or resource is undergoing testing</td>
-</tr>
-<tr>
-<td>StandbyOffline</td>
-<td>This function or resource is enabled, but awaiting an external action to activate it</td>
-</tr>
-<tr>
-<td>StandbySpare</td>
-<td>This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it.</td>
-</tr>
-<tr>
-<td>Starting</td>
-<td>This function or resource is starting</td>
-</tr>
-<tr>
-<td>UnavailableOffline</td>
-<td>This function or resource is present but cannot be used</td>
 </tr>
 </tbody></table>
 
@@ -14302,21 +10897,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -14325,21 +10905,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Actions</strong> {}</td>
@@ -14355,11 +10920,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Drives</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>The set of drives attached to the storage controllers represented by this resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Drives@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Drives@odata.navigationLink</strong></td>
@@ -14392,29 +10952,14 @@
 <td>Redundancy information for the storage subsystem</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Redundancy@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Redundancy@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
 <td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>StorageControllers</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>The set of storage controllers represented by this resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>StorageControllers@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>StorageControllers@odata.navigationLink</strong></td>
@@ -14427,11 +10972,6 @@
 <td>The set of volumes produced by the storage controllers represented by this resource.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Volumes@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Volumes@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -14439,11 +10979,6 @@
 <tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -14474,21 +11009,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
@@ -14626,21 +11146,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -14649,21 +11154,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
@@ -14713,11 +11203,6 @@
 <tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -14827,21 +11312,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>CompletedTaskOverWritePolicy</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td>Overwrite policy of completed tasks <em>See Property Details, below, for more information about this property.</em></td>
@@ -14882,54 +11352,9 @@
 <td>This indicates whether this service is enabled.</td>
 </tr>
 <tr>
-<td><strong>Status</strong> {</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Health</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the health state of this resource in the absence of its dependent resources. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>HealthRollup</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the overall health state from the view of this resource. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Oem</strong> {}</td>
-<td>object<br><br><em>read-write</em></td>
-<td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>State</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This indicates the known state of the resource, such as if it is enabled. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Tasks</strong> {</td>
 <td>object<br><br><em>read-write</em></td>
 <td>References to the Tasks collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td>string<br><br><em>read-only</em></td>
-<td>The unique identifier for a resource.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
@@ -14940,11 +11365,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members</strong> [ {} ]</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Members@odata.navigationLink</strong></td>
@@ -14988,92 +11408,6 @@
 </tr>
 </tbody></table>
 
-<h3 id="health">Health:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="healthrollup">HealthRollup:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="state">State:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Absent</td>
-<td>This function or resource is not present or not detected</td>
-</tr>
-<tr>
-<td>Disabled</td>
-<td>This function or resource has been disabled</td>
-</tr>
-<tr>
-<td>Enabled</td>
-<td>This function or resource has been enabled</td>
-</tr>
-<tr>
-<td>InTest</td>
-<td>This function or resource is undergoing testing</td>
-</tr>
-<tr>
-<td>StandbyOffline</td>
-<td>This function or resource is enabled, but awaiting an external action to activate it</td>
-</tr>
-<tr>
-<td>StandbySpare</td>
-<td>This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it.</td>
-</tr>
-<tr>
-<td>Starting</td>
-<td>This function or resource is starting</td>
-</tr>
-<tr>
-<td>UnavailableOffline</td>
-<td>This function or resource is present but cannot be used</td>
-</tr>
-</tbody></table>
-
 <h1 id="thermal-1-1-0">Thermal 1.1.0</h1>
 
 <p>This is the schema definition for the Thermal properties.  It represents the properties for Temperature and Cooling.</p>
@@ -15085,21 +11419,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
@@ -15176,11 +11495,6 @@
 <td>This structure is used to show redundancy for fans.  The Component ids will reference the members of the redundancy groups.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Redundancy@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Redundancy@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -15191,18 +11505,8 @@
 <td>The ID(s) of the resources serviced with this fan</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>RelatedItem@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>RelatedItem@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
 <td></td>
 </tr>
 <tr>
@@ -15223,11 +11527,6 @@
 <tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Fans@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -15271,43 +11570,8 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>Redundancy@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Redundancy@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Status</strong> {</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Health</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the health state of this resource in the absence of its dependent resources. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>HealthRollup</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the overall health state from the view of this resource. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Oem</strong> {}</td>
-<td>object<br><br><em>read-write</em></td>
-<td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>State</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This indicates the known state of the resource, such as if it is enabled. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>}</td>
-<td></td>
 <td></td>
 </tr>
 <tr>
@@ -15371,11 +11635,6 @@
 <td>Describes the areas or devices to which this temperature measurement applies.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>RelatedItem@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>RelatedItem@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -15384,11 +11643,6 @@
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>SensorNumber</strong></td>
 <td>number, null<br><br><em>read-only</em></td>
 <td>A numerical identifier to represent the temperature sensor</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Status</strong> {}</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>UpperThresholdCritical</strong></td>
@@ -15411,11 +11665,6 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>Temperatures@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Temperatures@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -15423,50 +11672,6 @@
 </tbody></table>
 
 <h2 id="property-details">Property Details</h2>
-
-<h3 id="health">Health:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="healthrollup">HealthRollup:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
 
 <h3 id="physicalcontext">PhysicalContext:</h3>
 
@@ -15576,48 +11781,6 @@
 </tr>
 </tbody></table>
 
-<h3 id="state">State:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Absent</td>
-<td>This function or resource is not present or not detected</td>
-</tr>
-<tr>
-<td>Disabled</td>
-<td>This function or resource has been disabled</td>
-</tr>
-<tr>
-<td>Enabled</td>
-<td>This function or resource has been enabled</td>
-</tr>
-<tr>
-<td>InTest</td>
-<td>This function or resource is undergoing testing</td>
-</tr>
-<tr>
-<td>StandbyOffline</td>
-<td>This function or resource is enabled, but awaiting an external action to activate it</td>
-</tr>
-<tr>
-<td>StandbySpare</td>
-<td>This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it.</td>
-</tr>
-<tr>
-<td>Starting</td>
-<td>This function or resource is starting</td>
-</tr>
-<tr>
-<td>UnavailableOffline</td>
-<td>This function or resource is present but cannot be used</td>
-</tr>
-</tbody></table>
-
 <h1 id="vlannetworkinterface-1-0-2">VLanNetworkInterface 1.0.2</h1>
 
 <p>This resource contains information for a Virtual LAN (VLAN) network instance available on a manager, system or other device.</p>
@@ -15629,21 +11792,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
@@ -15688,21 +11836,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -15711,21 +11844,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Description</strong></td>
@@ -15763,11 +11881,6 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Members@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -15795,21 +11908,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>ConnectedVia</strong></td>
 <td>string, null<br><br><em>read-write</em></td>
@@ -15902,21 +12000,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>Description</strong></td>
 <td>string, null<br><br><em>read-only</em></td>
 <td>Provides a description of this resource and is used for commonality  in the schema definitions.</td>
@@ -15925,21 +12008,6 @@
 <td><strong>Members</strong> [ {</td>
 <td>array<br><br><em>read-only</em></td>
 <td>Contains the members of this collection.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ConnectedVia</strong></td>
@@ -15994,11 +12062,6 @@
 <tr>
 <td>} ]</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Members@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
 <td></td>
 </tr>
 <tr>
@@ -16057,21 +12120,6 @@
 <th></th>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>@odata.context</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.id</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>@odata.type</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
 <tr>
 <td><strong>Actions</strong> {</td>
 <td>object<br><br><em>read-only</em></td>
@@ -16153,11 +12201,6 @@
 <td>An array of references to the drives which contain this volume. This will reference Drives that either wholly or only partly contain this volume.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Drives@odata.count</strong></td>
-<td><br><br><em>read-write</em></td>
-<td></td>
-</tr>
-<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Drives@odata.navigationLink</strong></td>
 <td>string<br><br><em>read-write</em></td>
 <td></td>
@@ -16213,36 +12256,6 @@
 <td>The size in bytes of this Volume&rsquo;s optimum IO size.</td>
 </tr>
 <tr>
-<td><strong>Status</strong> {</td>
-<td>object<br><br><em>read-only</em></td>
-<td></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Health</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the health state of this resource in the absence of its dependent resources. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>HealthRollup</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This represents the overall health state from the view of this resource. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Oem</strong> {}</td>
-<td>object<br><br><em>read-write</em></td>
-<td>This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.</td>
-</tr>
-<tr>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>State</strong></td>
-<td>string, null<br><br><em>read-write</em></td>
-<td>This indicates the known state of the resource, such as if it is enabled. <em>See Property Details, below, for more information about this property.</em></td>
-</tr>
-<tr>
-<td>}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td><strong>VolumeType</strong></td>
 <td>string, null<br><br><em>read-write</em></td>
 <td>Is this drive currently predicting a failure in the near future <em>See Property Details, below, for more information about this property.</em></td>
@@ -16281,92 +12294,6 @@
 </tr>
 </tbody></table>
 
-<h3 id="health">Health:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="healthrollup">HealthRollup:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Critical</td>
-<td>A critical condition exists that requires immediate attention</td>
-</tr>
-<tr>
-<td>OK</td>
-<td>Normal</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>A condition exists that requires attention</td>
-</tr>
-</tbody></table>
-
-<h3 id="state">State:</h3>
-
-<table><thead>
-<tr>
-<th>string</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Absent</td>
-<td>This function or resource is not present or not detected</td>
-</tr>
-<tr>
-<td>Disabled</td>
-<td>This function or resource has been disabled</td>
-</tr>
-<tr>
-<td>Enabled</td>
-<td>This function or resource has been enabled</td>
-</tr>
-<tr>
-<td>InTest</td>
-<td>This function or resource is undergoing testing</td>
-</tr>
-<tr>
-<td>StandbyOffline</td>
-<td>This function or resource is enabled, but awaiting an external action to activate it</td>
-</tr>
-<tr>
-<td>StandbySpare</td>
-<td>This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it.</td>
-</tr>
-<tr>
-<td>Starting</td>
-<td>This function or resource is starting</td>
-</tr>
-<tr>
-<td>UnavailableOffline</td>
-<td>This function or resource is present but cannot be used</td>
-</tr>
-</tbody></table>
-
 <h3 id="volumetype">VolumeType:</h3>
 
 <table><thead>
@@ -16401,9 +12328,20 @@
 </tr>
 </tbody></table>
 
-<hr>
+<h1 id="this-is-an-example-postscript">This is an example Postscript</h1>
 
-<p>TODO: postscript from MD file</p>
+<h2 id="what-lucid-does-for-you">What Lucid does for you</h2>
+
+<ul>
+<li>Sends out a scheduling poll to find the best time for everyone</li>
+<li>Translates meeting times into each person’s time zone</li>
+<li>Formats a professional meeting invitation email</li>
+<li>Makes sure people get the meeting on their calendar</li>
+<li>Sends meeting reminders on the day of the meeting</li>
+<li>Saves your contacts so you can easily select the people to invite for the next meeting</li>
+</ul>
+
+<p>Lucid brings clarity to your meetings by making it easy for everyone in an organization to run consistently successful meetings using your chosen process.</p>
 
       </div>
       <div class="dark-box">
