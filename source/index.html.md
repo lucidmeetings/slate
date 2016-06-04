@@ -8,28 +8,28 @@ search: true
 ---
 
 
+# Introduction
+
+
+Lucid brings clarity to your meetings by making it easy for everyone in an organization to run consistently successful meetings using your chosen process.
+
+
+Template-driven processes give every meeting a quick start, with sensible defaults pre-filled, pre-formatted, and prepared for you. Step-by-step prompts and one-click access guide meeting leaders through prep to follow-up. Automated tracking, timing, and reminders keep everyone in synch.
+
+
+
 # AccountService 1.0.2
-
-
-
 
 Account Service contains properties common to all user accounts, such as password requirements, and control features such as account lockout.  It also contains links to the collections of Manager Accounts and Roles.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **AccountLockoutCounterResetAfter** | number<br><br>*read-write* | The interval of time in seconds since the last failed login attempt at which point the lockout threshold counter for the account is reset to zero. Must be less than or equal to AccountLockoutDuration |
 | **AccountLockoutDuration** | number, null<br><br>*read-write* | The time in seconds an account is locked after the account lockout threshold is met. Must be >= AccountLockoutResetAfter. If set to 0, no lockout will occur. |
 | **AccountLockoutThreshold** | number, null<br><br>*read-write* | The number of failed login attempts before a user account is locked for a specified duration. (0=never locked) |
 | **Accounts** { | object<br><br>*read-write* | Link to a collection of Manager Accounts |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -42,68 +42,20 @@ Account Service contains properties common to all user accounts, such as passwor
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | **Roles** { | object<br><br>*read-write* | Link to a collection of Roles |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | } |   |   |
 | **ServiceEnabled** | boolean, null<br><br>*read-write* | This indicates whether this service is enabled. |
-| **Status** { | object<br><br>*read-only* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Health** | string, null<br><br>*read-write* | This represents the health state of this resource in the absence of its dependent resources. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**HealthRollup** | string, null<br><br>*read-write* | This represents the overall health state from the view of this resource. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**State** | string, null<br><br>*read-write* | This indicates the known state of the resource, such as if it is enabled. *See Property Details, below, for more information about this property.* |
-| } |   |   |
-
-## Property Details
-
-### Health:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### HealthRollup:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### State:
-
-| string | Description |
-| --- | --- |
-| Absent | This function or resource is not present or not detected |
-| Disabled | This function or resource has been disabled |
-| Enabled | This function or resource has been enabled |
-| InTest | This function or resource is undergoing testing |
-| StandbyOffline | This function or resource is enabled, but awaiting an external action to activate it |
-| StandbySpare | This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it. |
-| Starting | This function or resource is starting |
-| UnavailableOffline | This function or resource is present but cannot be used |
-
 
 # AttributeRegistry 1.0.0
-
-
-
 
 An Attribute Registry is a set of key-value pairs which are specific to a particular implementation or product, such that creating standardized property names would be impractical.  This schema describes the structure of a Registry, and also includes mechanisms for building user interfaces (menus) allowing consistent navigation of the contents.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | **Language** | string<br><br>*read-only* | This is the RFC 5646 compliant language code for the registry. |
@@ -123,16 +75,10 @@ An Attribute Registry is a set of key-value pairs which are specific to a partic
 
 # Bios 1.0.0
 
-
-
-
 Bios contains properties surrounding a BIOS Attribute Registry (where the system-specific BIOS attributes are described) and the Actions needed to perform changes to BIOS settings, which typically require a system reset to apply.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Actions** { | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**#Bios.ChangePassword** {} | object<br><br>*read-write* | This action is used to change the BIOS passwords. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**#Bios.ResetBios** {} | object<br><br>*read-write* | This action is used to reset the BIOS attributes to default. |
@@ -147,16 +93,10 @@ Bios contains properties surrounding a BIOS Attribute Registry (where the system
 
 # Chassis 1.2.0
 
-
-
-
 A Chassis represents the physical components for any system.  This resource represents the sheet-metal confined spaces and logical zones like racks, enclosures, chassis and all other containers. Subsystems (like sensors), which operate outside of a system's data plane (meaning the resources are not accessible to software running on the system) are linked either directly or indirectly through this resource.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Actions** { | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**#Chassis.Reset** {} | object<br><br>*read-write* | This action is used to reset the chassis. This action resets the chassis, not Systems or other contained resources, although side effects may occur which affect those resources. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* |  |
@@ -168,30 +108,22 @@ A Chassis represents the physical components for any system.  This resource repr
 | **IndicatorLED** | string, null<br><br>*read-write* | The state of the indicator LED, used to identify the chassis. *See Property Details, below, for more information about this property.* |
 | **Links** { | object<br><br>*read-only* | Contains references to other resources that are related to this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ComputerSystems** [ {} ] | array<br><br>*read-only* | An array of references to the computer systems contained in this chassis.  This will only reference ComputerSystems that are directly and wholly contained in this chassis. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ComputerSystems@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ComputerSystems@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ContainedBy** {} | object<br><br>*read-write* | A reference to the chassis that this chassis is contained by. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Contains** [ {} ] | array<br><br>*read-only* | An array of references to any other chassis that this chassis has in it. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Contains@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Contains@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**CooledBy** [ {} ] | array<br><br>*read-only* | An array of ID[s] of resources that cool this chassis. Normally the ID will be a chassis or a specific set of fans. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**CooledBy@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**CooledBy@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Drives** [ {} ] | array<br><br>*read-only* | An array of references to the disk drives located in this Chassis. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Drives@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Drives@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagedBy** [ {} ] | array<br><br>*read-only* | An array of references to the Managers responsible for managing this chassis. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagedBy@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagedBy@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagersInChassis** [ {} ] | array<br><br>*read-only* | An array of references to the managers located in this Chassis. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagersInChassis@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagersInChassis@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | Oem extension object. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PoweredBy** [ {} ] | array<br><br>*read-only* | An array of ID[s] of resources that power this chassis. Normally the ID will be a chassis or a specific set of powerSupplies |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PoweredBy@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PoweredBy@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Storage** [ {} ] | array<br><br>*read-only* | An array of references to the storage subsystems connected to or inside this Chassis. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Storage@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Storage@odata.navigationLink** | string<br><br>*read-write* |  |
 | } |   |   |
 | **Location** *(v1.2.0)* { | object<br><br>*read-only* |  |
@@ -200,12 +132,8 @@ A Chassis represents the physical components for any system.  This resource repr
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | Oem extension object. |
 | } |   |   |
 | **LogServices** { | object<br><br>*read-write* | A reference to the logs for this chassis. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -221,52 +149,32 @@ A Chassis represents the physical components for any system.  This resource repr
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**IntrusionSensorReArm** | string, null<br><br>*read-write* | This indicates how the Normal state to be restored. *See Property Details, below, for more information about this property.* |
 | } |   |   |
 | **Power** { | object<br><br>*read-write* | A reference to the power properties (power supplies, power policies, sensors) for this chassis. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerControl** [ {} ] | array<br><br>*read-write* | This is the definition for power control function (power reading/limiting). |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerControl@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerControl@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerSupplies** [ {} ] | array<br><br>*read-write* | Details of the power supplies associated with this system or device |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerSupplies@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerSupplies@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy** [ {} ] | array<br><br>*read-only* | Redundancy information for the power subsystem of this system or device |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Voltages** [ {} ] | array<br><br>*read-write* | This is the definition for voltage sensors. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Voltages@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Voltages@odata.navigationLink** | string<br><br>*read-write* |  |
 | } |   |   |
 | **PowerState** *(v1.0.1)* | string, null<br><br>*read-write* | This is the current power state of the chassis. *See Property Details, below, for more information about this property.* |
 | **SKU** | string, null<br><br>*read-only* | This is the SKU for this chassis. |
 | **SerialNumber** | string, null<br><br>*read-only* | The serial number for this chassis. |
-| **Status** { | object<br><br>*read-only* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Health** | string, null<br><br>*read-write* | This represents the health state of this resource in the absence of its dependent resources. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**HealthRollup** | string, null<br><br>*read-write* | This represents the overall health state from the view of this resource. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**State** | string, null<br><br>*read-write* | This indicates the known state of the resource, such as if it is enabled. *See Property Details, below, for more information about this property.* |
-| } |   |   |
 | **Thermal** { | object<br><br>*read-write* | A reference to the thermal properties (fans, cooling, sensors) for this chassis. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Fans** [ {} ] | array<br><br>*read-write* | This is the definition for fans. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Fans@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Fans@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy** [ {} ] | array<br><br>*read-only* | This structure is used to show redundancy for fans.  The Component ids will reference the members of the redundancy groups. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Temperatures** [ {} ] | array<br><br>*read-write* | This is the definition for temperature sensors. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Temperatures@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Temperatures@odata.navigationLink** | string<br><br>*read-write* |  |
 | } |   |   |
 
@@ -294,22 +202,6 @@ A Chassis represents the physical components for any system.  This resource repr
 | Sled | An enclosed or semi-enclosed, system chassis which must be plugged into a multi-system chassis to function normally similar to a blade type chassis. |
 | StandAlone | A single, free-standing system, commonly called a tower or desktop chassis |
 | Zone | A logical division or portion of a physical chassis that contains multiple devices or systems that cannot be physically separated |
-
-### Health:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### HealthRollup:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
 
 ### IndicatorLED:
 
@@ -344,37 +236,15 @@ A Chassis represents the physical components for any system.  This resource repr
 | PoweringOff | A temporary state between On and Off. The components within the chassis can take time to process the power off action. |
 | PoweringOn | A temporary state between Off and On. The components within the chassis can take time to process the power on action. |
 
-### State:
-
-| string | Description |
-| --- | --- |
-| Absent | This function or resource is not present or not detected |
-| Disabled | This function or resource has been disabled |
-| Enabled | This function or resource has been enabled |
-| InTest | This function or resource is undergoing testing |
-| StandbyOffline | This function or resource is enabled, but awaiting an external action to activate it |
-| StandbySpare | This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it. |
-| Starting | This function or resource is starting |
-| UnavailableOffline | This function or resource is present but cannot be used |
-
 
 # ChassisCollection
-
-
-
 
 A Collection of Chassis resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Actions** {} | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**AssetTag** | string, null<br><br>*read-write* | The user assigned asset tag for this chassis. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ChassisType** | string<br><br>*read-write* | This property indicates the type of physical form factor of this resource. *See Property Details, below, for more information about this property.* |
@@ -394,10 +264,8 @@ A Collection of Chassis resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerState** | string, null<br><br>*read-write* | This is the current power state of the chassis. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SKU** | string, null<br><br>*read-only* | This is the SKU for this chassis. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SerialNumber** | string, null<br><br>*read-only* | The serial number for this chassis. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Thermal** {} | object<br><br>*read-write* | A reference to the thermal properties (fans, cooling, sensors) for this chassis. |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -448,25 +316,16 @@ A Collection of Chassis resource instances.
 
 # ComputerSystem 1.1.0
 
-
-
-
 This schema defines a computer system and its respective properties.  A computer system represents a machine (physical or virtual) and the local resources such as memory, cpu and other devices that can be accessed from that machine.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Actions** { | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**#ComputerSystem.Reset** {} | object<br><br>*read-write* | This action is used to reset the system. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* |  |
 | } |   |   |
 | **AssetTag** | string, null<br><br>*read-write* | The user definable tag that can be used to track this computer system for inventory or other client purposes |
 | **Bios** *(v1.1.0)* { | object<br><br>*read-write* | A reference to the BIOS settings associated with this system. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Actions** {} | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**AttributeRegistry** | string, null<br><br>*read-write* | The Resource ID of the Attribute Registry for the BIOS Attributes resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Attributes** {} | object<br><br>*read-write* | This is the manufacturer/provider specific list of BIOS attributes. |
@@ -484,12 +343,8 @@ This schema defines a computer system and its respective properties.  A computer
 | } |   |   |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **EthernetInterfaces** { | object<br><br>*read-write* | A reference to the collection of Ethernet interfaces associated with this system |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -499,45 +354,32 @@ This schema defines a computer system and its respective properties.  A computer
 | **IndicatorLED** | string, null<br><br>*read-write* | The state of the indicator LED, used to identify the system *See Property Details, below, for more information about this property.* |
 | **Links** { | object<br><br>*read-only* | Contains references to other resources that are related to this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Chassis** [ {} ] | array<br><br>*read-only* | An array of references to the chassis in which this system is contained |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Chassis@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Chassis@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**CooledBy** [ {} ] | array<br><br>*read-only* | An array of ID[s] of resources that cool this computer system. Normally the ID will be a chassis or a specific set of fans. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**CooledBy@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**CooledBy@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagedBy** [ {} ] | array<br><br>*read-only* | An array of references to the Managers responsible for this system |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagedBy@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagedBy@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | Oem extension object. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PoweredBy** [ {} ] | array<br><br>*read-only* | An array of ID[s] of resources that power this computer system. Normally the ID will be a chassis or a specific set of powerSupplies |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PoweredBy@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PoweredBy@odata.navigationLink** | string<br><br>*read-write* |  |
 | } |   |   |
 | **LogServices** { | object<br><br>*read-write* | A reference to the collection of Log Services associated with this system |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | } |   |   |
 | **Manufacturer** | string, null<br><br>*read-only* | The manufacturer or OEM of this system. |
 | **Memory** *(v1.1.0)* { | object<br><br>*read-write* | A reference to the collection of Memory associated with this system |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | } |   |   |
 | **MemorySummary** { | object<br><br>*read-write* | This object describes the central memory of the system in general detail. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**MemoryMirroring** | string, null<br><br>*read-write* | The ability and type of memory mirroring supported by this system. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TotalSystemMemoryGiB** | number, null<br><br>*read-only* | The total installed, operating system-accessible memory (RAM), measured in GiB. |
 | } |   |   |
 | **Model** | string, null<br><br>*read-only* | The model number for this system |
@@ -548,24 +390,16 @@ This schema defines a computer system and its respective properties.  A computer
 | **ProcessorSummary** { | object<br><br>*read-write* | This object describes the central processors of the system in general detail. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Count** | number, null<br><br>*read-only* | The number of processors in the system. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Model** | string, null<br><br>*read-only* | The processor model for the primary or majority of processors in this system. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | } |   |   |
 | **Processors** { | object<br><br>*read-write* | A reference to the collection of Processors associated with this system |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | } |   |   |
 | **SKU** | string, null<br><br>*read-only* | The manufacturer SKU for this system |
 | **SecureBoot** *(v1.1.0)* { | object<br><br>*read-write* | A reference to the UEFI SecureBoot resource associated with this system. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Actions** {} | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
@@ -577,29 +411,15 @@ This schema defines a computer system and its respective properties.  A computer
 | } |   |   |
 | **SerialNumber** | string, null<br><br>*read-only* | The serial number for this system |
 | **SimpleStorage** { | object<br><br>*read-write* | A reference to the collection of storage devices associated with this system |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | } |   |   |
-| **Status** { | object<br><br>*read-only* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Health** | string, null<br><br>*read-write* | This represents the health state of this resource in the absence of its dependent resources. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**HealthRollup** | string, null<br><br>*read-write* | This represents the overall health state from the view of this resource. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**State** | string, null<br><br>*read-write* | This indicates the known state of the resource, such as if it is enabled. *See Property Details, below, for more information about this property.* |
-| } |   |   |
 | **Storage** *(v1.1.0)* { | object<br><br>*read-write* | A reference to the collection of storage devices associated with this system |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -609,7 +429,6 @@ This schema defines a computer system and its respective properties.  A computer
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**FirmwareVersion** | string, null<br><br>*read-only* | The firmware version of this Trusted Module |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**InterfaceType** | string, null<br><br>*read-write* | This property indicates the interface type of the Trusted Module. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | } ] |   |   |
 | **UUID** | string, null<br><br>*read-write* | The universal unique identifier (UUID) for this system |
 
@@ -647,22 +466,6 @@ This schema defines a computer system and its respective properties.  A computer
 | UefiTarget | Boot to the UEFI Device specified in the UefiTargetBootSourceOverride property |
 | Usb | Boot from a USB device as specified by the system BIOS |
 | Utilities | Boot the manufacturer's Utilities program(s) |
-
-### Health:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### HealthRollup:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
 
 ### IndicatorLED:
 
@@ -715,19 +518,6 @@ This schema defines a computer system and its respective properties.  A computer
 | SetupMode | Secure Boot is currently in Setup Mode. |
 | UserMode | Secure Boot is currently in User Mode. |
 
-### State:
-
-| string | Description |
-| --- | --- |
-| Absent | This function or resource is not present or not detected |
-| Disabled | This function or resource has been disabled |
-| Enabled | This function or resource has been enabled |
-| InTest | This function or resource is undergoing testing |
-| StandbyOffline | This function or resource is enabled, but awaiting an external action to activate it |
-| StandbySpare | This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it. |
-| Starting | This function or resource is starting |
-| UnavailableOffline | This function or resource is present but cannot be used |
-
 ### SystemType:
 
 | string | Description |
@@ -741,21 +531,12 @@ This schema defines a computer system and its respective properties.  A computer
 
 # ComputerSystemCollection
 
-
-
-
 A Collection of ComputerSystem resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Actions** {} | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**AssetTag** | string, null<br><br>*read-write* | The user definable tag that can be used to track this computer system for inventory or other client purposes |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Bios** {} | object<br><br>*read-write* | A reference to the BIOS settings associated with this system. |
@@ -782,13 +563,11 @@ A Collection of ComputerSystem resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SecureBoot** {} | object<br><br>*read-write* | A reference to the UEFI SecureBoot resource associated with this system. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SerialNumber** | string, null<br><br>*read-only* | The serial number for this system |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SimpleStorage** {} | object<br><br>*read-write* | A reference to the collection of storage devices associated with this system |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Storage** {} | object<br><br>*read-write* | A reference to the collection of storage devices associated with this system |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SystemType** | string<br><br>*read-write* | The type of computer system represented by this resource. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TrustedModules** [ {} ] | array<br><br>*read-write* | This object describes the array of Trusted Modules in the system. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UUID** | string, null<br><br>*read-write* | The universal unique identifier (UUID) for this system |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -826,16 +605,10 @@ A Collection of ComputerSystem resource instances.
 
 # Drive 1.0.0
 
-
-
-
 Drive contains properties describing a single physical disk drive for any system, along with links to associated Volumes.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Actions** { | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**#Drive.SecureErase** {} | object<br><br>*read-write* | This action is used to securely erase the contents of the drive. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* |  |
@@ -858,7 +631,6 @@ Drive contains properties describing a single physical disk drive for any system
 | **Links** { | object<br><br>*read-only* | Contains references to other resources that are related to this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | Oem extension object. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Volumes** [ {} ] | array<br><br>*read-only* | An array of references to the volumes contained in this drive. This will reference Volumes that are either wholly or only partly contained by this drive. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Volumes@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Volumes@odata.navigationLink** | string<br><br>*read-write* |  |
 | } |   |   |
 | **Location** [ { | array<br><br>*read-only* | The Location of the drive |
@@ -879,12 +651,6 @@ Drive contains properties describing a single physical disk drive for any system
 | **RotationSpeedRPM** | number, null<br><br>*read-only* | The rotation speed of this Drive in Revolutions per Minute (RPM) |
 | **SKU** | string, null<br><br>*read-only* | This is the SKU for this drive. |
 | **SerialNumber** | string, null<br><br>*read-only* | The serial number for this drive. |
-| **Status** { | object<br><br>*read-only* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Health** | string, null<br><br>*read-write* | This represents the health state of this resource in the absence of its dependent resources. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**HealthRollup** | string, null<br><br>*read-write* | This represents the overall health state from the view of this resource. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**State** | string, null<br><br>*read-write* | This indicates the known state of the resource, such as if it is enabled. *See Property Details, below, for more information about this property.* |
-| } |   |   |
 | **StatusIndicator** | string, null<br><br>*read-write* | The state of the status indicator, used to communicate status information about this drive. *See Property Details, below, for more information about this property.* |
 
 ## Property Details
@@ -916,22 +682,6 @@ Drive contains properties describing a single physical disk drive for any system
 | Unecrypted | The drive is not currently encrypted |
 | Unlocked | The drive is currently encrypted but the data is accessible to the user unencrypted |
 
-### Health:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### HealthRollup:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
 ### HotspareType:
 
 | string | Description |
@@ -957,19 +707,6 @@ Drive contains properties describing a single physical disk drive for any system
 | SMR | The drive media type is shingled magnetic recording |
 | SSD | The drive media type is solid state or flash memory |
 
-### State:
-
-| string | Description |
-| --- | --- |
-| Absent | This function or resource is not present or not detected |
-| Disabled | This function or resource has been disabled |
-| Enabled | This function or resource has been enabled |
-| InTest | This function or resource is undergoing testing |
-| StandbyOffline | This function or resource is enabled, but awaiting an external action to activate it |
-| StandbySpare | This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it. |
-| Starting | This function or resource is starting |
-| UnavailableOffline | This function or resource is present but cannot be used |
-
 ### StatusIndicator:
 
 | string | Description |
@@ -985,16 +722,10 @@ Drive contains properties describing a single physical disk drive for any system
 
 # EthernetInterface 1.0.2
 
-
-
-
 This schema defines a simple ethernet NIC resource.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **AutoNeg** | boolean, null<br><br>*read-write* | This indicates if the speed and duplex are automatically negotiated and configured on this interface. |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **FQDN** | string, null<br><br>*read-write* | This is the complete, fully qualified domain name obtained by DNS for this interface. |
@@ -1035,21 +766,11 @@ This schema defines a simple ethernet NIC resource.
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | **PermanentMACAddress** | string, null<br><br>*read-write* | This is the permanent MAC address assigned to this interface (port) |
 | **SpeedMbps** | number, null<br><br>*read-write* | This is the current speed in Mbps of this interface. |
-| **Status** { | object, null<br><br>*read-only* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Health** | string, null<br><br>*read-write* | This represents the health state of this resource in the absence of its dependent resources. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**HealthRollup** | string, null<br><br>*read-write* | This represents the overall health state from the view of this resource. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**State** | string, null<br><br>*read-write* | This indicates the known state of the resource, such as if it is enabled. *See Property Details, below, for more information about this property.* |
-| } |   |   |
 | **UefiDevicePath** | string, null<br><br>*read-only* | The UEFI device path for this interface |
 | **VLAN** | , null<br><br>*read-write* | If this Network Interface supports more than one VLAN, this property will not be present and the client should look for VLANs collection in the link section of this resource. |
 | **VLANs** { | object<br><br>*read-write* | This is a reference to a collection of VLANs and is only used if the interface supports more than one VLANs. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -1075,53 +796,15 @@ This schema defines a simple ethernet NIC resource.
 | Preferred | This address is currently within both it's valid and preferred lifetimes as defined in RFC 4862. |
 | Tentative | This address is currently undergoing Duplicate Address Detection testing as defined in RFC 4862 section 5.4. |
 
-### Health:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### HealthRollup:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### State:
-
-| string | Description |
-| --- | --- |
-| Absent | This function or resource is not present or not detected |
-| Disabled | This function or resource has been disabled |
-| Enabled | This function or resource has been enabled |
-| InTest | This function or resource is undergoing testing |
-| StandbyOffline | This function or resource is enabled, but awaiting an external action to activate it |
-| StandbySpare | This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it. |
-| Starting | This function or resource is starting |
-| UnavailableOffline | This function or resource is present but cannot be used |
-
 
 # EthernetInterfaceCollection
-
-
-
 
 A Collection of EthernetInterface resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**AutoNeg** | boolean, null<br><br>*read-write* | This indicates if the speed and duplex are automatically negotiated and configured on this interface. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**FQDN** | string, null<br><br>*read-write* | This is the complete, fully qualified domain name obtained by DNS for this interface. |
@@ -1142,28 +825,20 @@ A Collection of EthernetInterface resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PermanentMACAddress** | string, null<br><br>*read-write* | This is the permanent MAC address assigned to this interface (port) |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SpeedMbps** | number, null<br><br>*read-write* | This is the current speed in Mbps of this interface. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object, null<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UefiDevicePath** | string, null<br><br>*read-only* | The UEFI device path for this interface |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**VLAN** | , null<br><br>*read-write* | If this Network Interface supports more than one VLAN, this property will not be present and the client should look for VLANs collection in the link section of this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**VLANs** {} | object<br><br>*read-write* | This is a reference to a collection of VLANs and is only used if the interface supports more than one VLANs. |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 
 # Event 1.1.0
 
-
-
-
 The Event schema describes the JSON payload received by an Event Destination (which has subscribed to event notification) when events occurs.  This resource contains data about event(s), including descriptions, severity and MessageId reference to a Message Registry that can be accessed for further information. 
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Context** *(v1.1.0)* | string<br><br>*read-only* | A context can be supplied at subscription time.  This property is the context value supplied by the subscriber. |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Events** [ { | array<br><br>*read-write* | Each event in this array has a set of properties that describe the event.  Since this is an array, more than one event can be sent simultaneously. |
@@ -1179,7 +854,6 @@ The Event schema describes the JSON payload received by an Event Destination (wh
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**OriginOfCondition** {} | object<br><br>*read-write* | This indicates the resource that originated the condition that caused the event to be generated. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Severity** | string<br><br>*read-only* | This is the severity of the event. |
 | } ] |   |   |
-| **Events@odata.count** | <br><br>*read-write* |  |
 | **Events@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
@@ -1200,16 +874,10 @@ The Event schema describes the JSON payload received by an Event Destination (wh
 
 # EventDestination 1.0.2
 
-
-
-
 An Event Destination desribes the target of an event subscription, including the types of events subscribed and context to provide to the target in the Event payload.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Context** | string<br><br>*read-write* | A client-supplied string that is stored with the event destination subscription. |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Destination** | string<br><br>*read-only* | The URI of the destination Event Service. |
@@ -1231,21 +899,12 @@ An Event Destination desribes the target of an event subscription, including the
 
 # EventDestinationCollection
 
-
-
-
 A Collection of EventDestination resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Context** | string<br><br>*read-write* | A client-supplied string that is stored with the event destination subscription. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Destination** | string<br><br>*read-only* | The URI of the destination Event Service. |
@@ -1256,7 +915,6 @@ A Collection of EventDestination resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Protocol** | string<br><br>*read-write* | The protocol type of the event connection. *See Property Details, below, for more information about this property.* |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -1272,16 +930,10 @@ A Collection of EventDestination resource instances.
 
 # EventService 1.0.2
 
-
-
-
 The Event Service resource contains properties for managing event subcriptions and generates the events sent to subscribers.  The resource has links to the actual collection of subscriptions (called Event Destinations).
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Actions** { | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**#EventService.SubmitTestEvent** {} | object<br><br>*read-write* | This action is used to generate a test event. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* |  |
@@ -1294,68 +946,20 @@ The Event Service resource contains properties for managing event subcriptions a
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | **ServiceEnabled** | boolean, null<br><br>*read-write* | This indicates whether this service is enabled. |
-| **Status** { | object<br><br>*read-only* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Health** | string, null<br><br>*read-write* | This represents the health state of this resource in the absence of its dependent resources. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**HealthRollup** | string, null<br><br>*read-write* | This represents the overall health state from the view of this resource. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**State** | string, null<br><br>*read-write* | This indicates the known state of the resource, such as if it is enabled. *See Property Details, below, for more information about this property.* |
-| } |   |   |
 | **Subscriptions** { | object<br><br>*read-write* | This is a reference to a collection of Event Destination resources. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | } |   |   |
 
-## Property Details
-
-### Health:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### HealthRollup:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### State:
-
-| string | Description |
-| --- | --- |
-| Absent | This function or resource is not present or not detected |
-| Disabled | This function or resource has been disabled |
-| Enabled | This function or resource has been enabled |
-| InTest | This function or resource is undergoing testing |
-| StandbyOffline | This function or resource is enabled, but awaiting an external action to activate it |
-| StandbySpare | This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it. |
-| Starting | This function or resource is starting |
-| UnavailableOffline | This function or resource is present but cannot be used |
-
-
 # JsonSchemaFile 1.0.2
-
-
-
 
 This is the schema definition for the Schema File locator resource.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | **Languages** [ {} ] | array<br><br>*read-only* | Language codes for the schemas available. |
@@ -1372,21 +976,12 @@ This is the schema definition for the Schema File locator resource.
 
 # JsonSchemaFileCollection
 
-
-
-
 A Collection of JsonSchemaFile resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Languages** [ {} ] | array<br><br>*read-only* | Language codes for the schemas available. |
@@ -1395,23 +990,16 @@ A Collection of JsonSchemaFile resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Schema** | string<br><br>*read-only* | The @odata.type name this schema describes. |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 
 # LogEntry 1.0.2
 
-
-
-
 This resource defines the record format for a log.  It is designed to be used for SEL logs (from IPMI) as well as Event Logs and OEM-specific log formats.  The EntryType field indicates the type of log and the resource includes several additional properties dependent on the EntryType.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Created** | string<br><br>*read-only* | The time the log entry was created. |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **EntryCode** | string, null<br><br>*read-write* | If the EntryType is SEL, this will have the entry code for the log entry. *See Property Details, below, for more information about this property.* |
@@ -1564,21 +1152,12 @@ This resource defines the record format for a log.  It is designed to be used fo
 
 # LogEntryCollection
 
-
-
-
 A Collection of LogEntry resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Created** | string<br><br>*read-only* | The time the log entry was created. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**EntryCode** | string, null<br><br>*read-write* | If the EntryType is SEL, this will have the entry code for the log entry. *See Property Details, below, for more information about this property.* |
@@ -1595,7 +1174,6 @@ A Collection of LogEntry resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SensorType** | string, null<br><br>*read-write* | If the EntryType is SEL, this will have the sensor type that the log entry pertains to. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Severity** | string, null<br><br>*read-write* | This is the severity of the log entry. *See Property Details, below, for more information about this property.* |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -1734,15 +1312,13 @@ A Collection of LogEntry resource instances.
 # LogService 1.0.2
 
 
+**You don't have to attend every meeting to know what happened.**
 
+Meeting records capture who showed up, what they reviewed, what was decided, and what tasks were assigned. Publish records to the team and your existing business systems.
 
-This resource represents the log service for the resource or service to which it is associated.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Actions** { | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**#LogService.ClearLog** {} | object<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* |  |
@@ -1751,12 +1327,8 @@ This resource represents the log service for the resource or service to which it
 | **DateTimeLocalOffset** | string, null<br><br>*read-write* | The time offset from UTC that the DateTime property is set to in format: +06:00 . |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Entries** { | object<br><br>*read-write* | References to the log entry collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -1767,30 +1339,8 @@ This resource represents the log service for the resource or service to which it
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | **OverWritePolicy** | string<br><br>*read-write* | The overwrite policy for this service that takes place when the log is full. *See Property Details, below, for more information about this property.* |
 | **ServiceEnabled** | boolean, null<br><br>*read-write* | This indicates whether this service is enabled. |
-| **Status** { | object, null<br><br>*read-only* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Health** | string, null<br><br>*read-write* | This represents the health state of this resource in the absence of its dependent resources. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**HealthRollup** | string, null<br><br>*read-write* | This represents the overall health state from the view of this resource. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**State** | string, null<br><br>*read-write* | This indicates the known state of the resource, such as if it is enabled. *See Property Details, below, for more information about this property.* |
-| } |   |   |
 
 ## Property Details
-
-### Health:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### HealthRollup:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
 
 ### OverWritePolicy:
 
@@ -1800,37 +1350,15 @@ This resource represents the log service for the resource or service to which it
 | Unknown | The overwrite policy is not known or is undefined |
 | WrapsWhenFull | When full, new entries to the Log will overwrite previous entries |
 
-### State:
-
-| string | Description |
-| --- | --- |
-| Absent | This function or resource is not present or not detected |
-| Disabled | This function or resource has been disabled |
-| Enabled | This function or resource has been enabled |
-| InTest | This function or resource is undergoing testing |
-| StandbyOffline | This function or resource is enabled, but awaiting an external action to activate it |
-| StandbySpare | This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it. |
-| Starting | This function or resource is starting |
-| UnavailableOffline | This function or resource is present but cannot be used |
-
 
 # LogServiceCollection
-
-
-
 
 A Collection of LogService resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Actions** {} | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**DateTime** | string, null<br><br>*read-write* | The current DateTime (with offset) for the log service, used to set or read time. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**DateTimeLocalOffset** | string, null<br><br>*read-write* | The time offset from UTC that the DateTime property is set to in format: +06:00 . |
@@ -1842,9 +1370,7 @@ A Collection of LogService resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**OverWritePolicy** | string<br><br>*read-write* | The overwrite policy for this service that takes place when the log is full. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ServiceEnabled** | boolean, null<br><br>*read-write* | This indicates whether this service is enabled. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object, null<br><br>*read-only* |  |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -1862,16 +1388,10 @@ A Collection of LogService resource instances.
 
 # Manager 1.1.0
 
-
-
-
 This is the schema definition for a Manager.  Examples of managers are BMCs, Enclosure Managers, Management Controllers and other subsystems assigned managability functions.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Actions** { | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**#Manager.ForceFailover** {} | object<br><br>*read-write* | The ForceFailover action forces a failover of this manager to the manager used in the parameter |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**#Manager.ModifyRedundancySet** {} | object<br><br>*read-write* | The ModifyRedundancySet operation is used to add or remove members to a redundant group of manager. |
@@ -1887,12 +1407,8 @@ This is the schema definition for a Manager.  Examples of managers are BMCs, Enc
 | **DateTimeLocalOffset** | string, null<br><br>*read-write* | The time offset from UTC that the DateTime property is set to in format: +06:00 . |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **EthernetInterfaces** { | object<br><br>*read-write* | This is a reference to a collection of NICs that this manager uses for network communication.  It is here that clients will find NIC configuration options and settings. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -1906,21 +1422,15 @@ This is the schema definition for a Manager.  Examples of managers are BMCs, Enc
 | **Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | **Links** { | object<br><br>*read-only* | Contains references to other resources that are related to this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagerForChassis** [ {} ] | array<br><br>*read-only* | This property is an array of references to the chassis that this manager has control over. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagerForChassis@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagerForChassis@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagerForServers** [ {} ] | array<br><br>*read-only* | This property is an array of references to the systems that this manager has control over. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagerForServers@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagerForServers@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagerInChassis** {} | object<br><br>*read-write* | This property is a reference to the chassis that this manager is located in. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | Oem extension object. |
 | } |   |   |
 | **LogServices** { | object<br><br>*read-write* | This is a reference to a collection of Logs used by the manager. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -1929,9 +1439,6 @@ This is the schema definition for a Manager.  Examples of managers are BMCs, Enc
 | **Model** | string, null<br><br>*read-only* | The model information of this Manager as defined by the manufacturer |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **NetworkProtocol** { | object<br><br>*read-write* | This is a reference to the network services and their settings that the manager controls.  It is here that clients will find network configuration options as well as network services. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**FQDN** | string, null<br><br>*read-only* | This is the fully qualified domain name for the manager obtained by DNS including the host name and top-level domain name. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**HTTP** {} | object<br><br>*read-write* | Settings for this Manager's HTTP protocol support |
@@ -1945,7 +1452,6 @@ This is the schema definition for a Manager.  Examples of managers are BMCs, Enc
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SNMP** {} | object<br><br>*read-write* | Settings for this Manager's SNMP support |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SSDP** {} | object<br><br>*read-write* | Settings for this Manager's SSDP support |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SSH** {} | object<br><br>*read-write* | Settings for this Manager's SSH (Secure Shell) protocol support |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Telnet** {} | object<br><br>*read-write* | Settings for this Manager's Telnet protocol support |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**VirtualMedia** {} | object<br><br>*read-write* | Settings for this Manager's Virtual Media support |
 | } |   |   |
@@ -1954,7 +1460,6 @@ This is the schema definition for a Manager.  Examples of managers are BMCs, Enc
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**MemberId** | string<br><br>*read-write* | This is the identifier for the member within the collection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | } ] |   |   |
-| **Redundancy@odata.count** | <br><br>*read-write* |  |
 | **Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
 | **SerialConsole** { | object<br><br>*read-write* | Information about the Serial Console service provided by this manager. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ConnectTypesSupported** [ {} ] | array<br><br>*read-only* | This object is used to enumerate the Serial Console connection types allowed by the implementation. |
@@ -1962,53 +1467,23 @@ This is the schema definition for a Manager.  Examples of managers are BMCs, Enc
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ServiceEnabled** | boolean<br><br>*read-write* | Indicates if the service is enabled for this manager. |
 | } |   |   |
 | **SerialInterfaces** { | object<br><br>*read-write* | This is a reference to a collection of serial interfaces that this manager uses for serial and console communication.  It is here that clients will find serial configuration options and settings. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | } |   |   |
 | **ServiceEntryPointUUID** | string<br><br>*read-write* | The UUID of the Redfish Service provided by this manager |
-| **Status** { | object<br><br>*read-only* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Health** | string, null<br><br>*read-write* | This represents the health state of this resource in the absence of its dependent resources. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**HealthRollup** | string, null<br><br>*read-write* | This represents the overall health state from the view of this resource. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**State** | string, null<br><br>*read-write* | This indicates the known state of the resource, such as if it is enabled. *See Property Details, below, for more information about this property.* |
-| } |   |   |
 | **UUID** | string, null<br><br>*read-write* | The Universal Unique Identifier (UUID) for this Manager |
 | **VirtualMedia** { | object<br><br>*read-write* | This is a reference to the Virtual Media services for this particular manager. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | } |   |   |
 
 ## Property Details
-
-### Health:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### HealthRollup:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
 
 ### ManagerType:
 
@@ -2020,32 +1495,49 @@ This is the schema definition for a Manager.  Examples of managers are BMCs, Enc
 | ManagementController | A controller used primarily to monitor or manage the operation of a device or system |
 | RackManager | A controller which provides management functions for a whole or part of a rack |
 
-### State:
-
-| string | Description |
-| --- | --- |
-| Absent | This function or resource is not present or not detected |
-| Disabled | This function or resource has been disabled |
-| Enabled | This function or resource has been enabled |
-| InTest | This function or resource is undergoing testing |
-| StandbyOffline | This function or resource is enabled, but awaiting an external action to activate it |
-| StandbySpare | This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it. |
-| Starting | This function or resource is starting |
-| UnavailableOffline | This function or resource is present but cannot be used |
-
 
 # ManagerAccount 1.0.2
 
 
+Stop juggling multiple applications while trying to run a productive meeting. Before, during, after: Lucid's all-in-one platform combines all the tools you need to run a successful meeting start to finish.
 
 
-The user accounts, owned by a Manager, are defined in this resource.  Changes to a Manager Account may affect the current Redfish service connection if this manager is responsible for the Redfish service.
+
+
+> Here is how to get a list of meetings. A meeting contains all the information necessary for scheduling and running an online meeting. Meetings are scheduled within a room, and each meeting includes its specific agenda, meeting state, list of attendees, notes, action items, and meeting record.
+
+```json
+[
+  {
+    "meeting_id": 1194,
+    "name": "Review meeting",
+    "start_time": {
+      "value": 1431648000,
+      "iso_8601": "2015-05-15T00:00:00Z"
+    }
+  },
+  {
+    "meeting_id": 1192,
+    "name": "Status followup",
+    "start_time": {
+      "value": 1430956800,
+      "iso_8601": "2015-05-07T00:00:00Z"
+    }
+  },
+  {
+    "meeting_id": 1199,
+    "name": "Status update",
+    "start_time": {
+      "value": 1430872200,
+      "iso_8601": "2015-05-06T00:30:00Z"
+    }
+  }
+]
+```
+
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Enabled** | boolean<br><br>*read-write* | This property is used by a User Administrator to disable an account w/o having to delet the user information.  When set to true, the user can login.  When set to false, the account is administratively disabled and the user cannot login. |
 | **Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
@@ -2062,21 +1554,12 @@ The user accounts, owned by a Manager, are defined in this resource.  Changes to
 
 # ManagerAccountCollection
 
-
-
-
 A Collection of ManagerAccount resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Enabled** | boolean<br><br>*read-write* | This property is used by a User Administrator to disable an account w/o having to delet the user information.  When set to true, the user can login.  When set to false, the account is administratively disabled and the user cannot login. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
@@ -2088,28 +1571,18 @@ A Collection of ManagerAccount resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RoleId** | string<br><br>*read-write* | This property contains the Role for this account. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UserName** | string<br><br>*read-write* | This property contains the user name for the account. |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 
 # ManagerCollection
 
-
-
-
 A Collection of Manager resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Actions** {} | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**CommandShell** {} | object<br><br>*read-write* | Information about the Command Shell service provided by this manager. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**DateTime** | string, null<br><br>*read-write* | The current DateTime (with offset) for the manager, used to set or read time. |
@@ -2127,16 +1600,13 @@ A Collection of Manager resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**NetworkProtocol** {} | object<br><br>*read-write* | This is a reference to the network services and their settings that the manager controls.  It is here that clients will find network configuration options as well as network services. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy** [ {} ] | array<br><br>*read-only* | Redundancy information for the managers of this system |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SerialConsole** {} | object<br><br>*read-write* | Information about the Serial Console service provided by this manager. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SerialInterfaces** {} | object<br><br>*read-write* | This is a reference to a collection of serial interfaces that this manager uses for serial and console communication.  It is here that clients will find serial configuration options and settings. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ServiceEntryPointUUID** | string<br><br>*read-write* | The UUID of the Redfish Service provided by this manager |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UUID** | string, null<br><br>*read-write* | The Universal Unique Identifier (UUID) for this Manager |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**VirtualMedia** {} | object<br><br>*read-write* | This is a reference to the Virtual Media services for this particular manager. |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -2156,16 +1626,10 @@ A Collection of Manager resource instances.
 
 # ManagerNetworkProtocol 1.0.2
 
-
-
-
 This resource is used to obtain or modify the network services managed by a given manager.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **FQDN** | string, null<br><br>*read-only* | This is the fully qualified domain name for the manager obtained by DNS including the host name and top-level domain name. |
 | **HTTP** { | object<br><br>*read-write* | Settings for this Manager's HTTP protocol support |
@@ -2203,12 +1667,6 @@ This resource is used to obtain or modify the network services managed by a give
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Port** | number, null<br><br>*read-write* | Indicates the protocol port. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ProtocolEnabled** | boolean, null<br><br>*read-write* | Indicates if the protocol is enabled or disabled |
 | } |   |   |
-| **Status** { | object<br><br>*read-only* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Health** | string, null<br><br>*read-write* | This represents the health state of this resource in the absence of its dependent resources. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**HealthRollup** | string, null<br><br>*read-write* | This represents the overall health state from the view of this resource. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**State** | string, null<br><br>*read-write* | This indicates the known state of the resource, such as if it is enabled. *See Property Details, below, for more information about this property.* |
-| } |   |   |
 | **Telnet** { | object<br><br>*read-write* | Settings for this Manager's Telnet protocol support |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Port** | number, null<br><br>*read-write* | Indicates the protocol port. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ProtocolEnabled** | boolean, null<br><br>*read-write* | Indicates if the protocol is enabled or disabled |
@@ -2220,22 +1678,6 @@ This resource is used to obtain or modify the network services managed by a give
 
 ## Property Details
 
-### Health:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### HealthRollup:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
 ### NotifyIPv6Scope:
 
 | string | Description |
@@ -2244,32 +1686,13 @@ This resource is used to obtain or modify the network services managed by a give
 | Organization | SSDP Notify messages are sent to addresses in the IPv6 Local Organization scope |
 | Site | SSDP Notify messages are sent to addresses in the IPv6 Local Site scope |
 
-### State:
-
-| string | Description |
-| --- | --- |
-| Absent | This function or resource is not present or not detected |
-| Disabled | This function or resource has been disabled |
-| Enabled | This function or resource has been enabled |
-| InTest | This function or resource is undergoing testing |
-| StandbyOffline | This function or resource is enabled, but awaiting an external action to activate it |
-| StandbySpare | This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it. |
-| Starting | This function or resource is starting |
-| UnavailableOffline | This function or resource is present but cannot be used |
-
 
 # Memory 1.0.0
-
-
-
 
 This is the schema definition for definition of a Memory and its configuration
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Actions** { | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**#Memory.DisablePassphrase** {} | object<br><br>*read-write* | Disable passphrase for given regions |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**#Memory.SecureEraseUnit** {} | object<br><br>*read-write* | This defines the action for securely erasing given regions. |
@@ -2304,9 +1727,6 @@ This is the schema definition for definition of a Memory and its configuration
 | **MemoryMedia** [ {} ] | array<br><br>*read-only* | Media  of this Memory |
 | **MemoryType** | string, null<br><br>*read-write* | The type of Memory *See Property Details, below, for more information about this property.* |
 | **Metrics** { | object<br><br>*read-write* | A reference to the Metrics associated with this Memory |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Actions** {} | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**BlockSizeBytes** | number, null<br><br>*read-only* | Block size in bytes |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**CurrentPeriod** {} | object<br><br>*read-write* | This object describes the central memory of the system in general detail. |
@@ -2419,21 +1839,12 @@ This is the schema definition for definition of a Memory and its configuration
 
 # MemoryCollection
 
-
-
-
 A Collection of Memory resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Actions** {} | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**AllowedSpeedsMHz** [ {} ] | array<br><br>*read-only* | Speed bins supported by this Memory |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**BaseModuleType** | string, null<br><br>*read-write* | The base module type of Memory *See Property Details, below, for more information about this property.* |
@@ -2474,7 +1885,6 @@ A Collection of Memory resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**VendorID** | string, null<br><br>*read-only* | Vendor ID |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**VolatileRegionSizeLimitMiB** | number, null<br><br>*read-only* | Total size of volatile regions in MiB |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -2541,16 +1951,10 @@ A Collection of Memory resource instances.
 
 # MemoryMetrics 1.0.0
 
-
-
-
 MemoryMetrics contains usage and health statistics for a single Memory module or device instance.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Actions** { | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**#MemoryMetrics.ClearCurrentPeriod** {} | object<br><br>*read-write* | This sets the CurrentPeriod object values to zero. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* |  |
@@ -2578,16 +1982,10 @@ MemoryMetrics contains usage and health statistics for a single Memory module or
 
 # MessageRegistry 1.0.2
 
-
-
-
 This is the schema definition for all Message Registries.  It represents the properties for the registries themselves.  The MessageId is formed per the Redfish specification.  It consists of the RegistryPrefix concatenated with the version concatenated with the unique identifier for the message registry entry.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | **Language** | string<br><br>*read-only* | This is the RFC 5646 compliant language code for the registry. |
@@ -2600,21 +1998,12 @@ This is the schema definition for all Message Registries.  It represents the pro
 
 # MessageRegistryCollection
 
-
-
-
 A Collection of MessageRegistry resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Language** | string<br><br>*read-only* | This is the RFC 5646 compliant language code for the registry. |
@@ -2625,23 +2014,16 @@ A Collection of MessageRegistry resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RegistryPrefix** | string<br><br>*read-only* | This is the single word prefix used to form a messageID structure. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RegistryVersion** | string<br><br>*read-only* | This is the message registry version which is used in the middle portion of a messageID. |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 
 # MessageRegistryFile 1.0.2
 
-
-
-
 This is the schema definition for the Schema File locator resource.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | **Languages** [ {} ] | array<br><br>*read-only* | Language codes for the schemas available. |
@@ -2658,21 +2040,12 @@ This is the schema definition for the Schema File locator resource.
 
 # MessageRegistryFileCollection
 
-
-
-
 A Collection of MessageRegistryFile resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Languages** [ {} ] | array<br><br>*read-only* | Language codes for the schemas available. |
@@ -2681,23 +2054,16 @@ A Collection of MessageRegistryFile resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Registry** | string<br><br>*read-only* | The Registry Name, Major and Minor version used in MessageID construction. |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 
 # Power 1.1.0
 
-
-
-
 This is the schema definition for the Power Metrics.  It represents the properties for Power Consumption and Power Limiting.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
@@ -2714,11 +2080,8 @@ This is the schema definition for the Power Metrics.  It represents the properti
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerMetrics** {} | object<br><br>*read-write* | Power readings for this chassis. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerRequestedWatts** | number, null<br><br>*read-only* | The potential power that the chassis resources are requesting which may be higher than the current level being consumed since requested power includes budget that the chassis resource wants for future use. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem** [ {} ] | array<br><br>*read-write* | The ID(s) of the resources associated with this Power Limit |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem@odata.navigationLink** | string<br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | } ] |   |   |
-| **PowerControl@odata.count** | <br><br>*read-write* |  |
 | **PowerControl@odata.navigationLink** | string<br><br>*read-write* |  |
 | **PowerSupplies** [ { | array<br><br>*read-write* | Details of the power supplies associated with this system or device |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**FirmwareVersion** | string, null<br><br>*read-only* | The firmware version for this Power Supply |
@@ -2735,22 +2098,17 @@ This is the schema definition for the Power Metrics.  It represents the properti
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerCapacityWatts** | number, null<br><br>*read-only* | The maximum capacity of this Power Supply |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerSupplyType** | string, null<br><br>*read-write* | The Power Supply type (AC or DC) *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy** [ {} ] | array<br><br>*read-only* | This structure is used to show redundancy for power supplies.  The Component ids will reference the members of the redundancy groups. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem** [ {} ] | array<br><br>*read-write* | The ID(s) of the resources associated with this Power Limit |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SerialNumber** | string, null<br><br>*read-only* | The serial number for this Power Supply |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SparePartNumber** | string, null<br><br>*read-only* | The spare part number for this Power Supply |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | } ] |   |   |
-| **PowerSupplies@odata.count** | <br><br>*read-write* |  |
 | **PowerSupplies@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Redundancy** [ { | array<br><br>*read-only* | Redundancy information for the power subsystem of this system or device |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**MemberId** | string<br><br>*read-write* | This is the identifier for the member within the collection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | } ] |   |   |
-| **Redundancy@odata.count** | <br><br>*read-write* |  |
 | **Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Voltages** [ { | array<br><br>*read-write* | This is the definition for voltage sensors. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**LowerThresholdCritical** | number, null<br><br>*read-only* | Below normal range but not yet fatal. |
@@ -2764,15 +2122,12 @@ This is the schema definition for the Power Metrics.  It represents the properti
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PhysicalContext** | string<br><br>*read-write* | Describes the area or device to which this voltage measurement applies. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ReadingVolts** | number, null<br><br>*read-only* | The current value of the voltage sensor. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem** [ {} ] | array<br><br>*read-only* | Describes the areas or devices to which this voltage measurement applies. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SensorNumber** | number, null<br><br>*read-only* | A numerical identifier to represent the voltage sensor |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UpperThresholdCritical** | number, null<br><br>*read-only* | Above normal range but not yet fatal. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UpperThresholdFatal** | number, null<br><br>*read-only* | Above normal range and is fatal |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UpperThresholdNonCritical** | number, null<br><br>*read-only* | Above normal range |
 | } ] |   |   |
-| **Voltages@odata.count** | <br><br>*read-write* |  |
 | **Voltages@odata.navigationLink** | string<br><br>*read-write* |  |
 
 ## Property Details
@@ -2832,15 +2187,61 @@ This is the schema definition for the Power Metrics.  It represents the properti
 # Processor 1.0.2
 
 
+### ProcessorID
+
+This object's properties shall contain values dependent on the value of the ProcessorArchitecture property, as listed in the sections below:
+
+#### ProcessorArchitecture: x86
+
+##### VendorId
+
+This property shall contain a 12 byte, little-endian ASCII string derived from register values resulting from the execution of the CPUID instruction.  The value shall be constructed using the following algorithm:
+
+~~~
+k=0;
+foreach reg (cpuid.0.ebx, cpuid.0.edx, cpuid.0.ecx){ ##NB: order must be ebx, edx, ecx
+  for (i=0; i<=3; i++) { vendorID[ byte(k*4 + i) ] = reg[byte(i)]; }
+  k++;
+  }
+~~~
 
 
-This is the schema definition for the Processor resource.  It represents the properties of a processor attached to a System.
+##### IdentificationRegisters
+
+This property shall contain the register contents resulting from the exeuction of the CPUID instruction.
+
+##### EffectiveFamily
+
+This property shall contain a value derived from register values resulting from the execution of the CPUID instruction.  The value shall use the following forumula:
+~~~
+((cpuid.1.eax & 0x0ff00000) >> 20) + ((cpuid.1.eax & 0x00000f00) >> 8)
+~~~
+
+##### EffectiveModel
+
+This property shall contain a value derived from register values resulting from the execution of the CPUID instruction.  The value shall use the following forumula:
+~~~
+((cpuid.1.eax & 0x000f0000) >> 12) + ((cpuid.1.eax & 0x000000f0) >> 4)
+~~~
+
+##### Step
+
+This property shall contain a value derived from register values resulting from the execution of the CPUID instruction.  The value shall use the following forumula:
+~~~
+(cpuid->eax & 0xf)
+~~~
+
+##### MicrocodeInfo
+
+This property shall contain the 64-bit value contained in MSR 0x8B.
+
+#### ProcessorArchitecture: All Others
+
+The contents of this object are not specified.
+
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | **InstructionSet** | string, null<br><br>*read-write* | The instruction set of the processor *See Property Details, below, for more information about this property.* |
@@ -2860,32 +2261,10 @@ This is the schema definition for the Processor resource.  It represents the pro
 | } |   |   |
 | **ProcessorType** | string, null<br><br>*read-write* | The type of processor *See Property Details, below, for more information about this property.* |
 | **Socket** | string, null<br><br>*read-only* | The socket or location of the processor |
-| **Status** { | object<br><br>*read-only* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Health** | string, null<br><br>*read-write* | This represents the health state of this resource in the absence of its dependent resources. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**HealthRollup** | string, null<br><br>*read-write* | This represents the overall health state from the view of this resource. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**State** | string, null<br><br>*read-write* | This indicates the known state of the resource, such as if it is enabled. *See Property Details, below, for more information about this property.* |
-| } |   |   |
 | **TotalCores** | number, null<br><br>*read-only* | The total number of cores contained in this processor |
 | **TotalThreads** | number, null<br><br>*read-only* | The total number of execution threads supported by this processor |
 
 ## Property Details
-
-### Health:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### HealthRollup:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
 
 ### InstructionSet:
 
@@ -2921,37 +2300,15 @@ This is the schema definition for the Processor resource.  It represents the pro
 | GPU | A Graphics Processing Unit |
 | OEM | An OEM-defined Processing Unit |
 
-### State:
-
-| string | Description |
-| --- | --- |
-| Absent | This function or resource is not present or not detected |
-| Disabled | This function or resource has been disabled |
-| Enabled | This function or resource has been enabled |
-| InTest | This function or resource is undergoing testing |
-| StandbyOffline | This function or resource is enabled, but awaiting an external action to activate it |
-| StandbySpare | This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it. |
-| Starting | This function or resource is starting |
-| UnavailableOffline | This function or resource is present but cannot be used |
-
 
 # ProcessorCollection
-
-
-
 
 A Collection of Processor resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**InstructionSet** | string, null<br><br>*read-write* | The instruction set of the processor *See Property Details, below, for more information about this property.* |
@@ -2964,11 +2321,9 @@ A Collection of Processor resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ProcessorId** {} | object<br><br>*read-write* | Identification information for this processor. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ProcessorType** | string, null<br><br>*read-write* | The type of processor *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Socket** | string, null<br><br>*read-only* | The socket or location of the processor |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TotalCores** | number, null<br><br>*read-only* | The total number of cores contained in this processor |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TotalThreads** | number, null<br><br>*read-only* | The total number of execution threads supported by this processor |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -3012,16 +2367,10 @@ A Collection of Processor resource instances.
 
 # Role 1.0.2
 
-
-
-
 This resource defines a user role to be used in conjunction with a Manager Account.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **AssignedPrivileges** [ {} ] | array<br><br>*read-write* | The redfish privileges that this role includes. |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
@@ -3032,21 +2381,12 @@ This resource defines a user role to be used in conjunction with a Manager Accou
 
 # RoleCollection
 
-
-
-
 A Collection of Role resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**AssignedPrivileges** [ {} ] | array<br><br>*read-write* | The redfish privileges that this role includes. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
@@ -3055,23 +2395,16 @@ A Collection of Role resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**OemPrivileges** [ {} ] | array<br><br>*read-write* | The OEM privileges that this role includes. |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 
 # SecureBoot 1.0.0
 
-
-
-
 This resource contains UEFI Secure Boot information. It represents properties for managing the UEFI Secure Boot functionality of a system.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Actions** { | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**#SecureBoot.ResetKeys** {} | object<br><br>*read-write* | This action is used to reset the Secure Boot keys. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* |  |
@@ -3105,16 +2438,10 @@ This resource contains UEFI Secure Boot information. It represents properties fo
 
 # SerialInterface 1.0.2
 
-
-
-
 This schema defines an asynchronous serial interface resource.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **BitRate** | string<br><br>*read-write* | The receive and transmit rate of data flow, typically in bits-per-second (bps), over the serial connection. *See Property Details, below, for more information about this property.* |
 | **ConnectorType** | string<br><br>*read-write* | The type of connector used for this interface. *See Property Details, below, for more information about this property.* |
 | **DataBits** | string<br><br>*read-write* | The number of data bits that will follow the start bit over the serial connection. *See Property Details, below, for more information about this property.* |
@@ -3211,21 +2538,12 @@ This schema defines an asynchronous serial interface resource.
 
 # SerialInterfaceCollection
 
-
-
-
 A Collection of SerialInterface resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**BitRate** | string<br><br>*read-write* | The receive and transmit rate of data flow, typically in bits-per-second (bps), over the serial connection. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ConnectorType** | string<br><br>*read-write* | The type of connector used for this interface. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**DataBits** | string<br><br>*read-write* | The number of data bits that will follow the start bit over the serial connection. *See Property Details, below, for more information about this property.* |
@@ -3240,7 +2558,6 @@ A Collection of SerialInterface resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SignalType** | string<br><br>*read-write* | The type of signal used for the communication connection - RS232 or RS485. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**StopBits** | string<br><br>*read-write* | The period of time before the next start bit is transmitted. *See Property Details, below, for more information about this property.* |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -3327,20 +2644,11 @@ A Collection of SerialInterface resource instances.
 
 # ServiceRoot 1.0.2
 
-
-
-
 This object represents the root Redfish service.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **AccountService** { | object<br><br>*read-write* | This is a link to the Account Service. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**AccountLockoutCounterResetAfter** | number<br><br>*read-write* | The interval of time in seconds since the last failed login attempt at which point the lockout threshold counter for the account is reset to zero. Must be less than or equal to AccountLockoutDuration |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**AccountLockoutDuration** | number, null<br><br>*read-write* | The time in seconds an account is locked after the account lockout threshold is met. Must be >= AccountLockoutResetAfter. If set to 0, no lockout will occur. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**AccountLockoutThreshold** | number, null<br><br>*read-write* | The number of failed login attempts before a user account is locked for a specified duration. (0=never locked) |
@@ -3354,24 +2662,16 @@ This object represents the root Redfish service.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Roles** {} | object<br><br>*read-write* | Link to a collection of Roles |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ServiceEnabled** | boolean, null<br><br>*read-write* | This indicates whether this service is enabled. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | } |   |   |
 | **Chassis** { | object<br><br>*read-write* | This is a link to a collection of Chassis. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | } |   |   |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **EventService** { | object<br><br>*read-write* | This is a link to the EventService. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Actions** {} | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**DeliveryRetryAttempts** | number<br><br>*read-only* | This is the number of attempts an event posting is retried before the subscription is terminated. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**DeliveryRetryIntervalSeconds** | number<br><br>*read-only* | This represents the number of seconds between retry attempts for sending any given Event |
@@ -3381,17 +2681,12 @@ This object represents the root Redfish service.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ServiceEnabled** | boolean, null<br><br>*read-write* | This indicates whether this service is enabled. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Subscriptions** {} | object<br><br>*read-write* | This is a reference to a collection of Event Destination resources. |
 | } |   |   |
 | **Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | **JsonSchemas** { | object<br><br>*read-write* | This is a link to a collection of Json-Schema files. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -3401,12 +2696,8 @@ This object represents the root Redfish service.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Sessions** {} | object<br><br>*read-write* | Link to a collection of Sessions |
 | } |   |   |
 | **Managers** { | object<br><br>*read-write* | This is a link to a collection of Managers. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -3415,20 +2706,13 @@ This object represents the root Redfish service.
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | **RedfishVersion** | string<br><br>*read-only* | The version of the Redfish service |
 | **Registries** { | object<br><br>*read-write* | This is a link to a collection of Registries. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | } |   |   |
 | **SessionService** { | object<br><br>*read-write* | This is a link to the Sessions Service. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
@@ -3436,23 +2720,15 @@ This object represents the root Redfish service.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ServiceEnabled** | boolean, null<br><br>*read-write* | This indicates whether this service is enabled. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SessionTimeout** | number<br><br>*read-write* | This is the number of seconds of inactivity that a session may have before the session service closes the session due to inactivity. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Sessions** {} | object<br><br>*read-write* | Link to a collection of Sessions |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | } |   |   |
 | **Systems** { | object<br><br>*read-write* | This is a link to a collection of Systems. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | } |   |   |
 | **Tasks** { | object<br><br>*read-write* | This is a link to the Task Service. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**CompletedTaskOverWritePolicy** | string<br><br>*read-write* | Overwrite policy of completed tasks *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**DateTime** | string, null<br><br>*read-only* | The current DateTime (with offset) setting that the task service is using. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
@@ -3461,7 +2737,6 @@ This object represents the root Redfish service.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ServiceEnabled** | boolean, null<br><br>*read-write* | This indicates whether this service is enabled. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Tasks** {} | object<br><br>*read-write* | References to the Tasks collection. |
 | } |   |   |
 | **UUID** | string, null<br><br>*read-write* | Unique identifier for a service instance. When SSDP is used, this value should be an exact match of the UUID value returned in a 200OK from an SSDP M-SEARCH request during discovery.  |
@@ -3478,16 +2753,10 @@ This object represents the root Redfish service.
 
 # Session 1.0.2
 
-
-
-
 The Session resource describes a single connection (session) between a client and a Redfish service instance.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
@@ -3497,21 +2766,12 @@ The Session resource describes a single connection (session) between a client an
 
 # SessionCollection
 
-
-
-
 A Collection of Session resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
@@ -3519,23 +2779,16 @@ A Collection of Session resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Password** | string, null<br><br>*read-write* | This property is used in a POST to specify a password when creating a new session.  This property is null on a GET. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UserName** | string, null<br><br>*read-only* | The UserName for the account for this session. |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 
 # SessionService 1.0.2
 
-
-
-
 This is the schema definition for the Session Service.  It represents the properties for the service itself and has links to the actual list of sessions.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
@@ -3543,67 +2796,19 @@ This is the schema definition for the Session Service.  It represents the proper
 | **ServiceEnabled** | boolean, null<br><br>*read-write* | This indicates whether this service is enabled. |
 | **SessionTimeout** | number<br><br>*read-write* | This is the number of seconds of inactivity that a session may have before the session service closes the session due to inactivity. |
 | **Sessions** { | object<br><br>*read-write* | Link to a collection of Sessions |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | } |   |   |
-| **Status** { | object<br><br>*read-only* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Health** | string, null<br><br>*read-write* | This represents the health state of this resource in the absence of its dependent resources. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**HealthRollup** | string, null<br><br>*read-write* | This represents the overall health state from the view of this resource. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**State** | string, null<br><br>*read-write* | This indicates the known state of the resource, such as if it is enabled. *See Property Details, below, for more information about this property.* |
-| } |   |   |
-
-## Property Details
-
-### Health:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### HealthRollup:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### State:
-
-| string | Description |
-| --- | --- |
-| Absent | This function or resource is not present or not detected |
-| Disabled | This function or resource has been disabled |
-| Enabled | This function or resource has been enabled |
-| InTest | This function or resource is undergoing testing |
-| StandbyOffline | This function or resource is enabled, but awaiting an external action to activate it |
-| StandbySpare | This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it. |
-| Starting | This function or resource is starting |
-| UnavailableOffline | This function or resource is present but cannot be used |
-
 
 # SimpleStorage 1.1.0
-
-
-
 
 This is the schema definition for the Simple Storage resource.  It represents the properties of a storage controller and its directly-attached devices.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Devices** [ { | array<br><br>*read-only* | The storage devices associated with this resource |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**CapacityBytes** | number, null<br><br>*read-only* | The size of the storage device. |
@@ -3611,102 +2816,43 @@ This is the schema definition for the Simple Storage resource.  It represents th
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Model** | string, null<br><br>*read-only* | The product model number of this device |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | } ] |   |   |
 | **Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| **Status** { | object<br><br>*read-only* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Health** | string, null<br><br>*read-write* | This represents the health state of this resource in the absence of its dependent resources. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**HealthRollup** | string, null<br><br>*read-write* | This represents the overall health state from the view of this resource. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**State** | string, null<br><br>*read-write* | This indicates the known state of the resource, such as if it is enabled. *See Property Details, below, for more information about this property.* |
-| } |   |   |
 | **UefiDevicePath** | string, null<br><br>*read-only* | The UEFI device path used to access this storage controller. |
 
-## Property Details
-
-### Health:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### HealthRollup:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### State:
-
-| string | Description |
-| --- | --- |
-| Absent | This function or resource is not present or not detected |
-| Disabled | This function or resource has been disabled |
-| Enabled | This function or resource has been enabled |
-| InTest | This function or resource is undergoing testing |
-| StandbyOffline | This function or resource is enabled, but awaiting an external action to activate it |
-| StandbySpare | This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it. |
-| Starting | This function or resource is starting |
-| UnavailableOffline | This function or resource is present but cannot be used |
-
-
 # SimpleStorageCollection
-
-
-
 
 A Collection of SimpleStorage resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Devices** [ {} ] | array<br><br>*read-only* | The storage devices associated with this resource |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UefiDevicePath** | string, null<br><br>*read-only* | The UEFI device path used to access this storage controller. |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 
 # Storage 1.0.0
 
-
-
-
 This schema defines a storage subsystem and its respective properties.  A storage subsystem represents a set of storage controllers (physical or virtual) and the resources such as volumes that can be accessed from that subsystem.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Actions** { | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**#Storage.SetEncryptionKey** {} | object<br><br>*read-write* | This action is used to set the encryption key for the storage subsystem. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* |  |
 | } |   |   |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Drives** [ { | array<br><br>*read-only* | The set of drives attached to the storage controllers represented by this resource. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Actions** {} | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**AssetTag** | string, null<br><br>*read-write* | The user assigned asset tag for this drive. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**BlockSizeBytes** | number, null<br><br>*read-only* | The size of the smallest addressible unit (Block) of this drive in bytes |
@@ -3735,15 +2881,12 @@ This schema defines a storage subsystem and its respective properties.  A storag
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RotationSpeedRPM** | number, null<br><br>*read-only* | The rotation speed of this Drive in Revolutions per Minute (RPM) |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SKU** | string, null<br><br>*read-only* | This is the SKU for this drive. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SerialNumber** | string, null<br><br>*read-only* | The serial number for this drive. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**StatusIndicator** | string, null<br><br>*read-write* | The state of the status indicator, used to communicate status information about this drive. *See Property Details, below, for more information about this property.* |
 | } ] |   |   |
-| **Drives@odata.count** | <br><br>*read-write* |  |
 | **Drives@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | **Links** { | object<br><br>*read-only* | Contains references to other resources that are related to this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Enclosures** [ {} ] | array<br><br>*read-only* | An array of references to the chassis to which this storage subsystem is attached |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Enclosures@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Enclosures@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | Oem extension object. |
 | } |   |   |
@@ -3753,23 +2896,10 @@ This schema defines a storage subsystem and its respective properties.  A storag
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**MemberId** | string<br><br>*read-write* | This is the identifier for the member within the collection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | } ] |   |   |
-| **Redundancy@odata.count** | <br><br>*read-write* |  |
 | **Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
-| **Status** { | object<br><br>*read-only* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Health** | string, null<br><br>*read-write* | This represents the health state of this resource in the absence of its dependent resources. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**HealthRollup** | string, null<br><br>*read-write* | This represents the overall health state from the view of this resource. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**State** | string, null<br><br>*read-write* | This indicates the known state of the resource, such as if it is enabled. *See Property Details, below, for more information about this property.* |
-| } |   |   |
-| **StorageControllers** [ { | array<br><br>*read-only* | The set of storage controllers represented by this resource. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |
-| } ] |   |   |
-| **StorageControllers@odata.count** | <br><br>*read-write* |  |
+| **StorageControllers** [ {} ] | array<br><br>*read-only* | The set of storage controllers represented by this resource. |
 | **StorageControllers@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Volumes** [ { | array<br><br>*read-only* | The set of volumes produced by the storage controllers represented by this resource. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Actions** {} | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**BlockSizeBytes** | number, null<br><br>*read-only* | The size of the smallest addressible unit (Block) of this volume in bytes |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**CapacityBytes** | number, null<br><br>*read-only* | The size in bytes of this Volume |
@@ -3783,10 +2913,8 @@ This schema defines a storage subsystem and its respective properties.  A storag
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Operations** [ {} ] | array<br><br>*read-only* | The operations currently running on the Volume |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**OptimumIOSizeBytes** | number, null<br><br>*read-only* | The size in bytes of this Volume's optimum IO size. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**VolumeType** | string, null<br><br>*read-write* | Is this drive currently predicting a failure in the near future *See Property Details, below, for more information about this property.* |
 | } ] |   |   |
-| **Volumes@odata.count** | <br><br>*read-write* |  |
 | **Volumes@odata.navigationLink** | string<br><br>*read-write* |  |
 
 ## Property Details
@@ -3807,22 +2935,6 @@ This schema defines a storage subsystem and its respective properties.  A storag
 | Locked | The drive is currently encrypted and the data is not accessible to the user, however the system has the ability to unlock the drive automatically |
 | Unecrypted | The drive is not currently encrypted |
 | Unlocked | The drive is currently encrypted but the data is accessible to the user unencrypted |
-
-### Health:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### HealthRollup:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
 
 ### HotspareType:
 
@@ -3848,19 +2960,6 @@ This schema defines a storage subsystem and its respective properties.  A storag
 | HDD | The drive media type is traditional magnetic platters |
 | SMR | The drive media type is shingled magnetic recording |
 | SSD | The drive media type is solid state or flash memory |
-
-### State:
-
-| string | Description |
-| --- | --- |
-| Absent | This function or resource is not present or not detected |
-| Disabled | This function or resource has been disabled |
-| Enabled | This function or resource has been enabled |
-| InTest | This function or resource is undergoing testing |
-| StandbyOffline | This function or resource is enabled, but awaiting an external action to activate it |
-| StandbySpare | This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it. |
-| Starting | This function or resource is starting |
-| UnavailableOffline | This function or resource is present but cannot be used |
 
 ### StatusIndicator:
 
@@ -3888,58 +2987,37 @@ This schema defines a storage subsystem and its respective properties.  A storag
 
 # StorageCollection
 
-
-
-
 A Collection of Storage resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Actions** {} | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Drives** [ {} ] | array<br><br>*read-only* | The set of drives attached to the storage controllers represented by this resource. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Drives@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Drives@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Links** {} | object<br><br>*read-only* | Contains references to other resources that are related to this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy** [ {} ] | array<br><br>*read-only* | Redundancy information for the storage subsystem |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**StorageControllers** [ {} ] | array<br><br>*read-only* | The set of storage controllers represented by this resource. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**StorageControllers@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**StorageControllers@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Volumes** [ {} ] | array<br><br>*read-only* | The set of volumes produced by the storage controllers represented by this resource. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Volumes@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Volumes@odata.navigationLink** | string<br><br>*read-write* |  |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 
 # Task 1.0.2
 
-
-
-
 This resource contains information about a specific Task scheduled by or being executed by a Redfish service's Task Service.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **EndTime** | string<br><br>*read-only* | The date-time stamp that the task was last completed. |
 | **Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
@@ -3979,21 +3057,12 @@ This resource contains information about a specific Task scheduled by or being e
 
 # TaskCollection
 
-
-
-
 A Collection of Task resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**EndTime** | string<br><br>*read-only* | The date-time stamp that the task was last completed. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
@@ -4004,7 +3073,6 @@ A Collection of Task resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TaskState** | string<br><br>*read-write* | The state of the task. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TaskStatus** | string<br><br>*read-write* | This is the completion status of the task. *See Property Details, below, for more information about this property.* |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -4038,16 +3106,10 @@ A Collection of Task resource instances.
 
 # TaskService 1.0.2
 
-
-
-
 This is the schema definition for the Task Service.  It represents the properties for the service itself and has links to the actual list of tasks.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **CompletedTaskOverWritePolicy** | string<br><br>*read-write* | Overwrite policy of completed tasks *See Property Details, below, for more information about this property.* |
 | **DateTime** | string, null<br><br>*read-only* | The current DateTime (with offset) setting that the task service is using. |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
@@ -4056,19 +3118,9 @@ This is the schema definition for the Task Service.  It represents the propertie
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | **ServiceEnabled** | boolean, null<br><br>*read-write* | This indicates whether this service is enabled. |
-| **Status** { | object<br><br>*read-only* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Health** | string, null<br><br>*read-write* | This represents the health state of this resource in the absence of its dependent resources. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**HealthRollup** | string, null<br><br>*read-write* | This represents the overall health state from the view of this resource. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**State** | string, null<br><br>*read-write* | This indicates the known state of the resource, such as if it is enabled. *See Property Details, below, for more information about this property.* |
-| } |   |   |
 | **Tasks** { | object<br><br>*read-write* | References to the Tasks collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | string<br><br>*read-only* | The unique identifier for a resource. |<br>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -4083,48 +3135,13 @@ This is the schema definition for the Task Service.  It represents the propertie
 | Manual | Completed tasks are not automatically overwritten |
 | Oldest | Oldest completed tasks are overwritten |
 
-### Health:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### HealthRollup:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### State:
-
-| string | Description |
-| --- | --- |
-| Absent | This function or resource is not present or not detected |
-| Disabled | This function or resource has been disabled |
-| Enabled | This function or resource has been enabled |
-| InTest | This function or resource is undergoing testing |
-| StandbyOffline | This function or resource is enabled, but awaiting an external action to activate it |
-| StandbySpare | This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it. |
-| Starting | This function or resource is starting |
-| UnavailableOffline | This function or resource is present but cannot be used |
-
 
 # Thermal 1.1.0
-
-
-
 
 This is the schema definition for the Thermal properties.  It represents the properties for Temperature and Cooling.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Fans** [ { | array<br><br>*read-write* | This is the definition for fans. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**FanName** | string, null<br><br>*read-only* | Name of the fan |
@@ -4140,17 +3157,13 @@ This is the schema definition for the Thermal properties.  It represents the pro
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Reading** | number, null<br><br>*read-only* | Current fan speed |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ReadingUnits** | string, null<br><br>*read-write* | Units in which the reading and thresholds are measured. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy** [ {} ] | array<br><br>*read-only* | This structure is used to show redundancy for fans.  The Component ids will reference the members of the redundancy groups. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem** [ {} ] | array<br><br>*read-write* | The ID(s) of the resources serviced with this fan |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem@odata.navigationLink** | string<br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UpperThresholdCritical** | number, null<br><br>*read-only* | Above normal range but not yet fatal |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UpperThresholdFatal** | number, null<br><br>*read-only* | Above normal range and is fatal |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UpperThresholdNonCritical** | number, null<br><br>*read-only* | Above normal range |
 | } ] |   |   |
-| **Fans@odata.count** | <br><br>*read-write* |  |
 | **Fans@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
@@ -4159,14 +3172,7 @@ This is the schema definition for the Thermal properties.  It represents the pro
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**MemberId** | string<br><br>*read-write* | This is the identifier for the member within the collection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | } ] |   |   |
-| **Redundancy@odata.count** | <br><br>*read-write* |  |
 | **Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
-| **Status** { | object<br><br>*read-only* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Health** | string, null<br><br>*read-write* | This represents the health state of this resource in the absence of its dependent resources. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**HealthRollup** | string, null<br><br>*read-write* | This represents the overall health state from the view of this resource. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**State** | string, null<br><br>*read-write* | This indicates the known state of the resource, such as if it is enabled. *See Property Details, below, for more information about this property.* |
-| } |   |   |
 | **Temperatures** [ { | array<br><br>*read-write* | This is the definition for temperature sensors. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**LowerThresholdCritical** | number, null<br><br>*read-only* | Below normal range but not yet fatal. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**LowerThresholdFatal** | number, null<br><br>*read-only* | Below normal range and is fatal |
@@ -4179,34 +3185,15 @@ This is the schema definition for the Thermal properties.  It represents the pro
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PhysicalContext** | string<br><br>*read-write* | Describes the area or device to which this temperature measurement applies. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ReadingCelsius** | number, null<br><br>*read-only* | Temperature |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem** [ {} ] | array<br><br>*read-only* | Describes the areas or devices to which this temperature measurement applies. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SensorNumber** | number, null<br><br>*read-only* | A numerical identifier to represent the temperature sensor |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UpperThresholdCritical** | number, null<br><br>*read-only* | Above normal range but not yet fatal. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UpperThresholdFatal** | number, null<br><br>*read-only* | Above normal range and is fatal |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UpperThresholdNonCritical** | number, null<br><br>*read-only* | Above normal range |
 | } ] |   |   |
-| **Temperatures@odata.count** | <br><br>*read-write* |  |
 | **Temperatures@odata.navigationLink** | string<br><br>*read-write* |  |
 
 ## Property Details
-
-### Health:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### HealthRollup:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
 
 ### PhysicalContext:
 
@@ -4240,32 +3227,13 @@ This is the schema definition for the Thermal properties.  It represents the pro
 | Percent | Indicates that the fan reading and thresholds are measured in percentage. |
 | RPM | Indicates that the fan reading and thresholds are measured in rotations per minute. |
 
-### State:
-
-| string | Description |
-| --- | --- |
-| Absent | This function or resource is not present or not detected |
-| Disabled | This function or resource has been disabled |
-| Enabled | This function or resource has been enabled |
-| InTest | This function or resource is undergoing testing |
-| StandbyOffline | This function or resource is enabled, but awaiting an external action to activate it |
-| StandbySpare | This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it. |
-| Starting | This function or resource is starting |
-| UnavailableOffline | This function or resource is present but cannot be used |
-
 
 # VLanNetworkInterface 1.0.2
-
-
-
 
 This resource contains information for a Virtual LAN (VLAN) network instance available on a manager, system or other device.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
@@ -4275,21 +3243,12 @@ This resource contains information for a Virtual LAN (VLAN) network instance ava
 
 # VLanNetworkInterfaceCollection
 
-
-
-
 A Collection of VLanNetworkInterface resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | The name of the resource or array element. |
@@ -4297,23 +3256,16 @@ A Collection of VLanNetworkInterface resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**VLANEnable** | boolean, null<br><br>*read-write* | This indicates if this VLAN is enabled. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**VLANId** | number, null<br><br>*read-write* | This indicates the VLAN identifier for this VLAN. |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 
 # VirtualMedia 1.0.2
 
-
-
-
 This resource allows monitoring and control of an instance of virtual media (e.g. a remote CD, DVD, or USB device) functionality provided by a Manager for a system or device.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **ConnectedVia** | string, null<br><br>*read-write* | Current virtual media connection methods *See Property Details, below, for more information about this property.* |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
@@ -4339,21 +3291,12 @@ This resource allows monitoring and control of an instance of virtual media (e.g
 
 # VirtualMediaCollection
 
-
-
-
 A Collection of VirtualMedia resource instances.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Members** [ { | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.context** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.id** | <br><br>*read-write* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**@odata.type** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ConnectedVia** | string, null<br><br>*read-write* | Current virtual media connection methods *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
@@ -4365,7 +3308,6 @@ A Collection of VirtualMedia resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**WriteProtected** | boolean, null<br><br>*read-only* | Indicates the media is write protected. |
 | } ] |   |   |
-| **Members@odata.count** | <br><br>*read-write* |  |
 | **Members@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -4384,16 +3326,10 @@ A Collection of VirtualMedia resource instances.
 
 # Volume 1.0.0
 
-
-
-
 Volume contains properties used to describe a volume, virtual disk, LUN, or other logical storage entity for any system.
 
 |     |     |     |
 | --- | --- | --- |
-| **@odata.context** | <br><br>*read-write* |  |
-| **@odata.id** | <br><br>*read-write* |  |
-| **@odata.type** | <br><br>*read-write* |  |
 | **Actions** { | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**#Volume.Initialize** {} | object<br><br>*read-write* | This action is used to prepare the contents of the volume for use by the system. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* |  |
@@ -4410,7 +3346,6 @@ Volume contains properties used to describe a volume, virtual disk, LUN, or othe
 | } ] |   |   |
 | **Links** { | object<br><br>*read-only* | Contains references to other resources that are related to this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Drives** [ {} ] | array<br><br>*read-only* | An array of references to the drives which contain this volume. This will reference Drives that either wholly or only partly contain this volume. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Drives@odata.count** | <br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Drives@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | Oem extension object. |
 | } |   |   |
@@ -4422,12 +3357,6 @@ Volume contains properties used to describe a volume, virtual disk, LUN, or othe
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PercentageComplete** | number, null<br><br>*read-only* | The percentage of the operation that has been completed. |
 | } ] |   |   |
 | **OptimumIOSizeBytes** | number, null<br><br>*read-only* | The size in bytes of this Volume's optimum IO size. |
-| **Status** { | object<br><br>*read-only* |  |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Health** | string, null<br><br>*read-write* | This represents the health state of this resource in the absence of its dependent resources. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**HealthRollup** | string, null<br><br>*read-write* | This represents the overall health state from the view of this resource. *See Property Details, below, for more information about this property.* |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**State** | string, null<br><br>*read-write* | This indicates the known state of the resource, such as if it is enabled. *See Property Details, below, for more information about this property.* |
-| } |   |   |
 | **VolumeType** | string, null<br><br>*read-write* | Is this drive currently predicting a failure in the near future *See Property Details, below, for more information about this property.* |
 
 ## Property Details
@@ -4442,35 +3371,6 @@ Volume contains properties used to describe a volume, virtual disk, LUN, or othe
 | UUID | Universally Unique Identifier |
 | iQN | iSCSI Qualified Name |
 
-### Health:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### HealthRollup:
-
-| string | Description |
-| --- | --- |
-| Critical | A critical condition exists that requires immediate attention |
-| OK | Normal |
-| Warning | A condition exists that requires attention |
-
-### State:
-
-| string | Description |
-| --- | --- |
-| Absent | This function or resource is not present or not detected |
-| Disabled | This function or resource has been disabled |
-| Enabled | This function or resource has been enabled |
-| InTest | This function or resource is undergoing testing |
-| StandbyOffline | This function or resource is enabled, but awaiting an external action to activate it |
-| StandbySpare | This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it. |
-| Starting | This function or resource is starting |
-| UnavailableOffline | This function or resource is present but cannot be used |
-
 ### VolumeType:
 
 | string | Description |
@@ -4483,6 +3383,20 @@ Volume contains properties used to describe a volume, virtual disk, LUN, or othe
 | StripedWithParity | The volume is a device which uses parity to retain redundant information |
 
 
----
-TODO: postscript from MD file
+
+# This is an example Postscript
+
+## What Lucid does for you
+
+ * Sends out a scheduling poll to find the best time for everyone
+ * Translates meeting times into each person’s time zone
+ * Formats a professional meeting invitation email
+ * Makes sure people get the meeting on their calendar
+ * Sends meeting reminders on the day of the meeting
+ * Saves your contacts so you can easily select the people to invite for the next meeting
+
+
+
+Lucid brings clarity to your meetings by making it easy for everyone in an organization to run consistently successful meetings using your chosen process.
+
 
