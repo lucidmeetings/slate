@@ -173,7 +173,7 @@ A Chassis represents the physical components for any system.  This resource repr
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Storage** [ {} ] | array<br><br>*read-only* | An array of references to the storage subsystems connected to or inside this Chassis. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Storage@odata.navigationLink** | string<br><br>*read-write* |  |
 | } |   |   |
-| **Location** *(v1.2.0)* { | object<br><br>*read-only* |  |
+| **Location** *(v1.2+)* { | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Info** | string, null<br><br>*read-only* | This indicates the location of the resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**InfoFormat** | string, null<br><br>*read-only* | This represents the format of the Info property. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | Oem extension object. |
@@ -190,7 +190,7 @@ A Chassis represents the physical components for any system.  This resource repr
 | **Name** | string<br><br>*read-only* | The name of the resource or array element. |
 | **Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | **PartNumber** | string, null<br><br>*read-only* | The part number for this chassis. |
-| **PhysicalSecurity** *(v1.1.0)* { | object<br><br>*read-write* | The state of the physical security sensor. |
+| **PhysicalSecurity** *(v1.1+)* { | object<br><br>*read-write* | The state of the physical security sensor. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**IntrusionSensor** | string, null<br><br>*read-write* | This indicates the known state of the physical security sensor, such as if it is hardware intrusion detected. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**IntrusionSensorNumber** | number, null<br><br>*read-only* | A numerical identifier to represent the physical security sensor. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**IntrusionSensorReArm** | string, null<br><br>*read-write* | This indicates how the Normal state to be restored. *See Property Details, below, for more information about this property.* |
@@ -209,7 +209,7 @@ A Chassis represents the physical components for any system.  This resource repr
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Voltages** [ {} ] | array<br><br>*read-write* | This is the definition for voltage sensors. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Voltages@odata.navigationLink** | string<br><br>*read-write* |  |
 | } |   |   |
-| **PowerState** *(v1.0.1)* | string, null<br><br>*read-write* | This is the current power state of the chassis. *See Property Details, below, for more information about this property.* |
+| **PowerState** *(v1.0+)* | string, null<br><br>*read-write* | This is the current power state of the chassis. *See Property Details, below, for more information about this property.* |
 | **SKU** | string, null<br><br>*read-only* | This is the SKU for this chassis. |
 | **SerialNumber** | string, null<br><br>*read-only* | The serial number for this chassis. |
 | **Status** { | object<br><br>*read-only* |  |
@@ -418,7 +418,7 @@ This schema defines a computer system and its respective properties.  A computer
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* |  |
 | } |   |   |
 | **AssetTag** | string, null<br><br>*read-write* | The user definable tag that can be used to track this computer system for inventory or other client purposes |
-| **Bios** *(v1.1.0)* { | object<br><br>*read-write* | A reference to the BIOS settings associated with this system. |
+| **Bios** *(v1.1+)* { | object<br><br>*read-write* | A reference to the BIOS settings associated with this system. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Actions** {} | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**AttributeRegistry** | string, null<br><br>*read-write* | The Resource ID of the Attribute Registry for the BIOS Attributes resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Attributes** {} | object<br><br>*read-write* | This is the manufacturer/provider specific list of BIOS attributes. |
@@ -464,7 +464,7 @@ This schema defines a computer system and its respective properties.  A computer
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | } |   |   |
 | **Manufacturer** | string, null<br><br>*read-only* | The manufacturer or OEM of this system. |
-| **Memory** *(v1.1.0)* { | object<br><br>*read-write* | A reference to the collection of Memory associated with this system |
+| **Memory** *(v1.1+)* { | object<br><br>*read-write* | A reference to the collection of Memory associated with this system |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
@@ -494,7 +494,7 @@ This schema defines a computer system and its respective properties.  A computer
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | } |   |   |
 | **SKU** | string, null<br><br>*read-only* | The manufacturer SKU for this system |
-| **SecureBoot** *(v1.1.0)* { | object<br><br>*read-write* | A reference to the UEFI SecureBoot resource associated with this system. |
+| **SecureBoot** *(v1.1+)* { | object<br><br>*read-write* | A reference to the UEFI SecureBoot resource associated with this system. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Actions** {} | object<br><br>*read-only* | The available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Id** | string<br><br>*read-only* | Uniquely identifies the resource within the collection of like resources. |
@@ -518,7 +518,7 @@ This schema defines a computer system and its respective properties.  A computer
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**State** | string, null<br><br>*read-write* | This indicates the known state of the resource, such as if it is enabled. *See Property Details, below, for more information about this property.* |
 | } |   |   |
-| **Storage** *(v1.1.0)* { | object<br><br>*read-write* | A reference to the collection of storage devices associated with this system |
+| **Storage** *(v1.1+)* { | object<br><br>*read-write* | A reference to the collection of storage devices associated with this system |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
@@ -526,7 +526,7 @@ This schema defines a computer system and its respective properties.  A computer
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
 | } |   |   |
 | **SystemType** | string<br><br>*read-write* | The type of computer system represented by this resource. *See Property Details, below, for more information about this property.* |
-| **TrustedModules** *(v1.1.0)* [ { | array<br><br>*read-write* | This object describes the array of Trusted Modules in the system. |
+| **TrustedModules** *(v1.1+)* [ { | array<br><br>*read-write* | This object describes the array of Trusted Modules in the system. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**FirmwareVersion** | string, null<br><br>*read-only* | The firmware version of this Trusted Module |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**InterfaceType** | string, null<br><br>*read-write* | This property indicates the interface type of the Trusted Module. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections. |
@@ -1069,7 +1069,7 @@ The Event schema describes the JSON payload received by an Event Destination (wh
 
 |     |     |     |
 | --- | --- | --- |
-| **Context** *(v1.1.0)* | string<br><br>*read-only* | A context can be supplied at subscription time.  This property is the context value supplied by the subscriber. |
+| **Context** *(v1.1+)* | string<br><br>*read-only* | A context can be supplied at subscription time.  This property is the context value supplied by the subscriber. |
 | **Description** | string, null<br><br>*read-only* | Provides a description of this resource and is used for commonality  in the schema definitions. |
 | **Events** [ { | array<br><br>*read-write* | Each event in this array has a set of properties that describe the event.  Since this is an array, more than one event can be sent simultaneously. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Context** | string<br><br>*read-only* | A context can be supplied at subscription time.  This property is the context value supplied by the subscriber. |
