@@ -30,7 +30,7 @@ This resource shall be used to represent a management account service for a Redf
 | **Accounts** { | object<br><br>*read-write* | This property shall contain the link to a collection of type ManagerAccountCollection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -44,7 +44,7 @@ This resource shall be used to represent a management account service for a Redf
 | **Roles** { | object<br><br>*read-write* | This property shall contain the link to a collection of type RoleCollection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -155,23 +155,23 @@ This resource shall be used to represent a chassis or other physical enclosure f
 | **IndicatorLED** | string, null<br><br>*read-write* | This value of this property shall contain the indicator light state for the indicator light associated with this system. *See Property Details, below, for more information about this property.* |
 | **Links** { | object<br><br>*read-only* | The Links property, as described by the Redfish Specification, shall contain references to resources that are related to, but not contained by (subordinate to), this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ComputerSystems** [ {} ] | array<br><br>*read-only* | The value of this property shall be a reference to the resource that this physical container is associated with and shall reference a resource of type ComputerSystem.  If a ComputerSystem is also referenced in a Chassis that is referenced in a Contains link from this resource, that ComputerSystem shall not be referenced in this Chassis. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ComputerSystems@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ComputerSystems\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ContainedBy** {} | object<br><br>*read-write* | The value of this property shall be a reference to the resource that represents the chassis that contains this chassis and shall be of type Chassis. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Contains** [ {} ] | array<br><br>*read-only* | The value of this property shall be a reference to the resource that represents the chassis that this chassis contains and shall be of type Chassis. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Contains@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Contains\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**CooledBy** [ {} ] | array<br><br>*read-only* | The value of this property shall be an array of IDs containing pointers consistent with JSON pointer syntax to the resource that cools this chassis. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**CooledBy@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**CooledBy\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Drives** [ {} ] | array<br><br>*read-only* | The value of this property shall reference one or more resources of type Drive that are in this Chassis. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Drives@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Drives\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagedBy** [ {} ] | array<br><br>*read-only* | The value of this property shall be a reference to the resource that manages this chassis and shall reference a resource of type Manager. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagedBy@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagedBy\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagersInChassis** [ {} ] | array<br><br>*read-only* | The value of this property shall reference one or more resources of type Manager that are in this Chassis. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagersInChassis@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagersInChassis\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This object represents the Oem property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PoweredBy** [ {} ] | array<br><br>*read-only* | The value of this property shall be an array of IDs containing pointers consistent with JSON pointer syntax to the resource that powers this chassis. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PoweredBy@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PoweredBy\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Storage** [ {} ] | array<br><br>*read-only* | The value of this property shall reference one or more resources of type Storage that are connected to or contained inside this Chassis. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Storage@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Storage\@odata.navigationLink** | string<br><br>*read-write* |  |
 | } |   |   |
 | **Location** *(v1.2.0)* { | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Info** | string, null<br><br>*read-only* | This property shall represent the location of the resource. |
@@ -181,7 +181,7 @@ This resource shall be used to represent a chassis or other physical enclosure f
 | **LogServices** { | object<br><br>*read-write* | The value of this property shall be a link to a collection of type LogServiceCollection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -201,13 +201,13 @@ This resource shall be used to represent a chassis or other physical enclosure f
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerControl** [ {} ] | array<br><br>*read-write* | These properties shall be the definition for power control (power reading and limiting) for a Redfish implementation. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerControl@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerControl\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerSupplies** [ {} ] | array<br><br>*read-write* | This object shall contain details of the power supplies associated with this system or device |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerSupplies@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerSupplies\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy** [ {} ] | array<br><br>*read-only* | Redundancy information for the power subsystem of this system or device |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Voltages** [ {} ] | array<br><br>*read-write* | These properties shall be the definition for voltage sensors for a Redfish implementation. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Voltages@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Voltages\@odata.navigationLink** | string<br><br>*read-write* |  |
 | } |   |   |
 | **PowerState** *(v1.0.1)* | string, null<br><br>*read-write* | The value of this property shall contain the power state of the chassis. *See Property Details, below, for more information about this property.* |
 | **SKU** | string, null<br><br>*read-only* | The value of this property shall be the stock-keeping unit number for this chassis. |
@@ -221,15 +221,15 @@ This resource shall be used to represent a chassis or other physical enclosure f
 | **Thermal** { | object<br><br>*read-write* | The value of this property shall be a reference to the resource that represents the thermal characteristics of this chassis and shall be of type Thermal. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Fans** [ {} ] | array<br><br>*read-write* | These properties shall be the definition for fans for a Redfish implementation. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Fans@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Fans\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Id** | string<br><br>*read-only* | This property represents an identifier for the resource.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy** [ {} ] | array<br><br>*read-only* | The values of the properties in this array shall be used to show redundancy for fans and other elements in this resource.  The use of IDs within these arrays shall reference the members of the redundancy groups. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Temperatures** [ {} ] | array<br><br>*read-write* | These properties shall be the definition for temperature sensors for a Redfish implementation. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Temperatures@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Temperatures\@odata.navigationLink** | string<br><br>*read-write* |  |
 | } |   |   |
 
 ## Property Details
@@ -359,7 +359,7 @@ A Collection of Chassis resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Thermal** {} | object<br><br>*read-write* | The value of this property shall be a reference to the resource that represents the thermal characteristics of this chassis and shall be of type Thermal. |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -438,7 +438,7 @@ This resource shall be used to represent resources that represent a computing sy
 | **EthernetInterfaces** { | object<br><br>*read-write* | The value of this property shall be a link to a collection of type EthernetInterfaceCollection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -447,19 +447,19 @@ This resource shall be used to represent resources that represent a computing sy
 | **IndicatorLED** | string, null<br><br>*read-write* | The value of this property shall contain the indicator light state for the indicator light associated with this system. *See Property Details, below, for more information about this property.* |
 | **Links** { | object<br><br>*read-only* | The Links property, as described by the Redfish Specification, shall contain references to resources that are related to, but not contained by (subordinate to), this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Chassis** [ {} ] | array<br><br>*read-only* | The value of this property shall reference a resource of type Chassis that represents the physical container associated with this resource. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Chassis@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Chassis\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**CooledBy** [ {} ] | array<br><br>*read-only* | The value of this property shall be an array of IDs containing pointers consistent with JSON pointer syntax to the resource that powers this computer system. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**CooledBy@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**CooledBy\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagedBy** [ {} ] | array<br><br>*read-only* | The value of this property shall reference a resource of type manager that represents the resource with management responsibility for this resource. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagedBy@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagedBy\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This object represents the Oem property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PoweredBy** [ {} ] | array<br><br>*read-only* | The value of this property shall be an array of IDs containing pointers consistent with JSON pointer syntax to the resource that powers this computer system. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PoweredBy@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PoweredBy\@odata.navigationLink** | string<br><br>*read-write* |  |
 | } |   |   |
 | **LogServices** { | object<br><br>*read-write* | The value of this property shall be a link to a collection of type LogServiceCollection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -467,7 +467,7 @@ This resource shall be used to represent resources that represent a computing sy
 | **Memory** *(v1.1.0)* { | object<br><br>*read-write* | The value of this property shall be a link to a collection of type MemoryCollection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -489,7 +489,7 @@ This resource shall be used to represent resources that represent a computing sy
 | **Processors** { | object<br><br>*read-write* | The value of this property shall be a link to a collection of type ProcessorCollection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -508,7 +508,7 @@ This resource shall be used to represent resources that represent a computing sy
 | **SimpleStorage** { | object<br><br>*read-write* | The value of this property shall be a link to a collection of type SimpleStorageCollection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -521,7 +521,7 @@ This resource shall be used to represent resources that represent a computing sy
 | **Storage** *(v1.1.0)* { | object<br><br>*read-write* | The value of this property shall be a link to a collection of type StorageCollection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -709,7 +709,7 @@ A Collection of ComputerSystem resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TrustedModules** [ {} ] | array<br><br>*read-write* | This object shall contain an array of objects with properties which describe the truted modules for the current resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UUID** | string, null<br><br>*read-write* | The value of this property shall be used to contain a universal unique identifier number for the system. RFC4122 describes methods that can be used to create the value. The value should be considered to be opaque. Client software should only treat the overall value as a universally unique identifier and should not interpret any sub-fields within the UUID. If the system supports SMBIOS, the value and byte order of the property should match byte-for-byte with the memory byte order (from lowest address to highest) of the SMBIOS UUID. Following this order will make it simpler to correlate the UUID with the SMBIOS UUID |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -772,7 +772,7 @@ This resource shall be used to represent a disk drive or other physical storage 
 | **Links** { | object<br><br>*read-only* | The Links property, as described by the Redfish Specification, shall contain references to resources that are related to, but not contained by (subordinate to), this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This object represents the Oem property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Volumes** [ {} ] | array<br><br>*read-only* | The value of this property shall be a reference to the resources that this drive is associated with and shall reference a resource of type Volume. This shall include all Volume resources of which this Drive is a member and all Volumes for which this Drive is acting as a spare if the HotspareType is Dedicated. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Volumes@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Volumes\@odata.navigationLink** | string<br><br>*read-write* |  |
 | } |   |   |
 | **Location** [ { | array<br><br>*read-only* | This property shall contain location information of the associated drive. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Info** | string, null<br><br>*read-only* | This property shall represent the location of the resource. |
@@ -962,7 +962,7 @@ This resource shall be used to represent NIC resources as part of the Redfish sp
 | **VLANs** { | object<br><br>*read-write* | The value of this property shall reference a collection of VLAN resources. If this property is used, the VLANEnabled and VLANId property shall not be used. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -1059,7 +1059,7 @@ A Collection of EthernetInterface resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**VLAN** | , null<br><br>*read-write* | The value of this property shall be the VLAN for this interface.  If this interface supports more than one VLAN, the VLAN property shall not be present and the VLANS collection link shall be present instead. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**VLANs** {} | object<br><br>*read-write* | The value of this property shall reference a collection of VLAN resources. If this property is used, the VLANEnabled and VLANId property shall not be used. |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -1084,7 +1084,7 @@ This resource shall be used to represent an event for a Redfish implementation.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**OriginOfCondition** {} | object<br><br>*read-write* | The value of this property shall contain a pointer consistent with JSON pointer syntax to the resource that caused the event to be generated. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Severity** | string<br><br>*read-only* | The value of this property shall be the severity of the event, as defined in the Status section of the Redfish specification. |
 | } ] |   |   |
-| **Events@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Events\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Id** | string<br><br>*read-only* | This property represents an identifier for the resource.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
@@ -1145,7 +1145,7 @@ A Collection of EventDestination resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Protocol** | string<br><br>*read-write* | This property shall contain the protocol type that the event will use for sending the event to the destination.  A value of Redfish shall be used to indicate that the event type shall adhere to that defined in the Redfish specification. *See Property Details, below, for more information about this property.* |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -1185,7 +1185,7 @@ The Event Service resource contains properties for managing event subcriptions a
 | **Subscriptions** { | object<br><br>*read-write* | The value of this property shall contain the link to a collection of type EventDestinationCollection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -1267,7 +1267,7 @@ A Collection of JsonSchemaFile resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Schema** | string<br><br>*read-only* | The value of this property shall be the value of the @odata.type property for that schema and shall conform to the syntax specified in the Redfish specification for the Type property. |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -1451,7 +1451,7 @@ A Collection of LogEntry resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SensorType** | string, null<br><br>*read-write* | This property shall be present if the EntryType value is SEL. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Severity** | string, null<br><br>*read-write* | The value of this property shall be the severity of the condition resulting in the log entry, as defined in the Status section of the Redfish specificaiton. *See Property Details, below, for more information about this property.* |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -1606,7 +1606,7 @@ Meeting records capture who showed up, what they reviewed, what was decided, and
 | **Entries** { | object<br><br>*read-write* | The value of this property shall reference a collection of resources of type LogEntry. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -1693,7 +1693,7 @@ A Collection of LogService resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ServiceEnabled** | boolean, null<br><br>*read-write* | The value of this property shall be a boolean indicating whether this service is enabled. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object, null<br><br>*read-only* |  |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -1731,7 +1731,7 @@ This resource shall be used to represent a management subsystem for a Redfish im
 | **EthernetInterfaces** { | object<br><br>*read-write* | The value of this property shall be a link to a collection of type EthernetInterfaceCollection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -1744,16 +1744,16 @@ This resource shall be used to represent a management subsystem for a Redfish im
 | **Id** | string<br><br>*read-only* | This property represents an identifier for the resource.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | **Links** { | object<br><br>*read-only* | The Links property, as described by the Redfish Specification, shall contain references to resources that are related to, but not contained by (subordinate to), this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagerForChassis** [ {} ] | array<br><br>*read-only* | This property shall contain an array of references to Chassis resources of which this Manager instance has control. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagerForChassis@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagerForChassis\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagerForServers** [ {} ] | array<br><br>*read-only* | This property shall contain an array of references to ComputerSystem resources of which this Manager instance has control. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagerForServers@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagerForServers\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ManagerInChassis** {} | object<br><br>*read-write* | This property shall contain a reference to the chassis that this manager is located in. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This object represents the Oem property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | } |   |   |
 | **LogServices** { | object<br><br>*read-write* | The value of this property shall contain a reference to a collection of type LogServiceCollection which are for the use of this manager. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -1783,7 +1783,7 @@ This resource shall be used to represent a management subsystem for a Redfish im
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**MemberId** | string<br><br>*read-write* | The value of this string shall uniquely identify the member within the collection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } ] |   |   |
-| **Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Redundancy\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **SerialConsole** { | object<br><br>*read-write* | The value of this property shall contain information about the Serial Console service of this manager. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ConnectTypesSupported** [ {} ] | array<br><br>*read-only* | The value of ConnectTypesSupported shall be an array of the enumerations provided here.  SSH shall be included if the Secure Shell (SSH) protocol is supported.  Telnet shall be included if the Telnet protocol is supported.  IPMI shall be included if the IPMI (Serial-over-LAN) protocol is supported. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**MaxConcurrentSessions** | number<br><br>*read-only* | The value of this property shall contain the maximum number of concurrent service sessions supported by the implementation. |
@@ -1792,7 +1792,7 @@ This resource shall be used to represent a management subsystem for a Redfish im
 | **SerialInterfaces** { | object<br><br>*read-write* | The value of this property shall be a link to a collection of type SerialInterfaceCollection which are for the use of this manager. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -1807,7 +1807,7 @@ This resource shall be used to represent a management subsystem for a Redfish im
 | **VirtualMedia** { | object<br><br>*read-write* | The value of this property shall contain a reference to a collection of type VirtualMediaCollection which are for the use of this manager. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -1938,7 +1938,7 @@ A Collection of ManagerAccount resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RoleId** | string<br><br>*read-write* | The value of this property shall be the ID of the Role resource that configured for this account. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UserName** | string<br><br>*read-write* | The value of this property shall be the user name for this account. |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -1967,7 +1967,7 @@ A Collection of Manager resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**NetworkProtocol** {} | object<br><br>*read-write* | The value of this property shall contain a reference to a resource of type ManagerNetworkProtocol which represents the network services for this manager. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy** [ {} ] | array<br><br>*read-only* | Redundancy information for the managers of this system |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SerialConsole** {} | object<br><br>*read-write* | The value of this property shall contain information about the Serial Console service of this manager. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SerialInterfaces** {} | object<br><br>*read-write* | The value of this property shall be a link to a collection of type SerialInterfaceCollection which are for the use of this manager. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ServiceEntryPointUUID** | string<br><br>*read-write* | This property shall contain the UUID of the Redfish Service provided by this manager.  Each Manager providing an Entry Point to the same Redfish Service shall report the same UUID value (even though the name of the property may imply otherwise).  This property shall not be present if this manager does not provide a Redfish Service Entry Point. |
@@ -1975,7 +1975,7 @@ A Collection of Manager resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UUID** | string, null<br><br>*read-write* | The value of this property shall contain the universal unique identifier number for the manager. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**VirtualMedia** {} | object<br><br>*read-write* | The value of this property shall contain a reference to a collection of type VirtualMediaCollection which are for the use of this manager. |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -2297,7 +2297,7 @@ A Collection of Memory resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**VendorID** | string, null<br><br>*read-only* | The value of this property shall be the vendor ID of the Memory. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**VolatileRegionSizeLimitMiB** | number, null<br><br>*read-only* | The value of this property shall be the total size of volatile regions in MiB. |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -2426,7 +2426,7 @@ A Collection of MessageRegistry resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RegistryPrefix** | string<br><br>*read-only* | The value of this property shall be the prefix used in messageIDs which uniquely identifies all of the messages in this registry as belonging to this registry. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RegistryVersion** | string<br><br>*read-only* | The value of this property shall be the version of this message registry.   The format of this string shall be of the format majorversion.minorversion.errata in compliance with Protocol Version section of the Redfish specification |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -2466,7 +2466,7 @@ A Collection of MessageRegistryFile resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Registry** | string<br><br>*read-only* | The value of this property shall be the value of the Registry Name, Major and Minor version and shall conform to the syntax specified in the Redfish specification for the MessageId property without the MessageKey. |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -2492,10 +2492,10 @@ This resource shall be used to represent a power metrics resource for a Redfish 
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerMetrics** {} | object<br><br>*read-write* | This object shall contain power metrics for power readings (interval, min/max/ave power consumption) for the chassis. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerRequestedWatts** | number, null<br><br>*read-only* | The value of this property shall represent the amount of power (in Watts) that the chassis resource is currently requesting be budgeted to it for future use. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem** [ {} ] | array<br><br>*read-write* | The value of this property shall be an array of IDs containing pointers consistent with JSON pointer syntax to the resource that is being limited. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | } ] |   |   |
-| **PowerControl@odata.navigationLink** | string<br><br>*read-write* |  |
+| **PowerControl\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **PowerSupplies** [ { | array<br><br>*read-write* | This object shall contain details of the power supplies associated with this system or device |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**FirmwareVersion** | string, null<br><br>*read-only* | This property shall contain the firwmare version as defined by the manufacturer for the associated power supply. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**InputRanges** [ {} ] | array<br><br>*read-only* | The value of this property shall be a collection of ranges usable by the power supply unit. |
@@ -2511,19 +2511,19 @@ This resource shall be used to represent a power metrics resource for a Redfish 
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerCapacityWatts** | number, null<br><br>*read-only* | This property shall contiain the maximum amount of power, in Watts, that the associated power supply is rated to deliver. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PowerSupplyType** | string, null<br><br>*read-write* | This property shall contain the input power type (AC or DC) of the associated power supply. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy** [ {} ] | array<br><br>*read-only* | The values of the properties in this array shall be used to show redundancy for power supplies and other elements in this resource.  The use of IDs within these arrays shall reference the members of the redundancy groups. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem** [ {} ] | array<br><br>*read-write* | The value of this property shall be an array of IDs containing pointers consistent with JSON pointer syntax to the resource that is being limited. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SerialNumber** | string, null<br><br>*read-only* | This property shall contain the serial number as defined by the manufacturer for the associated power supply. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SparePartNumber** | string, null<br><br>*read-only* | This property shall contain the spare or replacement part number as defined by the manufacturer for the associated power supply. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | } ] |   |   |
-| **PowerSupplies@odata.navigationLink** | string<br><br>*read-write* |  |
+| **PowerSupplies\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Redundancy** [ { | array<br><br>*read-only* | Redundancy information for the power subsystem of this system or device |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**MemberId** | string<br><br>*read-write* | The value of this string shall uniquely identify the member within the collection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } ] |   |   |
-| **Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Redundancy\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Voltages** [ { | array<br><br>*read-write* | These properties shall be the definition for voltage sensors for a Redfish implementation. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**LowerThresholdCritical** | number, null<br><br>*read-only* | The value of this property shall indicate the CurrentReading is below the normal range but is not yet fatal. Units shall use the same units as the related ReadingVolts propoerty. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**LowerThresholdFatal** | number, null<br><br>*read-only* | The value of this property shall indicate the CurrentReading is below the normal range and is fatal. Units shall use the same units as the related ReadingVolts propoerty. |
@@ -2536,14 +2536,14 @@ This resource shall be used to represent a power metrics resource for a Redfish 
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PhysicalContext** | string<br><br>*read-write* | The value of this property shall be a description of the affected device or region within the chassis to which this voltage measurement applies. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ReadingVolts** | number, null<br><br>*read-only* | The value of this property shall be the current value of the voltage sensor's reading. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem** [ {} ] | array<br><br>*read-only* | The value of this property shall be an array of IDs containing pointers consistent with JSON pointer syntax to the areas or devices to which this voltage measurement applies. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SensorNumber** | number, null<br><br>*read-only* | The value of this property shall be a numerical identifier for this voltage sensor that is unique within this resource.  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UpperThresholdCritical** | number, null<br><br>*read-only* | The value of this property shall indicate the CurrentReading is above the normal range but is not yet fatal. Units shall use the same units as the related ReadingVolts propoerty. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UpperThresholdFatal** | number, null<br><br>*read-only* | The value of this property shall indicate the CurrentReading is above the normal range and is fatal. Units shall use the same units as the related ReadingVolts propoerty. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UpperThresholdNonCritical** | number, null<br><br>*read-only* | The value of this property shall indicate the CurrentReading is above the normal range but is not critical. Units shall use the same units as the related ReadingVolts propoerty. |
 | } ] |   |   |
-| **Voltages@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Voltages\@odata.navigationLink** | string<br><br>*read-write* |  |
 
 ## Property Details
 
@@ -2786,7 +2786,7 @@ A Collection of Processor resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TotalCores** | number, null<br><br>*read-only* | This property shall indicate the total count of independent processor cores contained within this processor. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TotalThreads** | number, null<br><br>*read-only* | This property shall indicate the total count of independent execution threads supported by this processor. |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -2867,7 +2867,7 @@ A Collection of Role resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**OemPrivileges** [ {} ] | array<br><br>*read-write* | The value of this property shall be the OEM privileges that this role includes. For pre-defined roles, this property shall be readOnly. For custom roles some implementations may not allow writing this property. |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -3040,7 +3040,7 @@ A Collection of SerialInterface resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SignalType** | string<br><br>*read-write* | This property shall indicate the type of serial signalling that will be utilized for the serial connection. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**StopBits** | string<br><br>*read-write* | This property shall indicate the stop bits for the serial connection. *See Property Details, below, for more information about this property.* |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -3149,7 +3149,7 @@ This object represents the root Redfish service.  All values for resources descr
 | **Chassis** { | object<br><br>*read-write* | This object shall only contain a reference to a collection of resources that comply to the Chassis schema. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -3171,7 +3171,7 @@ This object represents the root Redfish service.  All values for resources descr
 | **JsonSchemas** { | object<br><br>*read-write* | This object shall only contain a reference to a collection of resources that comply to the SchemaFile schema where the files are Json-Schema files. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -3182,7 +3182,7 @@ This object represents the root Redfish service.  All values for resources descr
 | **Managers** { | object<br><br>*read-write* | This object shall only contain a reference to a collection of resources that comply to the Managers schema. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -3192,7 +3192,7 @@ This object represents the root Redfish service.  All values for resources descr
 | **Registries** { | object<br><br>*read-write* | This object shall contain a reference to Message Registry. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -3209,7 +3209,7 @@ This object represents the root Redfish service.  All values for resources descr
 | **Systems** { | object<br><br>*read-write* | This object shall only contain a reference to a collection of resources that comply to the Systems schema. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -3265,7 +3265,7 @@ A Collection of Session resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Password** | string, null<br><br>*read-write* | The value of this property shall be the password for this session.  The value shall be null for GET requests. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UserName** | string, null<br><br>*read-only* | The value of this property shall be the UserName that matches a registered account identified by a ManagerAccount resource registered with the Account Service. |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -3284,7 +3284,7 @@ This resource shall be used to represent the Session Service Properties for a Re
 | **Sessions** { | object<br><br>*read-write* | This property shall contain the link to a collection of Sessions. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -3419,7 +3419,7 @@ A Collection of SimpleStorage resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UefiDevicePath** | string, null<br><br>*read-only* | This property shall contain the UEFI device path used to identify and locate the specific storage controller |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -3466,11 +3466,11 @@ This resource shall be used to represent resources that represent a storage subs
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**StatusIndicator** | string, null<br><br>*read-write* | The value of this property shall contain the status indicator state for the status indicator associated with this drive. The valid values for this property are specified through the Redfish.AllowableValues annotation. *See Property Details, below, for more information about this property.* |
 | } ] |   |   |
-| **Drives@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Drives\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Id** | string<br><br>*read-only* | This property represents an identifier for the resource.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | **Links** { | object<br><br>*read-only* | The Links property, as described by the Redfish Specification, shall contain references to resources that are related to, but not contained by (subordinate to), this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Enclosures** [ {} ] | array<br><br>*read-only* | The value of this property shall reference a resource of type Chassis that represents the physical containers attached to this resource. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Enclosures@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Enclosures\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This object represents the Oem property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | } |   |   |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
@@ -3479,7 +3479,7 @@ This resource shall be used to represent resources that represent a storage subs
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**MemberId** | string<br><br>*read-write* | The value of this string shall uniquely identify the member within the collection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } ] |   |   |
-| **Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Redundancy\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Status** { | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Health** | string, null<br><br>*read-write* | This property shall represent the HealthState of the resource without considering its dependent resources. The values shall conform to those defined in the Redfish specification. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**HealthRollup** | string, null<br><br>*read-write* | This property shall represent the HealthState of the resource and its dependent resources.  The values shall conform to those defined in the Redfish specification. *See Property Details, below, for more information about this property.* |
@@ -3487,7 +3487,7 @@ This resource shall be used to represent resources that represent a storage subs
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**State** | string, null<br><br>*read-write* | This property shall represent if this component is available or not and why.  Enabled indicates the resource is available.  Disabled indicates the resource has been intentionally made unavailable but it can be enabled.  Offline indicates the resource is unavailable intentionally and requires action to be made available.  InTest indicates that the component is undergoing testing.  Starting indicates that the resource is on its way to becoming available.  Absent indicates the resources is physically unavailable. *See Property Details, below, for more information about this property.* |
 | } |   |   |
 | **StorageControllers** [ {} ] | array<br><br>*read-only* | A collection that indicates all the storage controllers that this resource represents. |
-| **StorageControllers@odata.navigationLink** | string<br><br>*read-write* |  |
+| **StorageControllers\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Volumes** [ { | array<br><br>*read-only* | A collection that indicates all the volumes produced by the storage controllers that this resource represents. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Actions** {} | object<br><br>*read-only* | The Actions property shall contain the available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**BlockSizeBytes** | number, null<br><br>*read-only* | This property shall contain size of the smallest addressible unit of the associated volume. |
@@ -3505,7 +3505,7 @@ This resource shall be used to represent resources that represent a storage subs
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**VolumeType** | string, null<br><br>*read-write* | This property shall contain failure information as defined by the manufacturer for the associated drive. *See Property Details, below, for more information about this property.* |
 | } ] |   |   |
-| **Volumes@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Volumes\@odata.navigationLink** | string<br><br>*read-write* |  |
 
 ## Property Details
 
@@ -3624,20 +3624,20 @@ A Collection of Storage resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Actions** {} | object<br><br>*read-only* | The Actions property shall contain the available actions for this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Drives** [ {} ] | array<br><br>*read-only* | A collection that indicates all the drives attached to the storage controllers that this resource represents. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Drives@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Drives\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Id** | string<br><br>*read-only* | This property represents an identifier for the resource.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Links** {} | object<br><br>*read-only* | The Links property, as described by the Redfish Specification, shall contain references to resources that are related to, but not contained by (subordinate to), this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy** [ {} ] | array<br><br>*read-only* | Redundancy information for the storage subsystem |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**StorageControllers** [ {} ] | array<br><br>*read-only* | A collection that indicates all the storage controllers that this resource represents. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**StorageControllers@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**StorageControllers\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Volumes** [ {} ] | array<br><br>*read-only* | A collection that indicates all the volumes produced by the storage controllers that this resource represents. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Volumes@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Volumes\@odata.navigationLink** | string<br><br>*read-write* |  |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -3702,7 +3702,7 @@ A Collection of Task resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TaskState** | string<br><br>*read-write* | The value of this property shall indicate the state of the task.  New shall be used to indicate that the task is a new task which has just been instantiated and is in the initial state and indicates it has never been started.  Starting shall be used to indicate that the task is moving from the New, Suspended, or Service states into the Running state.  Running shall be used to indicate that the Task is running.  Suspended shall be used to indicate  that the Task is stopped (e.g., by a user), but can be restarted in a seamless manner.  Interrupted shall be used to indicate  that the Task was interrupted (e.g., by a server crash) in the middle of processing, and the user should either re-run/restart the Task.  Pending shall be used to indicate  that the Task has been queued and will be scheduled for processing as soon as resources are available to handle the request.  Stopping shall be used to indicate that the Task is in the process of moving to a Completed, Killed, or Exception state.  Completed shall be used to indicate that the task has completed normally.  Killed shall be used to indicate  that the task has been stopped by a Kill state change request (non-graceful shutdown).  Exception shall be used to indicate  that the Task is in an abnormal state that might be indicative of an error condition.  Service shall be used to indicate that the Task is in a state that supports problem discovery, or resolution, or both.  This state is used when a corrective action is possible.  *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TaskStatus** | string<br><br>*read-write* | The value of this property shall be the completion status of the task, as defined in the Status section of the Redfish specification and shall not be set until the task has completed. *See Property Details, below, for more information about this property.* |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -3756,7 +3756,7 @@ This resource shall be used to represent a task service for a Redfish implementa
 | **Tasks** { | object<br><br>*read-write* | The value of this property shall be a link to a resource of type TaskCollection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Description** | string, null<br><br>*read-only* | This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members** [ {} ] | array<br><br>*read-only* | Contains the members of this collection. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } |   |   |
@@ -3830,15 +3830,15 @@ This resource shall be used to represent a thermal metrics resource for a Redfis
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Reading** | number, null<br><br>*read-only* | The value of this property shall be the current value of the fan sensor's reading. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ReadingUnits** | string, null<br><br>*read-write* | The value of this property shall be the units in which the fan's reading and thresholds are measured. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy** [ {} ] | array<br><br>*read-only* | The values of the properties in this array shall be used to show redundancy for fans and other elements in this resource.  The use of IDs within these arrays shall reference the members of the redundancy groups. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem** [ {} ] | array<br><br>*read-write* | The value of this property shall be an array of IDs containing pointers consistent with JSON pointer syntax to the resource that are being serviced by this fan. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UpperThresholdCritical** | number, null<br><br>*read-only* | The value of this property shall indicate the Reading is above the normal range but is not yet fatal. The units shall be the same units as the related Reading property. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UpperThresholdFatal** | number, null<br><br>*read-only* | The value of this property shall indicate the Reading is above the normal range and is fatal. The units shall be the same units as the related Reading property. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UpperThresholdNonCritical** | number, null<br><br>*read-only* | The value of this property shall indicate the Reading is above the normal range but is not critical. The units shall be the same units as the related Reading property. |
 | } ] |   |   |
-| **Fans@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Fans\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Id** | string<br><br>*read-only* | This property represents an identifier for the resource.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
@@ -3846,7 +3846,7 @@ This resource shall be used to represent a thermal metrics resource for a Redfis
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**MemberId** | string<br><br>*read-write* | The value of this string shall uniquely identify the member within the collection. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | } ] |   |   |
-| **Redundancy@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Redundancy\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Status** { | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Health** | string, null<br><br>*read-write* | This property shall represent the HealthState of the resource without considering its dependent resources. The values shall conform to those defined in the Redfish specification. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**HealthRollup** | string, null<br><br>*read-write* | This property shall represent the HealthState of the resource and its dependent resources.  The values shall conform to those defined in the Redfish specification. *See Property Details, below, for more information about this property.* |
@@ -3865,14 +3865,14 @@ This resource shall be used to represent a thermal metrics resource for a Redfis
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**PhysicalContext** | string<br><br>*read-write* | The value of this property shall be a description of the affected device or region within the chassis to which this temperature measurement applies. *See Property Details, below, for more information about this property.* |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**ReadingCelsius** | number, null<br><br>*read-only* | The value of this property shall be the current value of the temperature sensor's reading. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem** [ {} ] | array<br><br>*read-only* | The value of this property shall the array of IDs of areas or devices to which this temperature measurement applies. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RelatedItem\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SensorNumber** | number, null<br><br>*read-only* | The value of this property shall be a numerical identifier for this temperature sensor that is unique within this resource.  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status** {} | object<br><br>*read-only* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UpperThresholdCritical** | number, null<br><br>*read-only* | The value of this property shall indicate the ReadingCelsius is above the normal range but is not yet fatal. The units shall be the same units as the related ReadingCelsius property. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UpperThresholdFatal** | number, null<br><br>*read-only* | The value of this property shall indicate the ReadingCelsius is above the normal range and is fatal. The units shall be the same units as the related ReadingCelsius property. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**UpperThresholdNonCritical** | number, null<br><br>*read-only* | The value of this property shall indicate the ReadingCelsius is above the normal range but is not critical. The units shall be the same units as the related ReadingCelsius property. |
 | } ] |   |   |
-| **Temperatures@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Temperatures\@odata.navigationLink** | string<br><br>*read-write* |  |
 
 ## Property Details
 
@@ -3975,7 +3975,7 @@ A Collection of VLanNetworkInterface resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**VLANEnable** | boolean, null<br><br>*read-write* | The value of this property shall be used to indicate if this VLAN is enabled for this interface. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**VLANId** | number, null<br><br>*read-write* | The value of this property shall be used to indicate the VLAN identifier for this VLAN. |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -4027,7 +4027,7 @@ A Collection of VirtualMedia resource instances.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**WriteProtected** | boolean, null<br><br>*read-only* | The value of this property shall be used to indicate if the remote device media prevents writing to that media.  |
 | } ] |   |   |
-| **Members@odata.navigationLink** | string<br><br>*read-write* |  |
+| **Members\@odata.navigationLink** | string<br><br>*read-write* |  |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
 | **Oem** {} | object<br><br>*read-write* | The value of this string shall be of the format for the reserved word *Oem*. |
 
@@ -4065,7 +4065,7 @@ This resource shall be used to represent a volume, virtual disk, logical disk, L
 | } ] |   |   |
 | **Links** { | object<br><br>*read-only* | The Links property, as described by the Redfish Specification, shall contain references to resources that are related to, but not contained by (subordinate to), this resource. |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Drives** [ {} ] | array<br><br>*read-only* | The value of this property shall be a reference to the resources that this volume is associated with and shall reference resources of type Drive. This property shall only contain references to Drive entities which are currently members of the Volume, not hot spare Drives which are not currently a member of the volume. |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Drives@odata.navigationLink** | string<br><br>*read-write* |  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Drives\@odata.navigationLink** | string<br><br>*read-write* |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Oem** {} | object<br><br>*read-write* | This object represents the Oem property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. |
 | } |   |   |
 | **Name** | string<br><br>*read-only* | This object represents the Name property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification. The value of this string shall be of the format for the reserved word *Name*. |
